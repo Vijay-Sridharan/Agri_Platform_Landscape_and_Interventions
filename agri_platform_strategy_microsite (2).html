@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Agri Platform Strategy — 25M SMH Farming Households India</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+--bg:#fff;--bg2:#f5f4f0;--bg3:#eeede8;
+--bgI:#e6f1fb;--bgS:#eaf3de;--bgW:#faeeda;--bgD:#fcebeb;
+--tx:#1a1a18;--tx2:#5f5e5a;--tx3:#888780;
+--txI:#0c447c;--txS:#27500a;--txW:#633806;--txD:#a32d2d;
+--bd:rgba(0,0,0,.12);--bd2:rgba(0,0,0,.22);
+--bdI:#85b7eb;--bdS:#97c459;--bdW:#ef9f27;--bdD:#f09595;
+--sw:228px;--fn:system-ui,-apple-system,sans-serif
+}
+@media(prefers-color-scheme:dark){:root{
+--bg:#1e1e1c;--bg2:#2a2a28;--bg3:#323230;
+--bgI:#042c53;--bgS:#173404;--bgW:#412402;--bgD:#501313;
+--tx:#e8e6de;--tx2:#b4b2a9;--tx3:#888780;
+--txI:#85b7eb;--txS:#c0dd97;--txW:#fac775;--txD:#f09595;
+--bd:rgba(255,255,255,.12);--bd2:rgba(255,255,255,.22)
+}}
+body{font-family:var(--fn);background:var(--bg3);color:var(--tx);display:flex;min-height:100vh;font-size:14px;line-height:1.5}
+#sb{width:var(--sw);background:var(--bg);border-right:.5px solid var(--bd);position:fixed;top:0;left:0;height:100vh;overflow-y:auto;z-index:100;flex-shrink:0}
+.sbl{padding:16px 14px 13px;border-bottom:.5px solid var(--bd)}
+.sblt{font-size:13px;font-weight:500;color:var(--tx);line-height:1.3}
+.sbls{font-size:11px;color:var(--tx3);margin-top:3px}
+.sbs{padding:5px 0}
+.sblbl{font-size:10px;font-weight:500;color:var(--tx3);text-transform:uppercase;letter-spacing:.06em;padding:5px 14px 2px}
+.sbi{display:flex;align-items:center;gap:8px;padding:6px 14px;cursor:pointer;font-size:12px;color:var(--tx2);border-left:2px solid transparent;transition:background .1s}
+.sbi:hover{background:var(--bg2);color:var(--tx)}
+.sbi.active{background:var(--bgI);color:var(--txI);border-left-color:var(--txI)}
+.sbn{width:22px;height:22px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:500;color:#fff;flex-shrink:0}
+.sbsub{padding:2px 14px 2px 44px;font-size:11px;color:var(--tx3);cursor:pointer}
+.sbsub:hover{color:var(--txI)}
+#main{margin-left:var(--sw);flex:1;padding:24px 28px;max-width:calc(100% - var(--sw))}
+.pg{display:none}.pg.active{display:block}
+.ph{margin-bottom:20px;padding-bottom:16px;border-bottom:.5px solid var(--bd)}
+.pe{font-size:11px;font-weight:500;color:var(--tx3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}
+.pt{font-size:22px;font-weight:500;color:var(--tx);line-height:1.2;margin-bottom:7px}
+.pd{font-size:13px;color:var(--tx2);line-height:1.6;max-width:720px}
+.stl{font-size:11px;font-weight:500;color:var(--tx3);text-transform:uppercase;letter-spacing:.06em;margin:18px 0 10px;padding-bottom:4px;border-bottom:.5px solid var(--bd)}
+.stl:first-child{margin-top:0}
+.kg{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:14px}
+.kc{background:var(--bg2);border-radius:8px;padding:10px 12px}
+.kv{font-size:18px;font-weight:500;color:var(--tx);line-height:1.2}
+.kl{font-size:11px;color:var(--tx2);margin-top:2px;line-height:1.3}
+.ks{font-size:10px;color:var(--tx3);margin-top:2px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:12px}
+.card{background:var(--bg2);border-radius:10px;padding:12px 14px;margin-bottom:10px}
+.cl2{font-size:11px;font-weight:500;color:var(--tx3);text-transform:uppercase;letter-spacing:.04em;margin-bottom:6px}
+.cb{font-size:12px;color:var(--tx2);line-height:1.6}
+.ins{padding:10px 13px;border-radius:8px;font-size:12px;line-height:1.6;margin-bottom:10px;border-left:3px solid transparent}
+.iw{background:var(--bgW);color:var(--txW);border-left-color:var(--bdW)}
+.ii{background:var(--bgI);color:var(--txI);border-left-color:var(--bdI)}
+.is{background:var(--bgS);color:var(--txS);border-left-color:var(--bdS)}
+.id{background:var(--bgD);color:var(--txD);border-left-color:var(--bdD)}
+.tabs{display:flex;gap:4px;margin-bottom:12px;flex-wrap:wrap}
+.tab{padding:5px 12px;border-radius:6px;font-size:12px;font-weight:500;cursor:pointer;border:.5px solid var(--bd);background:transparent;color:var(--tx2)}
+.tab:hover{background:var(--bg2)}
+.tc{display:none}.tc.active{display:block}
+.br{margin:4px 0}
+.blr{display:flex;justify-content:space-between;font-size:11px;color:var(--tx2);margin-bottom:2px}
+.bt{height:7px;background:var(--bd);border-radius:3px;overflow:hidden}
+.bf{height:100%;border-radius:3px}
+.pl{display:inline-block;padding:2px 7px;border-radius:10px;font-size:11px;margin:2px 2px 0 0}
+.pg2{background:#EAF3DE;color:#27500A}.pa{background:#FAEEDA;color:#633806}
+.pb{background:#E6F1FB;color:#0C447C}.pr{background:#FCEBEB;color:#A32D2D}
+.pt2{background:#E1F5EE;color:#085041}.pp{background:#EEEDFE;color:#3C3489}
+.dt{width:100%;border-collapse:collapse;font-size:12px}
+.dt th{font-size:11px;font-weight:500;color:var(--tx2);padding:7px 9px;text-align:left;border-bottom:.5px solid var(--bd);background:var(--bg2)}
+.dt td{padding:7px 9px;border-bottom:.5px solid var(--bd);color:var(--tx);vertical-align:top;line-height:1.4}
+.dt tr:last-child td{border-bottom:none}
+.wr{display:flex;align-items:center;gap:7px;padding:5px 0;border-bottom:.5px solid var(--bd);font-size:12px}
+.wr:last-child{border-bottom:none}
+.wl{width:190px;flex-shrink:0;color:var(--tx2)}
+.wb{flex:1;height:15px;background:var(--bg2);border-radius:3px;overflow:hidden}
+.wf2{height:100%;border-radius:3px}
+.wv{width:115px;text-align:right;flex-shrink:0;font-weight:500;color:var(--tx)}
+.wn{font-size:10px;color:var(--tx3);width:65px;flex-shrink:0}
+.ng{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+.nc{border-radius:9px;border:.5px solid var(--bd);overflow:hidden}
+.nh{padding:9px 12px;display:flex;align-items:center;gap:9px}
+.ni{width:28px;height:28px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+.nt{font-size:13px;font-weight:500;color:var(--tx)}
+.ns2{font-size:11px;color:var(--tx2)}
+.nb2{padding:9px 12px;background:var(--bg2)}
+.ir{display:flex;justify-content:space-between;align-items:flex-start;padding:4px 0;border-bottom:.5px solid var(--bd);font-size:12px;gap:7px}
+.ir:last-child{border-bottom:none}
+.il{color:var(--tx2);flex:1;line-height:1.4}
+.im{font-size:11px;font-weight:500;padding:2px 6px;border-radius:10px;white-space:nowrap}
+.ic{background:#FCEBEB;color:#A32D2D}.ih{background:#FAECE7;color:#993C1D}.imm{background:#FAEEDA;color:#633806}
+.qq{font-size:11px;color:var(--txI);margin-top:5px;padding:5px 8px;background:var(--bg);border-radius:5px;line-height:1.4;border-left:2px solid var(--bdI)}
+.vcf{display:flex;gap:0;overflow-x:auto;padding-bottom:4px;margin-bottom:12px}
+.vcs{flex:1;min-width:95px}
+.vch{padding:6px 7px;border-radius:5px 5px 0 0;font-size:11px;font-weight:500;text-align:center}
+.vcb{border:.5px solid var(--bd);border-top:none;border-radius:0 0 5px 5px;padding:6px 7px;font-size:10px;color:var(--tx2);line-height:1.45;min-height:115px}
+.vca{display:flex;align-items:center;justify-content:center;color:var(--tx3);font-size:12px;padding:0 2px;flex-shrink:0;margin-top:-57px}
+.at{display:inline-block;background:var(--bg);border:.5px solid var(--bd);border-radius:10px;padding:2px 5px;font-size:9px;margin:2px 2px 2px 0}
+.mp{display:inline-block;padding:2px 6px;border-radius:10px;font-size:9px;font-weight:500;margin-top:4px}
+.gr{display:flex;align-items:center;gap:7px;padding:5px 0;border-bottom:.5px solid var(--bd);font-size:12px}
+.gr:last-child{border-bottom:none}
+.gs{width:110px;font-weight:500;color:var(--tx)}
+.gb{flex:1;height:10px;background:var(--bg2);border-radius:3px;overflow:hidden}
+.gbf{height:100%;border-radius:3px}
+.ic2{border:.5px solid var(--bd);border-radius:10px;margin-bottom:10px;overflow:hidden}
+.ih2{padding:12px 15px;display:flex;align-items:flex-start;gap:11px;cursor:pointer;background:var(--bg);user-select:none}
+.ih2:hover{background:var(--bg2)}
+.in2{width:34px;height:34px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:500;color:#fff;flex-shrink:0}
+.it{font-size:13px;font-weight:500;color:var(--tx);line-height:1.3}
+.ig{font-size:11px;color:var(--tx2);margin-top:2px;line-height:1.4}
+.ib{padding:0 15px 15px;display:none;border-top:.5px solid var(--bd)}
+.ib.open{display:block}
+.ig2{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-top:12px}
+.sr{display:flex;justify-content:space-between;font-size:11px;color:var(--tx2);margin-bottom:2px}
+.st{height:4px;background:var(--bd);border-radius:2px;overflow:hidden;margin-bottom:6px}
+.sf{height:100%;border-radius:2px}
+.stp{display:flex;align-items:flex-start;gap:7px;padding:5px 0;border-bottom:.5px solid var(--bd);font-size:12px}
+.stp:last-child{border-bottom:none}
+.stn{width:19px;height:19px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:500;color:#fff;flex-shrink:0;margin-top:1px}
+.stl2{font-weight:500;color:var(--tx);width:85px;flex-shrink:0}
+.std{flex:1;color:var(--tx2);line-height:1.4}
+.cr{display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:.5px solid var(--bd);font-size:12px}
+.cr:last-child{border-bottom:none}
+.cn{width:22px;height:22px;border-radius:50%;background:var(--bgI);color:var(--txI);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:500;flex-shrink:0}
+.cla{font-weight:500;color:var(--tx);width:140px;flex-shrink:0}
+.cd{flex:1;color:var(--tx2);line-height:1.4}
+.lc{border:.5px solid var(--bd);border-radius:8px;padding:11px 13px;margin-bottom:9px}
+.lh{display:flex;align-items:center;gap:8px;margin-bottom:5px}
+.ld{width:9px;height:9px;border-radius:50%}
+.lt{font-size:13px;font-weight:500;color:var(--tx)}
+.ll{font-size:10px;padding:2px 7px;border-radius:8px}
+.sc{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;font-size:11px;font-weight:500}
+.s5{background:#EAF3DE;color:#27500A}.s4{background:#C0DD97;color:#173404}
+.s3{background:#FAEEDA;color:#633806}.s2{background:#FAECE7;color:#993C1D}.s1{background:#FCEBEB;color:#A32D2D}
+.vm{width:100%;border-collapse:collapse;font-size:12px}
+.vm th{font-size:11px;font-weight:500;color:var(--tx2);padding:7px 9px;text-align:left;border-bottom:.5px solid var(--bd);background:var(--bg2)}
+.vm td{padding:7px 9px;border-bottom:.5px solid var(--bd);vertical-align:middle;color:var(--tx)}
+.vm tr:last-child td{border-bottom:none}
+.synth-card{border:.5px solid var(--bd);border-radius:10px;padding:13px 15px}
+@media(max-width:1000px){.kg{grid-template-columns:repeat(3,1fr)}.g2,.g3{grid-template-columns:1fr}.ng,.ig2{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav id="sb">
+  <div class="sbl"><div class="sblt">Agri Platform Strategy</div><div class="sbls">25M SMH Farming Households &middot; India 2025</div></div>
+  <div class="sbs"><div class="sblbl">Engagement overview</div>
+    <div class="sbi" onclick="show('p00')" id="n-p00"><div class="sbn" style="background:#534AB7">00</div>Methodology</div>
+    <div class="sbi" onclick="show('p01')" id="n-p01"><div class="sbn" style="background:#1D9E75">01</div>Value chain landscape</div>
+  </div>
+  <div class="sbs"><div class="sblbl">Value chain deep dives</div>
+    <div class="sbi" onclick="show('p02')" id="n-p02"><div class="sbn" style="background:#185FA5">02</div>Dairy</div>
+    <div class="sbsub" onclick="show('p02')">Snapshot &middot; Actor map &middot; Economics</div>
+    <div class="sbsub" onclick="show('p02')">Supply chain gaps &middot; White space &middot; 5 ideas</div>
+    <div class="sbi" onclick="show('p03')" id="n-p03"><div class="sbn" style="background:#D85A30">03</div>Horticulture</div>
+    <div class="sbsub" onclick="show('p03')">Snapshot &middot; Actor map &middot; Economics</div>
+    <div class="sbsub" onclick="show('p03')">Supply chain gaps &middot; White space &middot; 5 ideas</div>
+    <div class="sbi" onclick="show('p04')" id="n-p04"><div class="sbn" style="background:#639922">04</div>Cereals &amp; staples</div>
+    <div class="sbsub" onclick="show('p04')">Snapshot &middot; Actor map &middot; Economics</div>
+    <div class="sbsub" onclick="show('p04')">Supply chain gaps &middot; White space &middot; 5 ideas</div>
+  </div>
+  <div class="sbs"><div class="sblbl">Final synthesis</div>
+    <div class="sbi" onclick="show('p05')" id="n-p05"><div class="sbn" style="background:#993356">05</div>Final synthesis</div>
+    <div class="sbsub" onclick="show('p05')">Cross-VC analysis &middot; 5 final ideas</div>
+    <div class="sbsub" onclick="show('p05')">Investment thesis &middot; Build roadmap</div>
+  </div>
+</nav>
+<main id="main">
+
+<!-- ======== PAGE 00: METHODOLOGY ======== -->
+<div class="pg active" id="p00">
+<div class="ph"><div class="pe">Section 00</div><div class="pt">Methodology &amp; analytical framework</div><div class="pd">How this engagement was structured &mdash; the platform mandate, analytical lens selection, value chain scoring logic, and the 6-step deep dive process applied identically to every value chain.</div></div>
+<div class="stl">Platform mandate &mdash; the non-negotiables</div>
+<div class="g3">
+  <div class="card"><div class="cl2">Target</div><div class="cb"><strong style="color:var(--tx)">25 million</strong> small and medium holder (SMH) farming households &mdash; holdings under 2 hectares, representing 86% of India's 126M agricultural holdings (Agriculture Census 2015-16). Average holding has shrunk from 1.08 ha (2016) to 0.74 ha (2022) &mdash; making aggregation services increasingly critical to economic viability.</div></div>
+  <div class="card"><div class="cl2">Geography</div><div class="cb"><strong style="color:var(--tx)">India &mdash; phase-wise.</strong> Phase 1: Punjab, Gujarat, Karnataka, AP (highest cooperative density + digital readiness). Phase 2: UP, WB, Bihar (scale + income transformation urgency). Phase 3: Northeast and hill states (high-value niche crops, organic, spices).</div></div>
+  <div class="card"><div class="cl2">Dual outcome</div><div class="cb"><strong style="color:var(--tx)">Income uplift + climate resilience.</strong> Every platform idea must demonstrate a credible, quantified income improvement mechanism AND a climate stress response. Neither alone satisfies the DFI/investor mandate or the social mission. Both must be demonstrable with named data sources.</div></div>
+</div>
+<div class="ins iw"><strong>The foundational design principle:</strong> The platform is designed around the farmer household &mdash; not a single crop or commodity. Most SMH farmers participate in 2&ndash;3 value chains simultaneously (paddy + dairy + vegetables). A platform serving only one chain will always be sub-scale and easily displaced. The integrated household view is the structural moat and the primary differentiation from every existing agritech player in the market.</div>
+<div class="stl">The 3-layer analytical lens stack</div>
+<div class="lc"><div class="lh"><div class="ld" style="background:#1D9E75"></div><div class="lt">Layer 1 &mdash; Structural landscape</div><span class="ll" style="background:#E1F5EE;color:#085041">Value chain + market systems analysis</span></div><div style="font-size:12px;color:var(--tx2);line-height:1.6">Maps where value is created, captured, and destroyed across each commodity system. Identifies the full actor ecosystem and power dynamics between every node. <em>Investor question answered: "Do you understand the system?"</em></div><div style="font-size:11px;color:var(--txS);margin-top:4px">Reveals: market size, margin leakage points, systemic bottlenecks, intermediary extraction patterns</div></div>
+<div style="text-align:center;color:var(--tx3);padding:2px 0">&darr;</div>
+<div class="lc"><div class="lh"><div class="ld" style="background:#185FA5"></div><div class="lt">Layer 2 &mdash; Human landscape</div><span class="ll" style="background:#E6F1FB;color:#0C447C">Farmer decision journey + risk &amp; resilience</span></div><div style="font-size:12px;color:var(--tx2);line-height:1.6">Follows the farmer through a full crop/production season. Maps every decision point, moment of vulnerability, and service gap. Overlays climate stress and coping mechanisms. <em>Answers: "Do you understand the customer?"</em></div><div style="font-size:11px;color:var(--txS);margin-top:4px">Reveals: intervention timing, pain point hierarchy, climate-income nexus, gender dynamics in labour and financial access</div></div>
+<div style="text-align:center;color:var(--tx3);padding:2px 0">&darr;</div>
+<div class="lc"><div class="lh"><div class="ld" style="background:#BA7517"></div><div class="lt">Layer 3 &mdash; Commercial architecture</div><span class="ll" style="background:#FAEEDA;color:#633806">Financial flows + geospatial segmentation</span></div><div style="font-size:12px;color:var(--tx2);line-height:1.6">Maps how money moves in and out of farming households seasonally. Identifies where a platform creates monetisable value and viable unit economics. Geospatial segmentation finds optimal entry markets. <em>Answers: "Do you understand the business?"</em></div><div style="font-size:11px;color:var(--txS);margin-top:4px">Reveals: revenue model options, unit economics, geographic sequencing, addressable market sizing</div></div>
+<div class="stl">Value chain selection &mdash; 5-criteria scoring framework</div>
+<div class="card"><div class="cb" style="margin-bottom:10px">Every potential value chain scored 1&ndash;5 on five equally-weighted criteria using Agriculture Census, DAHD, MoAFW, NSSO, and academic studies. Total out of 25. Tier 1 = 20+. Tier 2 = 15&ndash;19. All data points attributed to named sources. Where data is estimated, it is explicitly labelled.</div>
+  <div class="cr" style="padding-top:0"><div class="cn">1</div><div class="cla">SMH HH coverage</div><div class="cd">Share of India's 86M+ SMH holdings actively participating in this value chain. Higher = larger addressable market without requiring behaviour change from the farmer.</div></div>
+  <div class="cr"><div class="cn">2</div><div class="cla">Market size &amp; farm-gate value</div><div class="cd">Total annual production value at farm gate. Larger market = greater revenue opportunity for a platform capturing a percentage of transactions or services provided.</div></div>
+  <div class="cr"><div class="cn">3</div><div class="cla">Climate vulnerability</div><div class="cd">Exposure to climate risk &times; current resilience gap. Higher = greater urgency AND stronger DFI/philanthropic funding rationale. Scored on exposure &times; gap.</div></div>
+  <div class="cr"><div class="cn">4</div><div class="cla">Platform opportunity</div><div class="cd">Digital amenability: farmer digital readiness, existing platform penetration, data availability, frequency of potential farmer-platform interaction.</div></div>
+  <div class="cr"><div class="cn">5</div><div class="cla">Income uplift potential</div><div class="cd">Can a platform intervention create measurable, quantified income improvement? Scored on efficiency gap size, farmer bargaining power today, and comparable case studies.</div></div>
+</div>
+<div class="stl">Deep dive process &mdash; 6 steps, applied identically to every Tier-1 value chain</div>
+<div class="card">
+  <div class="stp" style="padding-top:0"><div class="stn" style="background:#534AB7">1</div><div class="stl2">Sector snapshot</div><div class="std">Headline numbers &mdash; production volume, market size, SMH HH count, geographic concentration. Every figure attributed to a named dataset with year of publication.</div></div>
+  <div class="stp"><div class="stn" style="background:#534AB7">2</div><div class="stl2">Actor &amp; flow map</div><div class="std">Full value chain: every actor category, the physical flow of product, the financial flow of money, and the information flow. Power hierarchy identified at each node.</div></div>
+  <div class="stp"><div class="stn" style="background:#534AB7">3</div><div class="stl2">Farmer economics</div><div class="std">Deep research into actual farmer income: gross revenue, cost structure, net income by crop/state, gender disaggregation, credit access. Supplemented by deep research agent outputs and primary CACP/NSSO/RBI/crop budget study data.</div></div>
+  <div class="stp"><div class="stn" style="background:#534AB7">4</div><div class="stl2">Supply chain gaps</div><div class="std">For each value chain node: identify and quantify inefficiencies &mdash; cost leakage, quality loss, market access barriers, financial exclusion, climate exposure. Scored Critical / High / Medium with data justification.</div></div>
+  <div class="stp"><div class="stn" style="background:#534AB7">5</div><div class="stl2">Competitive landscape</div><div class="std">Map all existing platforms and startups. For each: funding raised, farmer scale, operating model, revenue model, and gaps left unaddressed. White space = platform opportunity.</div></div>
+  <div class="stp"><div class="stn" style="background:#534AB7">6</div><div class="stl2">5 platform ideas</div><div class="std">Synthesise gaps into 5 operationalisable ideas. Each with: problem statement, evidence base, value creation mechanism, entry point, business model, build roadmap, climate link, DFI/investor narrative, and key risks with mitigations.</div></div>
+</div>
+<div class="ins ii"><strong>Evidence standards:</strong> All data points attributed to named sources (MoAFW, DAHD, NDDB, NSSO, ICRISAT, NABCONS, RBI working papers, CACP/DES crop budget studies, peer-reviewed journals, ICAR, NICRA). Where data is estimated or inferred, it is explicitly labelled. Two rounds of deep research agent output (dairy and horticulture PDFs) have been incorporated. All competitive landscape data is sourced to Inc42 Agritech Report 2025, TheKredible/Tracxn, and company announcements.</div>
+</div>
+
+<!-- ======== PAGE 01: VALUE CHAIN LANDSCAPE ======== -->
+<div class="pg" id="p01">
+<div class="ph"><div class="pe">Section 01</div><div class="pt">Structural landscape &mdash; India's top agri value chains</div><div class="pd">The 5 top value chains ranked by SMH household coverage, market size, climate vulnerability, and platform opportunity. Three Tier-1 chains selected for full deep dive. Sources: Agriculture Census, DAHD, MoAFW, NSSO, Mordor Intelligence, NABCONS, ICAR.</div></div>
+<div class="stl">India agri sector &mdash; macro context</div>
+<div class="kg">
+  <div class="kc"><div class="kv">~$600B</div><div class="kl">India total agri market (2024)</div><div class="ks">Mordor Intelligence 2026</div></div>
+  <div class="kc"><div class="kv">126M</div><div class="kl">Small &amp; marginal holdings (&lt;2ha)</div><div class="ks">Agriculture Census 2015-16</div></div>
+  <div class="kc"><div class="kv">86%</div><div class="kl">Share of all holdings that are SMH</div><div class="ks">Agriculture Census 2015-16</div></div>
+  <div class="kc"><div class="kv">0.74 ha</div><div class="kl">Average holding (down 31% since 2016)</div><div class="ks">MoAFW 2022</div></div>
+  <div class="kc"><div class="kv">25M HHs</div><div class="kl">Platform Phase 1 addressable target</div><div class="ks">Platform mandate</div></div>
+</div>
+<div class="stl">Value chain scoring matrix</div>
+<table class="vm"><thead><tr><th>Value chain</th><th>SMH coverage</th><th>Market size</th><th>Climate vuln.</th><th>Platform opp.</th><th>Income uplift</th><th>Total /25</th><th>Tier</th></tr></thead><tbody id="vc-body"></tbody></table>
+<div class="stl" style="margin-top:18px">Tier-1 value chains &mdash; key indicators</div>
+<div id="vc-cards"></div>
+<div class="ins is"><strong>Strategic synthesis:</strong> Three Tier-1 value chains form the platform's non-negotiable core &mdash; dairy, horticulture, and cereals. Most smallholder families participate in at least two simultaneously: a paddy farmer also keeps dairy animals and grows vegetables. The platform must be designed around the farmer household, not a single crop. This integration is what separates the platform from every existing agritech point solution and is the primary source of durable competitive moat.</div>
+</div>
+
+<!-- ======== PAGE 02: DAIRY ======== -->
+<div class="pg" id="p02">
+<div class="ph"><div class="pe">Section 02 &middot; Value chain deep dive</div><div class="pt">Dairy value chain</div><div class="pd">India is the world's largest milk producer at 239 MT annually &mdash; yet 72% flows through unorganised channels, 80M smallholder farmers have no formal income records, and average yield is 5.3 kg/animal/day against an EU benchmark of ~22 kg. The productivity gap IS the income gap. Sources: DAHD, NDDB, NSSO 2018-19 via IIMA/Arcus, World Bank 2025, Cambridge Journal of Dairy Research, Fortune Business Insights.</div></div>
+<div class="tabs">
+  <button class="tab active" onclick="st(this,'d0')">Sector snapshot</button>
+  <button class="tab" onclick="st(this,'d1')">Value chain map</button>
+  <button class="tab" onclick="st(this,'d2')">Farmer economics</button>
+  <button class="tab" onclick="st(this,'d3')">Supply chain gaps</button>
+  <button class="tab" onclick="st(this,'d4')">White space</button>
+  <button class="tab" onclick="st(this,'d5')">5 platform ideas</button>
+</div>
+<div class="tc active" id="d0">
+  <div class="kg">
+    <div class="kc"><div class="kv">239 MT</div><div class="kl">Annual milk production FY24 &mdash; #1 globally</div><div class="ks">DAHD 2024 &middot; 24.76% of global output</div></div>
+    <div class="kc"><div class="kv">$135B</div><div class="kl">Dairy market size, growing at 9.33% CAGR</div><div class="ks">Fortune Business Insights 2024</div></div>
+    <div class="kc"><div class="kv">80M+</div><div class="kl">Farmer households in dairy livelihoods</div><div class="ks">DAHD Annual Report 2025</div></div>
+    <div class="kc"><div class="kv">~72%</div><div class="kl">Milk sold via unorganised channels</div><div class="ks">White Revolution 2.0 / IMPRI data</div></div>
+    <div class="kc"><div class="kv">5.3 kg</div><div class="kl">Avg yield/animal/day (EU average: ~22 kg)</div><div class="ks">Dairy Industry Expo, March 2026</div></div>
+  </div>
+  <div class="g3">
+    <div class="card"><div class="cl2">Channel breakdown</div>
+      <div class="br"><div class="blr"><span>Unorganised (local/direct)</span><span>~72%</span></div><div class="bt"><div class="bf" style="width:72%;background:#E24B4A"></div></div></div>
+      <div class="br" style="margin-top:5px"><div class="blr"><span>Cooperative organised</span><span>~17%</span></div><div class="bt"><div class="bf" style="width:17%;background:#1D9E75"></div></div></div>
+      <div class="br" style="margin-top:5px"><div class="blr"><span>Private dairies organised</span><span>~11%</span></div><div class="bt"><div class="bf" style="width:11%;background:#185FA5"></div></div></div>
+      <div style="font-size:10px;color:var(--tx3);margin-top:5px">FSSAI/NDDB; DAHD estimates ~35&ndash;40% organised share of marketed milk currently</div>
+    </div>
+    <div class="card"><div class="cl2">Cooperative infrastructure</div><div class="cb">~<strong>150,000</strong> village-level DCS operational &mdash; cover only ~<strong>25%</strong> of India's 620,000 villages &middot; WB &amp; Odisha: <strong>&lt;10%</strong> coverage &mdash; lowest-income states &middot; By 2026: <strong>17M</strong> cooperative members (PIB 2026) &middot; White Revolution 2.0 targets +75&ndash;100k new societies over 5 years</div></div>
+    <div class="card"><div class="cl2">Policy tailwinds 2024&ndash;26</div><div class="cb"><strong>White Revolution 2.0</strong> (Sep 2024): +50% coop procurement in 5 years, 1 lakh new PACS &middot; <strong>NPDD 2.0</strong>: ~&#8377;2,790 Cr for infrastructure + bulk coolers &middot; <strong>RGM Phase 2.0</strong>: sex-sorted semen + doorstep AI delivery (2026 Budget) &middot; No dedicated livestock Agristack yet &mdash; platform opportunity to become the data layer</div></div>
+  </div>
+  <div class="ins iw"><strong>The core diagnosis:</strong> India's dairy productivity problem is primarily a nutrition problem. Feed quality + green fodder deficit &rarr; low yield &rarr; thin margins &rarr; no reinvestment &rarr; structural poverty trap. A platform that solves the feed equation solves the income equation. At EU yield levels (~22 kg/day), the same 2-animal household would generate &#8377;3.5&ndash;4L gross annually vs &#8377;90,000 today.</div>
+</div>
+<div class="tc" id="d1"><div class="vcf" id="dvc"></div>
+<div class="ins iw"><strong>The structural contrast with horticulture:</strong> In dairy, the farmer gets ~60% of consumer price (cooperatives return 55&ndash;75%). In horticulture &mdash; perishable vegetables &mdash; the RBI working paper documents 33.5&ndash;36.7% in typical years, collapsing to 5&ndash;10% in glut events. Dairy is the platform's best entry point: highest farmer income share, daily touchpoint, predictable cash flow ideal for financial services layering.</div></div>
+<div class="tc" id="d2">
+  <div class="g2">
+    <div class="card"><div class="cl2">Typical SMH dairy HH &mdash; annual income model (2-animal holding)</div>
+      <div class="br"><div class="blr"><span>Gross milk income (~5L/day/animal &times; 300 days)</span><span style="color:var(--txS)">~&#8377;90,000/yr</span></div><div class="bt"><div class="bf" style="width:90%;background:#1D9E75"></div></div></div>
+      <div class="br" style="margin-top:6px"><div class="blr"><span>Feed cost (60&ndash;70% of gross income)</span><span style="color:var(--txD)">&#8211;&#8377;55,000</span></div><div class="bt"><div class="bf" style="width:60%;background:#E24B4A"></div></div></div>
+      <div class="br" style="margin-top:6px"><div class="blr"><span>Vet + healthcare costs</span><span style="color:var(--txD)">&#8211;&#8377;5,000</span></div><div class="bt"><div class="bf" style="width:6%;background:#EF9F27"></div></div></div>
+      <div class="br" style="margin-top:6px"><div class="blr"><span>Net income (before imputed family labour)</span><span style="color:var(--txS);font-weight:500">~&#8377;15,000&ndash;30,000</span></div><div class="bt"><div class="bf" style="width:20%;background:#639922"></div></div></div>
+      <div style="font-size:10px;color:var(--tx3);margin-top:7px">Source: NSSO 2018-19 via IIMA/Arcus analysis &middot; State range: &#8377;4,457/month (Punjab) to &#8377;416/month (Odisha) &middot; Implies ~&#8377;20&ndash;27k per milch animal per year in top dairy states; &#8377;2&ndash;5k in low-income states</div>
+    </div>
+    <div class="card"><div class="cl2">State-level income from dairy (&#8377;/month per HH)</div><div id="d-geo"></div></div>
+  </div>
+  <div class="g2">
+    <div class="card"><div class="cl2">Yield benchmark &mdash; India vs world</div>
+      <div class="br"><div class="blr"><span>India average (all breeds)</span><span style="color:var(--txD)">5.3 kg/day</span></div><div class="bt"><div class="bf" style="width:24%;background:#E24B4A"></div></div></div>
+      <div class="br" style="margin-top:6px"><div class="blr"><span>India crossbred cattle</span><span style="color:var(--txW)">7.8 kg/day</span></div><div class="bt"><div class="bf" style="width:35%;background:#EF9F27"></div></div></div>
+      <div class="br" style="margin-top:6px"><div class="blr"><span>India indigenous (zebu breeds)</span><span style="color:var(--txD)">3.0&ndash;3.5 kg/day</span></div><div class="bt"><div class="bf" style="width:16%;background:#E24B4A"></div></div></div>
+      <div class="br" style="margin-top:6px"><div class="blr"><span>EU average</span><span style="color:var(--txS)">~22 kg/day</span></div><div class="bt"><div class="bf" style="width:100%;background:#185FA5"></div></div></div>
+      <div style="font-size:11px;color:var(--tx2);margin-top:8px">ICAR research: hydroponic green fodder can improve yield by up to 20% using 90% less water than conventional cultivation. This is a direct climate-resilient intervention with immediate income impact.</div>
+    </div>
+    <div class="card"><div class="cl2">Women in dairy &mdash; the invisible workforce</div><div class="cb">~<strong>70%</strong> of India's 80M dairy farmers are women (Rockstart/DAHD data)<br>Only ~<strong>35%</strong> of dairy cooperative members are women (DAHD)<br>Only <strong>41%</strong> of women-headed agri HHs borrow formally vs 51% of men (World Bank 2025)<br>Women's agricultural loan-taking rate: <strong>50.9%</strong> vs 62.4% for men (World Bank 2025)<br><br>Women do the work; men hold the financial identity. Fixing this is SDG 5 + SDG 8 in one product &mdash; the most compelling DFI narrative in the dairy value chain.</div></div>
+  </div>
+</div>
+<div class="tc" id="d3">
+  <div class="ng" id="dg"></div>
+  <div class="stl">Value leakage waterfall &mdash; per &#8377;100 consumer price (cooperative channel)</div>
+  <div id="dwf"></div>
+  <div class="ins iw" style="margin-top:10px"><strong>The double income destruction in dairy:</strong> The farmer in the cooperative channel gets ~55&ndash;60% of consumer price &mdash; the best outcome in all Indian agri value chains. But feed costs then consume 60&ndash;70% of that income, leaving a net realisation of only &#8377;8&ndash;15 per &#8377;100 of milk value created. The platform works at two levels: raise the farm-gate price (market access + cooperative extension) AND reduce the feed cost (feed marketplace). Both levers must be pulled simultaneously.</div>
+</div>
+<div class="tc" id="d4">
+  <table class="dt"><thead><tr><th>Gap / Inefficiency</th><th>Existing players</th><th>Coverage</th><th>Platform white space</th></tr></thead><tbody id="dws"></tbody></table>
+  <div class="ins is" style="margin-top:10px"><strong>The defining white space insight:</strong> Every existing player is a vertical point solution &mdash; Stellapps does collection tech ($26M raised, 3.1M farmers), Animall does cattle trading ($22M), MoooFarm does vet access (&euro;500k), Digivriddhi does payments (&lt;&#8377;2Cr revenue FY24). No one connects feed procurement, vet services, milk income digitisation, market linkage, and financial services into a single farmer-facing integrated platform. That integration layer is where durable defensibility and farmer trust lie.</div>
+</div>
+<div class="tc" id="d5"><div id="di"></div></div>
+</div>
+
+<!-- ======== PAGE 03: HORTICULTURE ======== -->
+<div class="pg" id="p03">
+<div class="ph"><div class="pe">Section 03 &middot; Value chain deep dive</div><div class="pt">Horticulture value chain</div><div class="pd">India produces 370 MT of fruits and vegetables annually &mdash; more than foodgrains &mdash; yet loses 49.9 MT every year (&#8377;1.53 lakh crore) to post-harvest failures. RBI working paper documents farmer's share of consumer price: tomato 33.5%, onion 36.2%, potato 36.7% in typical years &mdash; collapsing to 5&ndash;10% in glut events. Sources: MoAFW FY25 Final Estimates, NHB ICAP, NABCONS 2022, RBI Working Paper (TNAU portal), ICAR-CIPHET, CACP crop budget studies 2021&ndash;25, Inc42 Agritech Report 2025.</div></div>
+<div class="tabs">
+  <button class="tab active" onclick="st(this,'h0')">Sector snapshot</button>
+  <button class="tab" onclick="st(this,'h1')">Value chain map</button>
+  <button class="tab" onclick="st(this,'h2')">Farmer economics</button>
+  <button class="tab" onclick="st(this,'h3')">Supply chain gaps</button>
+  <button class="tab" onclick="st(this,'h4')">White space</button>
+  <button class="tab" onclick="st(this,'h5')">5 platform ideas</button>
+</div>
+<div class="tc active" id="h0">
+  <div class="kg">
+    <div class="kc"><div class="kv">370 MT</div><div class="kl">Total horticulture production FY25</div><div class="ks">MoAFW Final Estimates Mar 2026</div></div>
+    <div class="kc"><div class="kv">30.1M ha</div><div class="kl">Area under horticulture (+3.6% vs FY24)</div><div class="ks">MoAFW FY25</div></div>
+    <div class="kc"><div class="kv">~65M</div><div class="kl">SMH farmer HHs in horticulture</div><div class="ks">Agriculture Census + MIDH estimates</div></div>
+    <div class="kc"><div class="kv">49.9 MT</div><div class="kl">Annual post-harvest loss &mdash; horticulture</div><div class="ks">ICAR-CIPHET / NABCONS 2022</div></div>
+    <div class="kc"><div class="kv">&#8377;1.53L Cr</div><div class="kl">Annual value lost to post-harvest failure</div><div class="ks">NABCONS study 2020&ndash;22</div></div>
+  </div>
+  <div class="g3">
+    <div class="card"><div class="cl2">Production by category (FY25)</div>
+      <div class="br"><div class="blr"><span>Vegetables</span><span>217.8 MT (+5.1%)</span></div><div class="bt"><div class="bf" style="width:100%;background:#D85A30"></div></div></div>
+      <div class="br" style="margin-top:5px"><div class="blr"><span>Fruits</span><span>117.6 MT (+4.1%)</span></div><div class="bt"><div class="bf" style="width:54%;background:#185FA5"></div></div></div>
+      <div class="br" style="margin-top:5px"><div class="blr"><span>Plantation crops</span><span>16.98 MT</span></div><div class="bt"><div class="bf" style="width:22%;background:#534AB7"></div></div></div>
+      <div class="br" style="margin-top:5px"><div class="blr"><span>Spices</span><span>~11.5 MT</span></div><div class="bt"><div class="bf" style="width:16%;background:#639922"></div></div></div>
+    </div>
+    <div class="card"><div class="cl2">SMH dominance in TOP crops &amp; cold chain reality</div><div class="cb">Tomato: predominantly <strong>marginal &amp; small</strong> farmers (DoA&amp;FW 2020)<br>Onion: <strong>~70.4%</strong> small &amp; marginal (&lt;2 ha) of all growers<br>Potato: <strong>~86.7%</strong> small &amp; marginal of all growers<br><br>NHB ICAP (Feb 2024): Only <strong>23</strong> pre-cooling units nationally &middot; Only <strong>67</strong> reefer vans nationally &middot; 5,431 cold storage projects (21.94 MMT) &mdash; mostly potato-focused &middot; Cold storage deficit: <strong>35 MMT</strong> (NCCD)</div></div>
+    <div class="card"><div class="cl2">Policy landscape 2024&ndash;26</div><div class="cb"><strong>MIDH</strong>: &#8377;2,200 Cr+ annual; Dec 2024 guidelines add polyhouse/net house for high-value vegetables<br><strong>PMKSY</strong>: &#8377;630 Cr allocated FY2024-25 (PIB Feb 2026); includes Operation Greens<br><strong>Operation Greens (TOP to TOTAL)</strong>: 50% subsidy for transport + storage of ALL fruits &amp; vegetables<br><strong>e-NAM</strong>: 1,656 mandis onboarded as of Feb 2026; 1.80 Cr farmers registered; 4,724 FPOs onboarded</div></div>
+  </div>
+  <div class="ins iw"><strong>The central paradox:</strong> India produces more horticulture than foodgrains &mdash; yet 49.9 MT is destroyed every year, worth &#8377;1.53 lakh crore. Bumper harvests consistently fail to lower retail prices or raise farmer incomes because the market infrastructure between farm and fork is broken. More production without fixing the supply chain just means more waste at lower prices &mdash; the onion-tomato price crisis repeats every year as a structural inevitability.</div>
+  <div class="ins ii"><strong>Note on farmer price share (anchored to RBI working paper):</strong> Tomato 33.5%, onion 36.2%, potato 36.7% of consumer price in typical years. During glut periods (crash events), the farmer share collapses to 5&ndash;10%. Both numbers matter for platform design: the typical year sets the baseline; the glut events are where the greatest income destruction and platform intervention opportunity exist.</div>
+</div>
+<div class="tc" id="h1"><div class="vcf" id="hvc"></div>
+<div class="ins id"><strong>The horticulture vs dairy structural contrast:</strong> In dairy, the farmer gets ~60% of consumer price. In horticulture, the RBI working paper documents 33.5&ndash;36.7% in typical years &mdash; but this collapses to 5&ndash;10% in glut seasons which occur 2&ndash;3 times per crop cycle. The entire gap is explained by three compounding failures: no cold chain to buffer supply, no price discovery before sowing 90&ndash;120 days in advance, and no aggregation power against commission agents. The volatility trap is not a weather problem &mdash; it is a market infrastructure problem.</div></div>
+<div class="tc" id="h2">
+  <div class="g2">
+    <div class="card"><div class="cl2">Net income per hectare &mdash; crop budget studies (CACP/DES framework, named studies)</div>
+      <div class="br"><div class="blr"><span>Tomato &mdash; Haryana, 2021-22 (210 growers, full cost incl. land rental)</span><span style="color:var(--txS)">&#8377;2,63,827/ha net</span></div><div class="bt"><div class="bf" style="width:90%;background:#D85A30"></div></div></div>
+      <div class="br" style="margin-top:6px"><div class="blr"><span>Onion rabi &mdash; UP, 2021-22, marginal farmers (Cost C2/C3)</span><span style="color:var(--txS)">&#8377;1,18,674/ha net</span></div><div class="bt"><div class="bf" style="width:55%;background:#D85A30"></div></div></div>
+      <div class="br" style="margin-top:6px"><div class="blr"><span>Onion rabi &mdash; Maharashtra, Akola, 2022-23 (Cost C)</span><span style="color:var(--txW)">&#8377;54,206/ha net</span></div><div class="bt"><div class="bf" style="width:25%;background:#EF9F27"></div></div></div>
+      <div class="br" style="margin-top:6px"><div class="blr"><span>Potato &mdash; UP Kannauj, 2025 (Cost C3, marginal/small/medium)</span><span style="color:var(--txS)">&#8377;88,718/ha net</span></div><div class="bt"><div class="bf" style="width:38%;background:#185FA5"></div></div></div>
+      <div class="br" style="margin-top:6px"><div class="blr"><span>Potato &mdash; Bihar Nalanda, marginal farmers (Cost C2)</span><span style="color:var(--txS)">&#8377;1,28,699/ha net</span></div><div class="bt"><div class="bf" style="width:55%;background:#185FA5"></div></div></div>
+      <div class="br" style="margin-top:6px"><div class="blr"><span>Paddy/wheat (for comparison)</span><span style="color:var(--tx2)">&#8377;20,000&ndash;35,000/ha</span></div><div class="bt"><div class="bf" style="width:10%;background:#888780"></div></div></div>
+      <div style="font-size:10px;color:var(--tx3);margin-top:7px">Sources: State-specific CACP/DES crop budget studies 2021&ndash;25; ICAR economic analysis reports. "Net income" uses Cost C2/C3 concept (includes imputed family labour + land rental value). High variance due to price volatility &mdash; same farmer, same crop, 10x income difference between good and crash year.</div>
+    </div>
+    <div class="card"><div class="cl2">Margin stack &mdash; farm gate to consumer (RBI Working Paper, typical year)</div>
+      <div style="display:grid;grid-template-columns:1fr 70px 70px 70px;gap:5px;padding:5px 0;border-bottom:.5px solid var(--bd);font-size:11px;color:var(--tx3);font-weight:500"><span>Commodity</span><span style="text-align:right">Farmer</span><span style="text-align:right">Trader+Whlsl</span><span style="text-align:right">Retailer</span></div>
+      <div style="display:grid;grid-template-columns:1fr 70px 70px 70px;gap:5px;padding:5px 0;border-bottom:.5px solid var(--bd);font-size:12px"><span>Tomato</span><span style="text-align:right;color:var(--txS);font-weight:500">33.5%</span><span style="text-align:right;color:var(--tx2)">37.4%</span><span style="text-align:right;color:var(--tx2)">29.1%</span></div>
+      <div style="display:grid;grid-template-columns:1fr 70px 70px 70px;gap:5px;padding:5px 0;border-bottom:.5px solid var(--bd);font-size:12px"><span>Onion</span><span style="text-align:right;color:var(--txS);font-weight:500">36.2%</span><span style="text-align:right;color:var(--tx2)">32.6%</span><span style="text-align:right;color:var(--tx2)">31.3%</span></div>
+      <div style="display:grid;grid-template-columns:1fr 70px 70px 70px;gap:5px;padding:5px 0;font-size:12px"><span>Potato</span><span style="text-align:right;color:var(--txS);font-weight:500">36.7%</span><span style="text-align:right;color:var(--tx2)">32.2%</span><span style="text-align:right;color:var(--tx2)">31.0%</span></div>
+      <div class="qq" style="margin-top:7px">Source: RBI Working Paper (TNAU portal), Jan 2023 field visits + AGMARKNET data. Trader markup includes mandi fee (~1%), commission (~4%), loading/unloading, packaging, weight loss. Glut events collapse farmer share to 5&ndash;10% &mdash; those are the platform's highest-value intervention moments.</div>
+      <div style="margin-top:10px;font-size:12px;color:var(--tx2);line-height:1.6"><strong style="color:var(--tx)">State cost heterogeneity signal:</strong> Onion cultivation cost (A2+FL, per quintal, CACP 2021-22) ranges from &#8377;341/qtl (Madhya Pradesh) to &#8377;2,305/qtl (Tamil Nadu) &mdash; a 6x dispersion. A single national unit economics model is misleading; state-by-state and season-by-season segmentation is mandatory for platform pricing and take-rate design.</div>
+    </div>
+  </div>
+  <div class="card"><div class="cl2">Farmer price share &mdash; horticulture vs other value chains (typical year + glut comparison)</div>
+    <div class="br"><div class="blr"><span>Dairy (cooperative channel)</span><span>~60% of consumer price (IIMA Ventures)</span></div><div class="bt"><div class="bf" style="width:60%;background:#1D9E75"></div></div></div>
+    <div class="br" style="margin-top:6px"><div class="blr"><span>Cereals (MSP procurement channel)</span><span>~45&ndash;55% (CACP price policy data)</span></div><div class="bt"><div class="bf" style="width:50%;background:#888780"></div></div></div>
+    <div class="br" style="margin-top:6px"><div class="blr"><span>Onion &mdash; typical year (RBI Working Paper)</span><span>36.2% of consumer price</span></div><div class="bt"><div class="bf" style="width:36%;background:#D85A30"></div></div></div>
+    <div class="br" style="margin-top:6px"><div class="blr"><span>Tomato &mdash; typical year (RBI Working Paper)</span><span>33.5% of consumer price</span></div><div class="bt"><div class="bf" style="width:33%;background:#D85A30"></div></div></div>
+    <div class="br" style="margin-top:6px"><div class="blr"><span>Tomato &mdash; glut / crash event (field estimates)</span><span>~5&ndash;10% of consumer price</span></div><div class="bt"><div class="bf" style="width:8%;background:#E24B4A"></div></div></div>
+    <div style="font-size:10px;color:var(--tx3);margin-top:6px">Sources: NHB market margin studies; RBI Working Paper (TNAU portal); ICRISAT crop budget analyses; MoAFW price monitoring 2021&ndash;24</div>
+  </div>
+  <div class="ins ii"><strong>Gender in horticulture market access:</strong> Women operational holders are ~14% nationally (Agriculture Census 2015-16), but women's labour participation in horticulture is much higher &mdash; particularly in harvesting, grading, and post-harvest handling. Barriers are structural beyond credit: early-morning mandi auctions are male-dominated and often require male accompaniment; mobility constraints restrict participation in time-sensitive perishables trading; lack of access to crates, transport, and market information pushes women toward lower-margin farm-gate channels. Women-led FPO formation is the primary mitigation pathway (FAO SEWA model).</div>
+</div>
+<div class="tc" id="h3">
+  <div class="ng" id="hg"></div>
+  <div class="stl">Value leakage waterfall &mdash; per &#8377;100 consumer price (tomato, mandi channel, typical year)</div>
+  <div id="hwf"></div>
+  <div class="ins iw" style="margin-top:10px"><strong>Revised from earlier analysis &mdash; now anchored to RBI Working Paper data:</strong> The waterfall reflects the RBI working paper's documented margin stack (farmer 33.5% typical year, not "10&ndash;25%" which applies specifically to glut events). The platform must address both: the typical-year margin capture (33.5% &rarr; 40%+ through aggregation/cold chain) AND the glut-event survival problem (inventory finance to hold produce through price crashes). Both mechanisms are required for sustained income improvement.</div>
+</div>
+<div class="tc" id="h4">
+  <table class="dt"><thead><tr><th>Gap / Inefficiency</th><th>Existing players &amp; funding</th><th>Coverage</th><th>Platform white space</th></tr></thead><tbody id="hws"></tbody></table>
+  <div class="ins is" style="margin-top:10px"><strong>Competitive landscape synthesis:</strong> Horticulture has more agritech investment than any other value chain &mdash; Ninjacart ($396M), WayCool ($231M), DeHaat ($270M, &#8377;3,000 Cr FY25 revenue), Vegrow ($80M), Arya.ag ($186M equity+debt). But all operate at ~1&ndash;5% of addressable SMH farmers. The structural white spaces that remain: perishable inventory finance (zero players), parametric weather insurance at scale (absent), pre-sowing price forecasting for sowing decisions (absent at SMH scale), and the integrated farmer household platform (absent entirely).</div>
+</div>
+<div class="tc" id="h5"><div id="hi"></div></div>
+</div>
+
+<!-- ======== PAGE 04: CEREALS ======== -->
+<div class="pg" id="p04">
+<div class="ph"><div class="pe">Section 04 &middot; Value chain deep dive</div><div class="pt">Cereals &amp; staple crops value chain</div><div class="pd">India achieved record foodgrain production of 353.96 MT in FY25 &mdash; rice 150.18 MT, wheat 117.94 MT, millets 18.59 MT, maize 43.41 MT. Yet only 15% of paddy and 9.6% of wheat farmers benefit from MSP-backed procurement despite &#8377;3.33 lakh crore in annual MSP payouts. MSP awareness stands at just 23% nationally. Post-harvest cereal losses range 6&ndash;18%. NICRA projects wheat yields down 6&ndash;25% by 2100. Sources: MoAFW 3rd Advance Estimates FY25, CACP, FCI, USDA FAS, NICRA/ICAR, Business Standard Jan 2025, ICAR-NAEP, StarAgri.</div></div>
+<div class="tabs">
+  <button class="tab active" onclick="st(this,'c0')">Sector snapshot</button>
+  <button class="tab" onclick="st(this,'c1')">Value chain map</button>
+  <button class="tab" onclick="st(this,'c2')">Farmer economics</button>
+  <button class="tab" onclick="st(this,'c3')">Supply chain gaps</button>
+  <button class="tab" onclick="st(this,'c4')">White space</button>
+  <button class="tab" onclick="st(this,'c5')">5 platform ideas</button>
+</div>
+<div class="tc active" id="c0">
+  <div class="kg">
+    <div class="kc"><div class="kv">353.96 MT</div><div class="kl">Record foodgrain production FY25 (3rd Adv. Est.)</div><div class="ks">MoAFW Mar 2026</div></div>
+    <div class="kc"><div class="kv">~100M+</div><div class="kl">SMH HHs participating in cereal farming</div><div class="ks">Agriculture Census + NSSO</div></div>
+    <div class="kc"><div class="kv">&#8377;3.33L Cr</div><div class="kl">Total MSP payouts to farmers (FY2024-25)</div><div class="ks">PIB / DFPD 2025</div></div>
+    <div class="kc"><div class="kv">~23%</div><div class="kl">MSP awareness among farmers nationally</div><div class="ks">Wikipedia/ICAR-NAEP research</div></div>
+    <div class="kc"><div class="kv">6&ndash;18%</div><div class="kl">Post-harvest cereal loss range by crop/region</div><div class="ks">CIPHET 2019; ICAR 2023</div></div>
+  </div>
+  <div class="g3">
+    <div class="card"><div class="cl2">Production breakdown FY25 (3rd Advance Estimates)</div>
+      <div class="br"><div class="blr"><span>Rice (paddy)</span><span>150.18 MT (+12.36 MT vs FY24)</span></div><div class="bt"><div class="bf" style="width:100%;background:#185FA5"></div></div></div>
+      <div class="br" style="margin-top:5px"><div class="blr"><span>Wheat</span><span>117.94 MT (+4.65 MT, record)</span></div><div class="bt"><div class="bf" style="width:79%;background:#639922"></div></div></div>
+      <div class="br" style="margin-top:5px"><div class="blr"><span>Maize</span><span>~43.41 MT</span></div><div class="bt"><div class="bf" style="width:29%;background:#EF9F27"></div></div></div>
+      <div class="br" style="margin-top:5px"><div class="blr"><span>Coarse cereals total</span><span>63.92 MT</span></div><div class="bt"><div class="bf" style="width:43%;background:#BA7517"></div></div></div>
+      <div class="br" style="margin-top:5px"><div class="blr"><span>Millets (Shree Anna)</span><span>~18.59 MT</span></div><div class="bt"><div class="bf" style="width:12%;background:#1D9E75"></div></div></div>
+    </div>
+    <div class="card"><div class="cl2">MSP system &mdash; key facts 2024&ndash;26</div><div class="cb">Paddy MSP (2025-26): <strong>&#8377;2,369/qtl</strong> &middot; Wheat MSP (2026-27): <strong>&#8377;2,585/qtl</strong><br>MSP set at minimum 1.5&times; A2+FL cost since 2018-19; wheat MSP = 109% over cost (2026-27)<br>FCI + state agencies covered/CAP storage: <strong>917.83 LMT</strong><br>FCI handles ~<strong>85 MT</strong> of food grains annually via MSP procurement<br>FY2024-25 total procurement: <strong>1,175 LMT</strong>; <strong>1.84 crore</strong> farmers benefited<br>Only 15% paddy and 9.6% wheat farmers benefit from MSP procurement (ICAR-NAEP)</div></div>
+    <div class="card"><div class="cl2">Policy tailwinds 2024&ndash;26</div><div class="cb"><strong>NFSM</strong>: productivity enhancement for rice, wheat, pulses, millets<br><strong>Self-Reliance in Pulses Mission</strong> (2025-31): 100% procurement target for tur/urad/masoor by 2028-29<br><strong>NMEO-Oilseeds</strong> (&#8377;10,103 Cr): import substitution for edible oils<br><strong>PM-AASHA</strong>: price deficiency payment scheme for MSP gap in non-procurement crops<br><strong>Digital Agriculture Mission</strong>: AgriStack (digital farmer ID, land records, crop data) &mdash; 19 states signed MoUs</div></div>
+  </div>
+  <div class="ins iw"><strong>The MSP paradox &mdash; the central structural inefficiency in cereals:</strong> India has one of the world's most elaborate price support systems &mdash; &#8377;3.33 lakh crore paid in MSP payouts in FY25 alone. Yet only 15% of paddy and 9.6% of wheat farmers actually benefit from MSP-backed procurement. Geographic concentration is extreme: Punjab captures ~95% of its wheat farmers in MSP; Uttar Pradesh &mdash; with far more farmers &mdash; only ~3.6%. This is not a policy design flaw; it is a structural access problem that a digital platform can directly address by facilitating registration, logistics coordination, and quality compliance documentation.</div>
+  <div class="ins ii"><strong>The climate-cereals nexus &mdash; quantified projections:</strong> NICRA (National Innovations in Climate Resilient Agriculture) predicts wheat yields will decline 6&ndash;25% by 2100; irrigated rice yields fall 7% by 2050 and 10% by 2080 (Business Standard, Jan 2025). Ministry of Earth Sciences confirms 6&ndash;10% production decline for rice and wheat under current climate trajectories. Rice yields experience larger declines during extreme weather compared to millets, sorghum, and maize which are more climate-resilient (Columbia University/ScienceDaily). In 2024, 3.2 million hectares of crops were affected by extreme weather events (CSE/IMD data). This creates both a risk (income loss for rice/wheat farmers) and an opportunity (climate-smart crop diversification advisory to millets and maize).</div>
+</div>
+<div class="tc" id="c1"><div class="vcf" id="cvc"></div>
+<div class="ins iw"><strong>The cereals value chain's defining structural feature vs dairy/horticulture:</strong> Cereals have the most government involvement of any value chain &mdash; FCI handles ~85 MT annually, MSP sets a price floor for wheat and rice. But this creates a false sense of security: 75&ndash;85% of cereal farmers never access MSP procurement. For the majority of India's cereal farmers &mdash; particularly in UP, Bihar, MP, Odisha &mdash; the market reality is spot selling at open mandi prices with no price floor, no storage facility, and no advisory. The platform must bridge the gap between the policy promise and the actual farmer experience on the ground.</div></div>
+<div class="tc" id="c2">
+  <div class="g2">
+    <div class="card"><div class="cl2">Farmer income per hectare &mdash; cereals (MSP-based and open market estimates FY25)</div>
+      <div class="br"><div class="blr"><span>Wheat &mdash; Punjab (MSP procurement, yield ~4.5T/ha)</span><span style="color:var(--txS)">&#8377;50,000&ndash;70,000/ha net</span></div><div class="bt"><div class="bf" style="width:70%;background:#639922"></div></div></div>
+      <div class="br" style="margin-top:6px"><div class="blr"><span>Wheat &mdash; Haryana/MP (MSP, ~3.5T/ha yield)</span><span style="color:var(--txS)">&#8377;35,000&ndash;50,000/ha net</span></div><div class="bt"><div class="bf" style="width:50%;background:#639922"></div></div></div>
+      <div class="br" style="margin-top:6px"><div class="blr"><span>Rice &mdash; West Bengal (avg yield ~2.2T/ha, sold below MSP)</span><span style="color:var(--txW)">&#8377;15,000&ndash;25,000/ha net</span></div><div class="bt"><div class="bf" style="width:25%;background:#EF9F27"></div></div></div>
+      <div class="br" style="margin-top:6px"><div class="blr"><span>Rice &mdash; Bihar/UP (rainfed, ~1.8T/ha, open market)</span><span style="color:var(--txD)">&#8377;10,000&ndash;18,000/ha net</span></div><div class="bt"><div class="bf" style="width:15%;background:#E24B4A"></div></div></div>
+      <div class="br" style="margin-top:6px"><div class="blr"><span>Millets (bajra, jowar &mdash; rainfed Rajasthan/MP)</span><span style="color:var(--tx2)">&#8377;12,000&ndash;22,000/ha net</span></div><div class="bt"><div class="bf" style="width:18%;background:#888780"></div></div></div>
+      <div class="br" style="margin-top:6px"><div class="blr"><span>Maize &mdash; Bihar/Rajasthan (growing market)</span><span style="color:var(--tx2)">&#8377;20,000&ndash;35,000/ha net</span></div><div class="bt"><div class="bf" style="width:30%;background:#185FA5"></div></div></div>
+      <div style="font-size:10px;color:var(--tx3);margin-top:7px">Sources: CACP price policy reports; MoAFW crop-wise cost of cultivation; state agriculture department estimates. Net after A2+FL costs (direct paid-out + family labour). MSP = &#8377;2,369/qtl paddy (2025-26); &#8377;2,585/qtl wheat (2026-27). Punjab wheat at MSP with 4.5T/ha: gross ~&#8377;1,04,000; net ~&#8377;60,000 after costs.</div>
+    </div>
+    <div class="card"><div class="cl2">MSP benefit distribution &mdash; the structural inequity (named state data)</div>
+      <div class="br"><div class="blr"><span>Punjab &mdash; % of paddy growers benefiting from MSP procurement</span><span style="color:var(--txS)">~95%</span></div><div class="bt"><div class="bf" style="width:95%;background:#1D9E75"></div></div></div>
+      <div class="br" style="margin-top:6px"><div class="blr"><span>Haryana &mdash; % wheat farmers at MSP</span><span style="color:var(--txS)">~70%</span></div><div class="bt"><div class="bf" style="width:70%;background:#639922"></div></div></div>
+      <div class="br" style="margin-top:6px"><div class="blr"><span>Madhya Pradesh &mdash; procurement farmers</span><span style="color:var(--txW)">~15&ndash;20%</span></div><div class="bt"><div class="bf" style="width:18%;background:#EF9F27"></div></div></div>
+      <div class="br" style="margin-top:6px"><div class="blr"><span>Uttar Pradesh &mdash; paddy farmers at MSP</span><span style="color:var(--txD)">~3.6%</span></div><div class="bt"><div class="bf" style="width:4%;background:#E24B4A"></div></div></div>
+      <div class="br" style="margin-top:6px"><div class="blr"><span>Bihar, WB, Odisha &mdash; effective MSP benefit</span><span style="color:var(--txD)">&lt;5%</span></div><div class="bt"><div class="bf" style="width:5%;background:#E24B4A"></div></div></div>
+      <div class="qq" style="margin-top:7px">Source: Wikipedia MSP article; EPW/RAS analysis of MSP distribution. This is the single most important data point in cereals: a &#8377;3.33 lakh crore annual government programme reaches fewer than 10&ndash;15% of eligible SMH farmers. The platform can change this &mdash; not by replacing MSP, but by enabling farmer registration, quality compliance, and logistics coordination to access existing procurement infrastructure.</div>
+    </div>
+  </div>
+  <div class="g2">
+    <div class="card"><div class="cl2">Climate impact &mdash; quantified projections for cereals (named sources)</div>
+      <div class="br"><div class="blr"><span>Wheat yield decline &mdash; NICRA projection by 2100 (without adaptation)</span><span style="color:var(--txD)">6&ndash;25% decline</span></div><div class="bt"><div class="bf" style="width:25%;background:#E24B4A"></div></div></div>
+      <div class="br" style="margin-top:6px"><div class="blr"><span>Irrigated rice yield decline by 2050 (NICRA/ICAR)</span><span style="color:var(--txD)">&ndash;7% by 2050</span></div><div class="bt"><div class="bf" style="width:7%;background:#E24B4A"></div></div></div>
+      <div class="br" style="margin-top:6px"><div class="blr"><span>Irrigated rice yield decline by 2080 (NICRA/ICAR)</span><span style="color:var(--txD)">&ndash;10% by 2080</span></div><div class="bt"><div class="bf" style="width:10%;background:#E24B4A"></div></div></div>
+      <div class="br" style="margin-top:6px"><div class="blr"><span>Rain-fed rice yield decline by 2050 (without adaptation)</span><span style="color:var(--txD)">&ndash;20% by 2050</span></div><div class="bt"><div class="bf" style="width:20%;background:#E24B4A"></div></div></div>
+      <div class="br" style="margin-top:6px"><div class="blr"><span>Millets/sorghum climate resilience vs rice (Columbia/ScienceDaily)</span><span style="color:var(--txS)">Much higher</span></div><div class="bt"><div class="bf" style="width:75%;background:#1D9E75"></div></div></div>
+      <div style="font-size:10px;color:var(--tx3);margin-top:7px">Sources: NICRA/ICAR; Business Standard Jan 2025 (citing Ministry of Earth Sciences); Columbia University/ScienceDaily research. India's avg temp has risen 0.7&deg;C since 1901; 2024 was hottest year on record. 2024: 3.2 million ha of crops affected by extreme weather events (CSE/IMD).</div>
+    </div>
+    <div class="card"><div class="cl2">Crop diversification imperative &mdash; the climate-income opportunity</div><div class="cb">Millets are <strong>more climate-resilient</strong> than rice/wheat; yields vary significantly less during extreme weather (Columbia University/ScienceDaily, Environmental Research Letters)<br><br><strong>Green Revolution legacy problem:</strong> Punjab/Haryana rice cultivation requires 3,000&ndash;3,500L water/kg; groundwater depletion threatens long-term viability; government actively incentivising diversification away from paddy<br><br><strong>Millet policy push (Shree Anna):</strong> India proposed and hosted UN International Year of Millets 2023; dedicated procurement under NFSM; export potential growing; India world's largest millet producer<br><br><strong>Market development gap:</strong> Millets are climate-resilient and nutritious but still lack organised market linkage, procurement infrastructure, and consumer demand signals for SMH farmers considering diversification<br><br><strong>Platform opportunity:</strong> Advisory that makes the economic case for diversification backed by real market linkages &mdash; not just agronomic advice with no buyer at the end</div></div>
+  </div>
+</div>
+<div class="tc" id="c3">
+  <div class="ng" id="cg"></div>
+  <div class="stl">Value leakage waterfall &mdash; per &#8377;100 consumer price (rice/paddy, non-MSP/open market channel)</div>
+  <div id="cwf"></div>
+  <div class="ins iw" style="margin-top:10px"><strong>The cereal value chain's unique structural duality:</strong> For the ~15% of paddy and 9.6% of wheat farmers who access MSP procurement, the value chain is relatively fair &mdash; government procurement at declared price, direct bank transfer, formal documentation. For the remaining 85&ndash;90%, the open mandi channel is opaque, intermediary-heavy, and subject to the same distress-selling dynamics as horticulture. The platform must serve both segments simultaneously: facilitate MSP access for the excluded majority AND improve price realisation in open market channels through better price discovery and timing.</div>
+</div>
+<div class="tc" id="c4">
+  <table class="dt"><thead><tr><th>Gap / Inefficiency</th><th>Existing players &amp; funding</th><th>Coverage</th><th>Platform white space</th></tr></thead><tbody id="cws"></tbody></table>
+  <div class="ins is" style="margin-top:10px"><strong>Competitive landscape synthesis &mdash; cereals:</strong> Cereals have the deepest agritech investment concentration: DeHaat ($270M, 2M farmers, 11 states, &#8377;3,000 Cr FY25 revenue), AgroStar ($111M, 5&ndash;9M farmers, primarily input commerce), Arya.ag ($186M equity+debt, grain warehousing + finance), BigHaat, BharatAgri, Krishify, CropIn (B2B enterprise). But most serve the input side (seeds, fertilisers, pesticides) and leave the output/market side largely unaddressed for SMH farmers. Critical white spaces: MSP access facilitation for excluded states, warehouse receipt finance for SMH grain farmers, and climate-smart crop diversification with real market linkage.</div>
+</div>
+<div class="tc" id="c5"><div id="ci"></div></div>
+</div>
+
+<!-- ======== PAGE 05: FINAL SYNTHESIS ======== -->
+<div class="pg" id="p05">
+<div class="ph"><div class="pe">Section 05 &middot; Final synthesis</div><div class="pt">5 platform ideas &mdash; cross-value-chain design</div><div class="pd">Cross-value-chain synthesis of the 15 ideas developed across dairy, horticulture, and cereals. The 5 final ideas are selected for highest combined impact, commercial viability, climate resilience, and cross-chain applicability. Each idea is horizontal &mdash; it works across multiple value chains and is not confined to a single commodity.</div></div>
+
+<div class="stl">The integration logic &mdash; why these 5, why in this sequence</div>
+<div class="ins ii"><strong>The platform architecture principle:</strong> The 5 final ideas form a deliberate stack, not a collection of point solutions. Idea 1 builds the foundational financial identity and data layer. Idea 2 builds the physical and digital market access infrastructure. Idea 3 is the high-frequency input service layer creating daily touchpoints and transaction revenue. Idea 4 is the market intelligence layer that enables smarter decisions. Idea 5 is the climate resilience layer that builds long-term loyalty and DFI alignment. Every existing agritech player addresses one or two of these layers in one value chain. No player addresses all five, integrated, across all three value chains. That integration is the defensible moat.</div>
+
+<div class="stl">Cross-value-chain scoring &mdash; all 15 ideas ranked</div>
+<div class="card">
+  <div style="font-size:12px;color:var(--tx2);margin-bottom:10px">Each idea scored 1&ndash;5 across 5 dimensions: income impact, white space depth, build feasibility, revenue clarity, and climate nexus. The 5 final ideas are the highest-scoring with cross-chain applicability. Average score threshold for selection: &ge;3.8/5.</div>
+  <table class="dt" id="ranking-table"></table>
+</div>
+
+<div class="stl">The 5 final platform ideas</div>
+<div id="synth-ideas"></div>
+
+<div class="stl">The investment thesis &mdash; for VC/PE and DFI/philanthropic audiences</div>
+<div class="g3">
+  <div class="synth-card"><div class="cl2">The commercial thesis (for VC/PE)</div><div class="cb">
+    <strong style="color:var(--tx)">Income uplift is quantifiable from first principles.</strong><br>
+    A smallholder farmer currently retains ~&#8377;8&ndash;15 per &#8377;100 of dairy value, ~&#8377;15 per &#8377;100 of horticulture value (typical year), and ~&#8377;20&ndash;30 per &#8377;100 of cereal value. The platform, working across all 5 final ideas, can realistically move: dairy net income from &#8377;15&ndash;30k/year to &#8377;40&ndash;60k/year per household; horticulture farmer net realisation from 33.5% to 40%+ of consumer price; and cereal farmers in excluded states from &#8377;15&ndash;25k to &#8377;30&ndash;45k/ha by enabling MSP access. This is a 2&ndash;3x income improvement for India's most economically vulnerable farmers &mdash; credible, evidence-based, achievable within 5 years at scale.<br><br>
+    <strong style="color:var(--tx)">Revenue model is commercial, not grant-dependent.</strong><br>
+    Total platform revenue potential at 5M farmers: &#8377;1,000&ndash;2,000 crore annually from transaction commissions, SaaS subscriptions, lending spreads, and data licensing. Unit economics are positive at district level within 18&ndash;24 months of launch. Blended finance is used to de-risk first-loss tranches only, not to subsidise ongoing operations.
+  </div></div>
+  <div class="synth-card"><div class="cl2">The DFI/philanthropic thesis</div><div class="cb">
+    <strong style="color:var(--tx)">Three SDGs in one integrated platform.</strong><br>
+    SDG 1 (No poverty) &mdash; income uplift for 25M SMH households in the bottom quintile<br>
+    SDG 5 (Gender equality) &mdash; women dairy farmers gaining formal financial identity; women-led FPOs in horticulture; women CAHW and DME agents in dairy<br>
+    SDG 13 (Climate action) &mdash; parametric insurance, climate-smart advisory, fodder system resilience, millet diversification across all three chains<br><br>
+    <strong style="color:var(--tx)">The blended finance opportunity.</strong><br>
+    Concessional capital de-risks: (a) first-loss tranches on farmer credit products (Ideas 1 and 3), (b) capex for village cold hub and PACS infrastructure (Idea 2), and (c) parametric insurance actuarial development (Idea 5). Commercial capital captures the upside once proof points are established. IFC, CGAP, ADB, NABARD, and philanthropic funders (Gates Foundation, Omidyar) have each identified these specific gaps as priorities.
+  </div></div>
+  <div class="synth-card"><div class="cl2">The white space argument</div><div class="cb">
+    <strong style="color:var(--tx)">No integrated platform exists.</strong><br>
+    Indian agritech has invested $2+ billion since 2020 and produced a collection of vertical point solutions: Stellapps (dairy collection tech), Ninjacart (fresh produce aggregation), DeHaat (input supply + market linkage), Arya.ag (grain warehousing + finance), AgroStar (input commerce + advisory). Each is excellent within its vertical. None has connected them.<br><br>
+    <strong style="color:var(--tx)">The integration is the moat.</strong><br>
+    A farmer household using the platform for dairy income digitisation also uses it for vegetable price forecasting, certified input procurement, grain storage finance, and climate insurance. Each touchpoint reduces churn. Each dataset from one value chain makes the other datasets more valuable. The platform becomes the operating system for the farmer household &mdash; not one app among many.
+  </div></div>
+</div>
+
+<div class="stl">Phased build &amp; investment roadmap</div>
+<div class="card">
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;font-size:12px">
+    <div style="border-right:.5px solid var(--bd);padding-right:12px">
+      <div style="font-size:11px;font-weight:500;color:var(--txI);margin-bottom:8px">Phase 1 &middot; Y0&ndash;Y2</div>
+      <div style="font-weight:500;color:var(--tx);margin-bottom:5px">Foundation layer</div>
+      <div style="color:var(--tx2);line-height:1.6">Deploy Idea 1 (financial identity) in 2 dairy geographies &middot; Pilot Idea 3 (input marketplace) with 3 cooperative networks &middot; Launch basic climate advisory (Idea 5) in 2 horticulture clusters &middot; Target: 200,000 active farmer HHs &middot; Validate unit economics before scaling</div>
+    </div>
+    <div style="border-right:.5px solid var(--bd);padding-right:12px">
+      <div style="font-size:11px;font-weight:500;color:var(--txS);margin-bottom:8px">Phase 2 &middot; Y2&ndash;Y4</div>
+      <div style="font-weight:500;color:var(--tx);margin-bottom:5px">Service layer expansion</div>
+      <div style="color:var(--tx2);line-height:1.6">Scale Idea 1 to 1M farmers across 5 states &middot; Launch Idea 2 (market access infrastructure) with 1,000 Village Cold Hubs + DMEs &middot; Introduce perishable inventory finance + MSP-access facilitation (Idea 4 components) &middot; Target: 2M active farmer HHs</div>
+    </div>
+    <div style="border-right:.5px solid var(--bd);padding-right:12px">
+      <div style="font-size:11px;font-weight:500;color:var(--txW);margin-bottom:8px">Phase 3 &middot; Y4&ndash;Y6</div>
+      <div style="font-weight:500;color:var(--tx);margin-bottom:5px">Market architecture</div>
+      <div style="color:var(--tx2);line-height:1.6">Activate Idea 4 (collective market access) at scale &middot; 5,000 FPOs + 10,000 DMEs &middot; Parametric insurance live across all 3 value chains &middot; National footprint 15+ states &middot; Target: 10M active farmer HHs &middot; First commercial-scale revenue profitability</div>
+    </div>
+    <div>
+      <div style="font-size:11px;font-weight:500;color:var(--txD);margin-bottom:8px">Phase 4 &middot; Y6&ndash;Y10</div>
+      <div style="font-weight:500;color:var(--tx);margin-bottom:5px">Platform dominance</div>
+      <div style="color:var(--tx2);line-height:1.6">25M farmer HH target &middot; Proprietary data layer: income records, crop data, climate risk, market prices &mdash; most comprehensive rural intelligence in India &middot; Licensing to banks, insurers, commodity traders, government &middot; IPO-ready unit economics</div>
+    </div>
+  </div>
+</div>
+<div class="ins is"><strong>The sequencing logic:</strong> Phase 1 builds the farmer relationship and data foundation. Phase 2 builds physical and financial infrastructure that creates switching costs. Phase 3 builds market architecture that makes every other agritech player dependent on (or displaced by) this platform. Phase 4 monetises the data and relationship moat. The platform does not need to win all five ideas simultaneously &mdash; it needs to win Idea 1 first, then layer the others on top of that established farmer relationship.</div>
+</div>
+
+<script>
+// ===================== NAVIGATION =====================
+function show(id){
+  document.querySelectorAll('.pg').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.sbi').forEach(i=>i.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  const n=document.getElementById('n-'+id);
+  if(n)n.classList.add('active');
+  window.scrollTo(0,0);
+}
+function st(btn,id){
+  const pg=btn.closest('.pg');
+  pg.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  pg.querySelectorAll('.tc').forEach(t=>t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+function tog(h){
+  const b=h.nextElementSibling;
+  const a=h.querySelector('.arr');
+  b.classList.toggle('open');
+  if(a)a.textContent=b.classList.contains('open')?'↓':'›';
+}
+
+// ===================== BUILDER FUNCTIONS =====================
+function bVCF(id,stages){
+  const el=document.getElementById(id);
+  if(!el)return;
+  stages.forEach((s,i)=>{
+    const d=document.createElement('div');
+    d.className='vcs';
+    d.innerHTML=`<div class="vch" style="background:${s.bg};color:${s.tc}">${s.h}</div>
+      <div class="vcb"><div>${s.a.map(a=>`<span class="at">${a}</span>`).join('')}</div>
+      <div style="margin-top:4px">${s.b}</div>
+      <span class="mp" style="background:${s.mc};color:${s.mt}">${s.m}</span></div>`;
+    el.appendChild(d);
+    if(i<stages.length-1){
+      const ar=document.createElement('div');
+      ar.className='vca';ar.textContent='›';
+      el.appendChild(ar);
+    }
+  });
+}
+
+function bGG(id,nodes){
+  const el=document.getElementById(id);
+  if(!el)return;
+  const iL={ic:"Critical",ih:"High",imm:"Medium"};
+  nodes.forEach(n=>{
+    const c=document.createElement('div');
+    c.className='nc';
+    let rows=n.rows.map(r=>`<div class="ir"><div class="il">${r.l}</div><span class="im ${r.s}">${iL[r.s]||'Medium'}</span></div>`).join('');
+    c.innerHTML=`<div class="nh" style="background:${n.bg}20"><div class="ni" style="background:${n.bg}">${n.i}</div>
+      <div><div class="nt">${n.t}</div><div class="ns2">${n.st}</div></div></div>
+      <div class="nb2">${rows}<div class="qq">${n.q}</div></div>`;
+    el.appendChild(c);
+  });
+}
+
+function bWF(id,data){
+  const el=document.getElementById(id);
+  if(!el)return;
+  data.forEach(r=>{
+    const row=document.createElement('div');
+    row.className='wr';
+    row.innerHTML=`<div class="wl">${r.l}</div><div class="wb"><div class="wf2" style="width:${r.p}%;background:${r.c}"></div></div>
+      <div class="wv">${r.v}</div><div class="wn">${r.n}</div>`;
+    el.appendChild(row);
+  });
+}
+
+function bWST(id,data){
+  const el=document.getElementById(id);
+  if(!el)return;
+  const cL={covered:"Partly served",partial:"Fragmented",uncovered:"White space"};
+  const cC={covered:"pa",partial:"pb",uncovered:"pg2"};
+  data.forEach(r=>{
+    const tr=document.createElement('tr');
+    const isWS=r.c==="uncovered";
+    tr.innerHTML=`<td style="${isWS?'font-weight:500':''}">${r.g}</td>
+      <td style="color:var(--tx2)">${r.p}</td>
+      <td><span class="pl ${cC[r.c]}">${cL[r.c]}</span></td>
+      <td style="${isWS?'color:var(--txS);font-weight:500':'color:var(--tx2)'}">${r.s}</td>`;
+    el.appendChild(tr);
+  });
+}
+
+const SK={impact:"Income impact",ws:"White space",feas:"Feasibility",rev:"Revenue",climate:"Climate nexus"};
+
+function bIdeas(cid,ideas){
+  const container=document.getElementById(cid);
+  if(!container)return;
+  ideas.forEach(idea=>{
+    const avg=(Object.values(idea.scores).reduce((a,b)=>a+b,0)/5).toFixed(1);
+    const evList=idea.ev.map(e=>`<li style="margin-bottom:3px;color:var(--tx2)">${e}</li>`).join('');
+    const scoreH=Object.entries(idea.scores).map(([k,v])=>
+      `<div class="sr"><span>${SK[k]||k}</span><span style="font-weight:500;color:${idea.color}">${v}/5</span></div>
+       <div class="st"><div class="sf" style="width:${v*20}%;background:${idea.color}"></div></div>`).join('');
+    const stagesH=idea.stages.map(s=>
+      `<div class="stp"><div class="stn" style="background:${idea.color}">${s.n}</div>
+       <div class="stl2">${s.l}</div><div class="std">${s.d}</div></div>`).join('');
+    const card=document.createElement('div');
+    card.className='ic2';
+    card.innerHTML=`<div class="ih2" onclick="tog(this)">
+      <div class="in2" style="background:${idea.color}">${idea.id}</div>
+      <div style="flex:1"><div class="it">${idea.title}</div><div class="ig">${idea.tag}</div></div>
+      <div style="text-align:right;flex-shrink:0;margin-right:8px">
+        <div style="font-size:13px;font-weight:500;color:${idea.color}">${avg}/5</div>
+        <div style="font-size:10px;color:var(--tx3)">avg score</div>
+      </div>
+      <div class="arr" style="color:var(--tx3);font-size:14px;margin-left:4px">›</div>
+    </div>
+    <div class="ib">
+      <div class="ins ii" style="margin-top:12px;margin-bottom:9px"><strong>Core thesis:</strong> ${idea.prob}</div>
+      <div class="ig2">
+        <div>
+          <div class="card" style="margin-bottom:9px"><div class="cl2">Evidence base</div>
+            <ul style="padding-left:15px;margin:0;font-size:12px;line-height:1.7">${evList}</ul></div>
+          <div class="card" style="margin-bottom:9px"><div class="cl2">Scoring</div>${scoreH}</div>
+          <div class="card"><div class="cl2">Business model</div><div class="cb">${idea.biz}</div></div>
+        </div>
+        <div>
+          <div class="card" style="margin-bottom:9px"><div class="cl2">Build roadmap</div>${stagesH}</div>
+          <div class="ins is" style="margin-bottom:9px"><strong>DFI / investor narrative:</strong> ${idea.dfi}</div>
+          <div class="ins iw"><strong>Key risk &amp; mitigation:</strong> ${idea.risk}</div>
+        </div>
+      </div>
+    </div>`;
+    container.appendChild(card);
+  });
+}
+
+// ===================== VALUE CHAIN MATRIX =====================
+const vcMatrix=[
+  {n:"🌾 Cereals & staple crops",s:[5,5,5,3,3],t:"Tier 1"},
+  {n:"🐄 Dairy & livestock",s:[5,5,4,5,5],t:"Tier 1"},
+  {n:"🍅 Horticulture",s:[4,4,5,5,5],t:"Tier 1"},
+  {n:"🌱 Pulses & oilseeds",s:[4,3,5,4,4],t:"Tier 2"},
+  {n:"🐟 Fisheries & aquaculture",s:[3,3,4,4,4],t:"Tier 2"},
+];
+const vb=document.getElementById('vc-body');
+if(vb){vcMatrix.forEach(r=>{
+  const tot=r.s.reduce((a,b)=>a+b,0);
+  const tr=document.createElement('tr');
+  let c=`<td><strong>${r.n}</strong></td>`;
+  r.s.forEach(s=>{c+=`<td><span class="sc s${s}">${s}</span></td>`;});
+  c+=`<td><strong>${tot}</strong></td><td><span class="pl ${r.t==='Tier 1'?'pg2':'pa'}">${r.t}</span></td>`;
+  tr.innerHTML=c;vb.appendChild(tr);
+});}
+
+const vcCardsData=[
+  {e:"🐄",color:"#1D9E75",n:"Dairy & livestock",s:[["HH participating","~80M"],["Milk production","239 MT (FY24)"],["Market size","$135B"],["Unorganised","~72% of supply"],["Avg yield","5.3 kg/animal/day"]]},
+  {e:"🍅",color:"#D85A30",n:"Horticulture (F&V)",s:[["HH participating","~65M"],["Production FY25","370 MT"],["PHT loss","49.9 MT/yr (₹1.53L Cr)"],["Cold chain access","~4% of F&V"],["SMH in onion","70.4% of growers"]]},
+  {e:"🌾",color:"#639922",n:"Cereals & staple crops",s:[["HH participating","~100M+"],["Production FY25","353.96 MT (record)"],["MSP payouts","₹3.33L Cr FY25"],["MSP coverage","Only 15% paddy, 9.6% wheat"],["Climate risk","6–25% yield decline projected"]]},
+];
+const vcEl=document.getElementById('vc-cards');
+if(vcEl){vcCardsData.forEach(c=>{
+  const d=document.createElement('div');
+  d.style.cssText='border:.5px solid var(--bd);border-radius:9px;padding:12px 14px;margin-bottom:9px;display:flex;align-items:flex-start;gap:11px';
+  d.innerHTML=`<div style="width:40px;height:40px;border-radius:8px;background:${c.color}20;display:flex;align-items:center;justify-content:center;font-size:19px;flex-shrink:0">${c.e}</div>
+    <div style="flex:1"><div style="font-size:14px;font-weight:500;color:var(--tx);margin-bottom:7px">${c.n}</div>
+    <div style="display:flex;flex-wrap:wrap;gap:6px">${c.s.map(s=>`<div style="background:var(--bg2);border-radius:6px;padding:5px 8px;font-size:11px"><div style="color:var(--tx3)">${s[0]}</div><div style="font-weight:500;color:var(--tx);margin-top:1px">${s[1]}</div></div>`).join('')}</div></div>`;
+  vcEl.appendChild(d);
+});}
+
+// ===================== DAIRY VALUE CHAIN FLOW =====================
+bVCF('dvc',[
+  {h:"1. Inputs",bg:"#E1F5EE",tc:"#04342C",a:["Feed companies","AI centres","Vet services"],b:"Feed = 60–70% of production cost. Green fodder deficit structural. AI coverage incomplete. Informal vet dominant.",m:"High cost leakage",mc:"#FCEBEB",mt:"#A32D2D"},
+  {h:"2. Production",bg:"#9FE1CB",tc:"#04342C",a:["80M SMH farmers","1–5 animals/HH"],b:"~471g/capita/day consumption target. Avg yield 5.3 kg/day. Women do 70%+ of labour. No formal income records.",m:"₹25–40/L farm-gate",mc:"#FAEEDA",mt:"#633806"},
+  {h:"3. Collection",bg:"#FAEEDA",tc:"#633806",a:["Doodhwalas","Village DCS","Chilling centres"],b:"72% through unorganised. Only 20% transported via cold chain. DCS 3-tier structure. Fat-based testing limited.",m:"Cold chain gap: 80%",mc:"#FCEBEB",mt:"#A32D2D"},
+  {h:"4. Processing",bg:"#FAC775",tc:"#412402",a:["Cooperatives","Private dairies","Informal processors"],b:"Cooperatives return 55–75% to farmer. Private sector ~35%. Organised growing but still minority share.",m:"Coop return highest",mc:"#EAF3DE",mt:"#27500A"},
+  {h:"5. Distribution",bg:"#EF9F27",tc:"#412402",a:["Wholesalers","Retailers","Q-commerce"],b:"Urban shift to quick-commerce. Rural: traditional retail + doorstep. Cold chain critical at last mile.",m:"Last-mile fragmented",mc:"#FAEEDA",mt:"#633806"},
+  {h:"6. Consumer",bg:"#FCEBEB",tc:"#501313",a:["Urban HHs","Rural consumers","Institutional"],b:"Retail ₹55–70/L. VAP shift: ghee, paneer, UHT. Farmer gets ~60% (coop) vs ~45% (unorganised).",m:"Farmer: 55–60% (coop)",mc:"#EAF3DE",mt:"#27500A"}
+]);
+
+// DAIRY GEO
+[{s:"Punjab",v:4457,p:100,ph:"Phase 1",pc:"#EAF3DE",pt:"#27500A"},{s:"Haryana",v:4020,p:90,ph:"Phase 1",pc:"#EAF3DE",pt:"#27500A"},{s:"Gujarat",v:2800,p:63,ph:"Phase 1",pc:"#EAF3DE",pt:"#27500A"},{s:"Andhra Pradesh",v:2200,p:49,ph:"Phase 1–2",pc:"#E6F1FB",pt:"#0C447C"},{s:"Uttarakhand",v:1800,p:40,ph:"Phase 2",pc:"#FAEEDA",pt:"#633806"},{s:"Bihar",v:700,p:16,ph:"Phase 2–3",pc:"#FAECE7",pt:"#993C1D"},{s:"West Bengal",v:452,p:10,ph:"Phase 3",pc:"#FCEBEB",pt:"#A32D2D"},{s:"Odisha",v:416,p:9,ph:"Phase 3",pc:"#FCEBEB",pt:"#A32D2D"}].forEach(g=>{
+  const r=document.createElement('div');r.className='gr';
+  r.innerHTML=`<div class="gs">${g.s}</div><div class="gb"><div class="gbf" style="width:${g.p}%;background:${g.p>60?'#1D9E75':g.p>30?'#EF9F27':'#E24B4A'}"></div></div><div style="font-size:11px;color:var(--tx);width:80px;text-align:right">₹${g.v.toLocaleString()}/mo</div><div style="width:65px;text-align:right"><span class="pl" style="background:${g.pc};color:${g.pt};font-size:10px">${g.ph}</span></div>`;
+  document.getElementById('d-geo').appendChild(r);
+});
+
+// DAIRY SUPPLY CHAIN GAPS
+bGG('dg',[
+  {i:"🌾",bg:"#FCEBEB",st:"Input stage",t:"Feed quality & cost opacity",rows:[
+    {l:"Feed = 60–70% of total milk production cost; no price transparency or quality benchmarks for SMH farmers anywhere in India",s:"ic"},
+    {l:"Green fodder deficit structural — feed prices up 3x in some regions; urbanisation reducing fodder land availability year on year",s:"ic"},
+    {l:"No organised feed market — farmers rely on local dealers with zero competitive pricing or quality assurance mechanisms",s:"ih"}],
+   q:"10% feed cost reduction → 25–35% net income improvement for a 2-animal HH. Single largest income lever in dairy. Zero organised players at scale. Source: DAHD/IIMA data."},
+  {i:"💉",bg:"#FAECE7",st:"Input stage",t:"Veterinary & AI access gap",rows:[
+    {l:"72% of milk flows through channels with no structured formal veterinary service access (DAHD)",s:"ih"},
+    {l:"LSD outbreak 2022: ~1.8M animals affected — concentrated in non-cooperative geographies with no early warning systems",s:"ic"},
+    {l:"AI coverage uneven; sex-sorted semen not reaching SMH farmers despite Rashtriya Gokul Mission mandate",s:"ih"}],
+   q:"MoooFarm pilot: ~$40/month income uplift per farmer from vet + AI access — 20–30% improvement on ₹1,500–3,000/month base income. India: 1 govt vet per 5,000+ animals; global norm is 1:500."},
+  {i:"🏘️",bg:"#FAEEDA",st:"Collection stage",t:"Cooperative coverage gap",rows:[
+    {l:"Only ~150k DCS cover ~25% of India's 620k villages — 465k+ villages have no organised dairy access at all",s:"ic"},
+    {l:"West Bengal, Odisha: <10% village coverage — coincides exactly with lowest-income dairy states (NSSO 2018-19)",s:"ic"},
+    {l:"Unserved farmers sell to doodhwalas at ₹2–3/L below cooperative prices; no fat-based quality testing available",s:"ih"}],
+   q:"Shifting 1 farmer from doodhwala to cooperative = ₹2–3/L × 10L/day × 300 days = ₹6,000–9,000/year additional income. White Revolution 2.0 targets this over 5 years at government pace."},
+  {i:"❄️",bg:"#FCEBEB",st:"Collection stage",t:"Cold chain — only 5% of milk refrigerated",rows:[
+    {l:"Only ~5% of milk transported under refrigeration; only 20% moves through any cold chain at all nationally",s:"ic"},
+    {l:"10–30% spoilage during summer without chillers — field reports (The Guardian 2014) cite up to 30% loss in peak summer",s:"ic"},
+    {l:"Quality deterioration reduces fat-based pricing even for milk that survives transport — farmer penalised twice",s:"ih"}],
+   q:"10% spoilage on 239 MT = ~24 MT lost, worth ₹1 lakh crore+ at current prices. Cold chain is the single largest systemic value destruction point in India dairy. Source: ResearchGate post-harvest study."},
+  {i:"💳",bg:"#FAEEDA",st:"Financial layer",t:"Financial identity & credit gap",rows:[
+    {l:"No formal income records for 80M dairy farmers — daily/fortnightly cash payments leave no paper trail for any formal institution",s:"ih"},
+    {l:"Women (70% of dairy labour) have 10pp lower borrowing rate vs men; almost no agricultural credit access (World Bank 2025)",s:"ih"},
+    {l:"Landless/livestock-only farmers excluded from Kisan Credit Card; no collateral recognised by formal lenders",s:"ih"}],
+   q:"Stellapps mooPay: digitised milk records → credit access proven at 3.1M farmers ($26M raised, Oct 2024 Series C). Digivriddhi: same model at 100k farmers (0.5% penetration). Concept works; scale absent."},
+  {i:"🌡️",bg:"#FAECE7",st:"Production",t:"Climate & heat stress impact",rows:[
+    {l:"Heat stress reduces yields 10–20% during peak summer — affects income when household cash is already at its lowest",s:"ih"},
+    {l:"North India projected to lose 0.36–0.38 MT/year milk by 2030s from heat stress alone (Cambridge Journal of Dairy Research, RCP4.5)",s:"ih"},
+    {l:"No climate advisory or cooling infrastructure for SMH farmers; only large organised dairies have shade/fans/evaporative coolers",s:"imm"}],
+   q:"ICAR research: hydroponic green fodder advisory + shade management recovers 15%+ of heat stress losses. Climate advisory is a direct income protection tool — and the strongest DFI narrative in dairy."}
+]);
+
+bWF('dwf',[
+  {l:"Consumer retail price",v:"₹60/L",p:100,c:"#185FA5",n:"Baseline"},
+  {l:"Retailer margin",v:"–₹6/L",p:10,c:"#E24B4A",n:"~10%"},
+  {l:"Distributor/transporter",v:"–₹4/L",p:7,c:"#E24B4A",n:"~7%"},
+  {l:"Processing (cooperative)",v:"–₹8/L",p:13,c:"#EF9F27",n:"~13%"},
+  {l:"Farmer receives (gross)",v:"~₹33–36/L",p:60,c:"#1D9E75",n:"~55–60%"},
+  {l:"Feed cost (60–70% of gross)",v:"–₹20–25/L",p:42,c:"#E24B4A",n:"Largest leak"},
+  {l:"Vet + healthcare",v:"–₹1–2/L",p:3,c:"#EF9F27",n:""},
+  {l:"Farmer net income",v:"~₹8–15/L",p:15,c:"#639922",n:"~13–25%"}
+]);
+
+bWST('dws',[
+  {g:"Milk quality testing at collection",p:"Stellapps (IoT sensors, $26M raised, 3.1M farmers)",c:"partial",s:"Well-served for cooperatives. Not the white space."},
+  {g:"Cattle trading marketplace",p:"Animall (~180k listings, $22M raised, Sequoia-backed)",c:"partial",s:"Urban/semi-urban covered; rural SMH gap remains."},
+  {g:"Vet & AI access (on-demand)",p:"MoooFarm (23k farmers, €500k raised)",c:"partial",s:"Proven model at tiny scale. No integration with feed or credit."},
+  {g:"Milk payment digitisation",p:"Stellapps mooPay, Digivriddhi (100k farmers, <₹2Cr rev FY24)",c:"partial",s:"~4M of 80M farmers served. Credit integration missing."},
+  {g:"Feed marketplace / quality assurance",p:"None at scale",c:"uncovered",s:"FULL WHITE SPACE — largest cost item, zero organised players."},
+  {g:"Climate-resilient fodder advisory",p:"None at scale",c:"uncovered",s:"FULL WHITE SPACE — ICAR knowledge exists; delivery gap is total."},
+  {g:"Dairy income → formal credit bridge",p:"Digivriddhi (early stage, <0.5% penetration of 80M farmers)",c:"partial",s:"Model proven at micro-scale. Massive scale opportunity."},
+  {g:"Geographic expansion — low-coop states",p:"None systematically",c:"uncovered",s:"FULL WHITE SPACE — WB, Odisha, Bihar essentially unserved."},
+  {g:"Integrated farmer household platform",p:"None",c:"uncovered",s:"FULL WHITE SPACE — all existing players are vertical point solutions."}
+]);
+
+// DAIRY 5 PLATFORM IDEAS
+bIdeas('di',[
+  {id:1,color:"#1D9E75",title:"Feed intelligence & marketplace",
+   tag:"Transparent, quality-assured digital marketplace for dairy feed — aggregating farmer demand to unlock bulk pricing, quality benchmarking, and nutrition advisory",
+   prob:"Feed costs consume 60–70% of a dairy farmer's income with no organised market, no price transparency, no quality assurance, and no negotiating power. Feed prices have tripled in some regions. This is the single largest income lever in the entire dairy value chain with zero existing platforms addressing it at scale.",
+   ev:["Feed = 60–70% of total milk production cost (DAHD/IIMA data)","10% feed cost reduction → 25–35% net income improvement for a 2-animal HH","No organised feed marketplace exists at scale in Indian dairy — full white space","ICAR: hydroponic green fodder improves yield 20% using 90% less water vs conventional"],
+   biz:"Gross margin on feed transactions (10–15% commission) + SaaS advisory subscription (₹50–100/month/farmer) + data monetisation to feed manufacturers. Target: ₹500–800 per farmer per year at scale.",
+   scores:{impact:5,ws:5,feas:4,rev:4,climate:4},
+   stages:[{n:1,l:"Y0–6 months",d:"Build feed supplier network. Partner with 2 cooperative DCS networks. Launch price transparency via WhatsApp/IVR."},{n:2,l:"Y1",d:"Transactional marketplace live. Pilot bulk procurement aggregation with 5,000 farmers. Track cost savings."},{n:3,l:"Y2",d:"AI-driven nutrition advisory (breed + region specific). 50,000 farmers across 3 states."},{n:4,l:"Y3–5",d:"National marketplace. Proprietary feed quality dataset as moat. Embedded credit for feed purchases."}],
+   dfi:"SDG 2 (income uplift via cost reduction not price increase). Women as primary beneficiaries. Climate-smart fodder = SDG 13. Blended finance to de-risk feed credit first-loss tranche.",
+   risk:"Last-mile feed logistics is capital-intensive. Use cooperative/PACS infrastructure as distribution — platform provides demand aggregation and quality assurance only, not physical delivery."},
+  {id:2,color:"#185FA5",title:"Dairy income digitisation & credit bridge",
+   tag:"Convert daily milk transaction records into verified financial identity — unlocking formal credit, insurance, and savings for 80M dairy households",
+   prob:"80M dairy farmers receive daily/fortnightly cash payments with no formal record — no credit history, no collateral, no financial identity. Without credit, farmers cannot upgrade feed, expand herd, or access cooling. Women doing 70%+ of labour are most excluded. This is a poverty trap with a digital key that already exists at proof-of-concept scale.",
+   ev:["Only 41% of women-headed agri HHs borrow formally vs 51% of men (World Bank 2025)","Stellapps mooPay: digital milk records → formal credit access proven at 3.1M farmers","Digivriddhi: exact model at 100k farmers — 0.5% of 80M addressable (proof of concept only)","Daily milk = most predictable recurring rural income stream — ideal credit underwriting base"],
+   biz:"Lending commission (1–2% of loan disbursed) + insurance premium share + SaaS fee to cooperatives (₹2–5/farmer/month). At 1M farmers: ₹50–100 crore annual revenue from lending commissions alone. Long-term moat: proprietary dairy income dataset.",
+   scores:{impact:5,ws:4,feas:5,rev:5,climate:3},
+   stages:[{n:1,l:"Y0–6 months",d:"Digital milk record infrastructure. Integrate with 3 cooperatives. 6-month income histories for 10,000 farmers."},{n:2,l:"Y1",d:"First credit product live (KCC-equivalent for livestock). ₹25–50k ticket. NBFC partner."},{n:3,l:"Y2",d:"Insurance layer. 200,000 farmers. Women-targeted savings product. API credit bureau integration."},{n:4,l:"Y3–5",d:"De facto dairy income data infrastructure. Licensed to banks, NBFCs, insurers. National scale."}],
+   dfi:"Financial inclusion + gender equity + climate resilience in one product. SDG 5 + SDG 8. CGAP and IFC have explicitly identified livestock income digitisation as a priority gap for blended finance.",
+   risk:"Depends on cooperative/DCS network for data. Position as infrastructure provider (B2B2C). Revenue share model aligns incentives. Never compete with cooperatives directly."},
+  {id:3,color:"#993C1D",title:"Tele-vet & animal health intelligence",
+   tag:"On-demand veterinary access + disease surveillance via trained community animal health workers — scaling India's 1:5,000 vet ratio toward global norm of 1:500",
+   prob:"72% of India's milk flows through channels with no structured vet access. Disease events (LSD 2022: 1.8M animals affected) cause catastrophic losses. India has 1 govt vet per 5,000+ animals vs global norm of 1:500. The Rashtriya Gokul Mission targets doorstep AI delivery — the implementation gap is the platform's entry point.",
+   ev:["LSD 2022: ~1.8M animals affected — concentrated in non-cooperative geographies","MoooFarm: ₹40/month income uplift per farmer from vet + AI access — 20–30% improvement on base income","RGM targets doorstep AI delivery — government programme creates implementation gap for platform","India vet:animal ratio 1:5,000+ vs global norm 1:500 (ICAR estimates)"],
+   biz:"Service fee per tele-vet consultation (₹50–150) + AI booking commission + insurance partnership + government contract for CAHW network + disease surveillance data as B2B product.",
+   scores:{impact:4,ws:3,feas:4,rev:3,climate:4},
+   stages:[{n:1,l:"Y0–6 months",d:"Tele-vet app + protocol library. 50 partner vets. Pilot in 2 districts with CAHW infrastructure."},{n:2,l:"Y1",d:"500 trained CAHWs across 5 districts. AI booking integrated with RGM portal. 25,000 farmers."},{n:3,l:"Y2",d:"Disease surveillance intelligence product live. Insurance linkage. 100,000 farmers."},{n:4,l:"Y3–5",d:"National CAHW network. Government contract for RGM delivery. 1M+ farmers."}],
+   dfi:"Animal health is a climate resilience intervention. CAHW network creates rural employment (women as Pashu Sakhis = gender equity). Clearest government partnership path of all 5 dairy ideas.",
+   risk:"Tele-medicine for animals has evolving regulatory clarity. Partner with veterinary universities + state livestock departments rather than operating independently."},
+  {id:4,color:"#7F77DD",title:"Climate-resilient fodder system",
+   tag:"Data-driven fodder advisory + input marketplace insulating dairy farmer incomes from the structural green fodder deficit and climate-driven price volatility",
+   prob:"Structural green fodder deficit is the most persistent climate-linked problem in Indian dairy. Feed prices have tripled in some regions. When climate shocks hit, fodder prices spike exactly when milk yields fall — a double income shock with zero existing platform addressing it anywhere in India.",
+   ev:["Feed = 60–70% of milk cost; fodder = 40–50% of that feed cost","NLM Fodder sub-mission: ₹474 Cr deployed — outcomes largely unmeasured (PIB data)","ICAR: hydroponic fodder → 20% yield improvement using 90% less water vs conventional","Cambridge peer-reviewed: North India to lose 0.36–0.38 MT/yr milk from heat stress by 2030s"],
+   biz:"Input sales margin (fodder seeds, hydroponics kits) + advisory SaaS + fodder bank transaction fee + insurance commission. Lower per-farmer revenue (₹200–400/yr) but climate narrative commands DFI premium and grant funding.",
+   scores:{impact:4,ws:5,feas:3,rev:3,climate:5},
+   stages:[{n:1,l:"Y0–6 months",d:"Seasonal fodder advisory + IVR/WhatsApp delivery. 1,000 farmers in drought-prone Maharashtra."},{n:2,l:"Y1",d:"Fodder seed marketplace live. NLM partnership formalised. 10,000 farmers. Hydroponics pilot."},{n:3,l:"Y2",d:"Community fodder bank piloted in 3 districts. Climate-indexed insurance product live."},{n:4,l:"Y3–5",d:"National fodder intelligence platform. Government procurement. 300,000+ farmers."}],
+   dfi:"Purest climate resilience play in dairy. Parametric insurance innovation a priority for IFC, CGAP, Gates, Omidyar. NLM partnership gives government legitimacy and co-funding access.",
+   risk:"Revenue lower; more dependent on government/grant funding. Bundle with Idea 1 (feed marketplace) so advisory drives input sales revenue and builds standalone commercial sustainability."},
+  {id:5,color:"#0F6E56",title:"Last-mile dairy micro-entrepreneurs (DMEs)",
+   tag:"Digital infrastructure extending organised dairy market access to 465,000+ villages outside the cooperative system via trained village-level micro-entrepreneur agents",
+   prob:"465,000+ of India's 620,000 villages have no dairy cooperative. Farmers sell to doodhwalas at ₹2–3/L below cooperative prices — a ₹6,000–9,000/year income gap per household. West Bengal and Odisha have under 10% cooperative coverage where household incomes from dairy are ₹416–452/month.",
+   ev:["150,000 DCS cover only ~25% of 620,000 villages (NDDB data)","WB/Odisha: <10% village coop coverage — lowest-income states (NSSO 2018-19 via Arcus/IIMA)","Doodhwala vs coop gap: ₹2–3/L → ₹6,000–9,000/year per HH additional income","White Revolution 2.0 targets 75–100k new societies over 5 years at government pace"],
+   biz:"Per-litre platform fee (₹0.50–1.00/L) from buyer cooperative/dairy + DME equipment financing margin + data monetisation to processors. At 100M litres/year: ₹50–100 crore revenue. DME network becomes distribution for all platform services.",
+   scores:{impact:5,ws:4,feas:3,rev:4,climate:3},
+   stages:[{n:1,l:"Y0–6 months",d:"Design DME model. Secure coop partner for offtake. Train 100 DMEs. Pilot in 100 villages."},{n:2,l:"Y1",d:"1,000 DMEs serving 30,000–50,000 farmers. Milk flow digitised. Unit economics validated."},{n:3,l:"Y2",d:"5,000 DMEs across 2–3 states. Network serves as last-mile for feed marketplace and vet services."},{n:4,l:"Y3–5",d:"10,000+ DMEs. Government partnership for White Revolution 2.0 delivery. 1M+ farmers."}],
+   dfi:"Most direct income uplift: ₹6,000–9,000/year in India's poorest states. Women DMEs = gender equity + rural entrepreneurship. NABARD and state govts fund cooperative expansion — DME model accesses this capital.",
+   risk:"DME equipment has upfront cost. Equipment-as-a-service model: DME pays from commissions. Partner with existing cold chain operators rather than building new physical infrastructure."}
+]);
+
+// ===================== HORTICULTURE VALUE CHAIN FLOW =====================
+bVCF('hvc',[
+  {h:"1. Inputs",bg:"#EAF3DE",tc:"#085041",a:["Seed companies","Agro-input dealers","Govt (MIDH)"],b:"Seeds = 20–30% of cost. Certified seed access poor for SMH. Pesticide overuse common. MIDH subsidises but coverage patchy.",m:"Input quality gap",mc:"#FAEEDA",mt:"#633806"},
+  {h:"2. Production",bg:"#9FE1CB",tc:"#04342C",a:["65M+ SMH farmers","FPOs (<5% coverage)"],b:"Avg holding 0.74 ha. Perishable crops — no storage = forced sale. Zero advisory on sowing vs price cycles. SMH dominate: onion 70.4%, potato 86.7%.",m:"Sowing blind",mc:"#FCEBEB",mt:"#A32D2D"},
+  {h:"3. Harvest & aggregation",bg:"#FAEEDA",tc:"#633806",a:["Pre-harvest contractors","Local traders","Aggregators"],b:"Pre-harvest contracts common — farmer sells standing crop at low price. Grading and sorting absent at farm level. Value surrendered early.",m:"Value surrendered early",mc:"#FCEBEB",mt:"#A32D2D"},
+  {h:"4. Transport & storage",bg:"#EF9F27",tc:"#412402",a:["Commission agents","Transporters","Cold stores (limited)"],b:"30% of F&V perish before mandi. NHB ICAP: only 23 pre-cooling units, 67 reefer vans nationally. Cold stores mostly potato-focused.",m:"25–30% loss here",mc:"#FCEBEB",mt:"#A32D2D"},
+  {h:"5. Mandi & wholesale",bg:"#F09595",tc:"#501313",a:["APMC mandis","Commission agents","e-NAM (1,656 mandis)"],b:"Commission agent: 6–8% of transaction. No price discovery before arrival. Must accept spot price on day. Onion cost: ₹341/qtl (MP) to ₹2,305/qtl (TN) — 6x dispersion.",m:"Zero pre-arrival price signal",mc:"#FCEBEB",mt:"#A32D2D"},
+  {h:"6. Retail & consumer",bg:"#FCEBEB",tc:"#A32D2D",a:["Retailers","Q-commerce","Processors","Exporters"],b:"RBI WP: farmer gets 33.5% (tomato), 36.2% (onion), 36.7% (potato) typical year. Glut events: 5–10%. Onion exports ~8.5% of production (2022-23), policy-sensitive.",m:"Farmer: 33–37% typical yr",mc:"#FAEEDA",mt:"#633806"}
+]);
+
+// HORTI SUPPLY CHAIN GAPS
+bGG('hg',[
+  {i:"🌡️",bg:"#FCEBEB",st:"Post-harvest / first mile",t:"Cold chain absence — the defining gap",rows:[
+    {l:"NHB ICAP: only 5,431 cold stores (21.94 MMT, mostly potato), 23 pre-cooling units, 67 reefer vans nationally — vs 35 MMT deficit (NCCD)",s:"ic"},
+    {l:"30% of F&V perishes before reaching mandis — single largest value destruction in Indian agriculture (NHB; NABCONS 2022)",s:"ic"},
+    {l:"No pre-cooling at farm level — field heat accelerates spoilage in first 6 hours post-harvest before cold chain starts",s:"ic"}],
+   q:"49.9 MT annual loss worth ₹1.53 lakh crore (NABCONS 2022). Solving 20% = ₹30,000 crore value creation annually. Operation Greens provides 50% capital subsidy — de-risking Village Cold Hub capex by half."},
+  {i:"📊",bg:"#FAECE7",st:"Pre-production / sowing",t:"Price discovery — farmers sow blind",rows:[
+    {l:"Farmers commit land, inputs, labour 90–120 days before harvest with zero forward price intelligence — driving coordinated overplanting and crash cycles",s:"ic"},
+    {l:"RBI working paper establishes structural mechanism: seasonal concentration (rabi onion = 77% of supply) + limited buffering + long-distance movement → persistent volatility",s:"ic"},
+    {l:"e-NAM integrated 1,656 mandis (Feb 2026) but farmer price uplift is mixed — binding constraints are infrastructure + participation quality, not registration",s:"ih"}],
+   q:"A platform providing advance demand signals + price forecasting for sowing decisions could reduce the glut cycle by 15–20% — stabilising prices for both farmers and consumers. No existing platform does this at SMH scale."},
+  {i:"🤝",bg:"#FAEEDA",st:"Market / aggregation",t:"Commission extraction and market fragmentation",rows:[
+    {l:"Commission agents take 6–8% at mandis — on produce farmer has already transported at cost, often at a net loss in glut periods",s:"ih"},
+    {l:"Fragmented holdings (avg 0.74 ha) have zero negotiating power individually; price dictated on day of arrival at mandi with no alternatives",s:"ih"},
+    {l:"FPOs cover <5% of horticulture farmers; majority of 10,000+ registered FPOs are dormant or undercapitalised (SFAC/NABARD)",s:"ih"}],
+   q:"Ninjacart ($396M) + WayCool ($231M): direct aggregation raises farmer price 10–15%. Combined they serve ~1–2% of addressable SMH horticulture farmers. The model works; scale and rural penetration do not."},
+  {i:"📦",bg:"#FAECE7",st:"Harvest / handling",t:"No grading, sorting or quality differentiation at farm",rows:[
+    {l:"Almost no grading at farm level — all produce goes to mandi undifferentiated; quality premium cannot be captured by any farmer",s:"ih"},
+    {l:"Inappropriate packaging (jute sacks for tomatoes, loose loading) causes mechanical damage compounding cold chain failure",s:"ih"},
+    {l:"DeHaat evidence: on-farm quality grading → 10–15% higher price realisation; almost no SMH farmer has access to this service",s:"imm"}],
+   q:"Export-grade tomatoes earn ₹40–60/kg vs ₹5–15/kg for commodity grade. Same crop, same farmer, different infrastructure = 3–4x price difference. Grading at farm level is a direct quality-to-income conversion mechanism."},
+  {i:"🌧️",bg:"#FAECE7",st:"Production",t:"Climate vulnerability with negligible insurance cover",rows:[
+    {l:"Horticulture crops are 3–5x more sensitive to temperature variability than cereals (ICAR-CRIDA Heat Wave 2022 bulletin)",s:"ic"},
+    {l:"PMFBY horticulture: 5% farmer premium cap but enrolment <5% of eligible farmers; claim settlement rates poor in practice",s:"ih"},
+    {l:"Onion cultivation costs vary 6x across states (MP ₹341/qtl to TN ₹2,305/qtl, CACP 2021-22) — climate shocks amplify this disparity severely",s:"ih"}],
+   q:"Maharashtra 2023: unseasonal rain destroyed ₹2,000+ crore of onion and tomato in one week — no SMH had meaningful insurance cover. RBI Bulletin (May 2025) confirms weather anomalies directly drive vegetable price spikes."},
+  {i:"💳",bg:"#E6F1FB",st:"Financial layer",t:"Working capital trap for perishable farmers",rows:[
+    {l:"Perishable crops excluded from Warehouse Receipt System (WRS) — produce cannot serve as collateral; no inventory finance product exists anywhere in India",s:"ih"},
+    {l:"Without working capital, farmers cannot hold back produce during price crashes — forced distress sale compounding the glut cycle",s:"ih"},
+    {l:"Women growing vegetables as secondary income lack formal land titles or income records — structurally excluded from all formal credit channels",s:"imm"}],
+   q:"2–3 weeks of storage financing during tomato/onion glut shifts effective realisation from ₹2–3/kg to ₹8–12/kg (3–4x improvement, ICRISAT/UP Farrukhabad field data). Zero NBFCs or fintechs offer this at meaningful scale."}
+]);
+
+bWF('hwf',[
+  {l:"Consumer retail price",v:"₹100/kg (indexed)",p:100,c:"#185FA5",n:"Baseline"},
+  {l:"Retailer margin",v:"–₹29/kg",p:29,c:"#E24B4A",n:"~29%"},
+  {l:"Wholesaler mark-up",v:"–₹16/kg",p:16,c:"#E24B4A",n:"~16%"},
+  {l:"Trader mark-up (incl. mandi costs)",v:"–₹21/kg",p:21,c:"#EF9F27",n:"~21%"},
+  {l:"Farmer gross receipt (typical yr)",v:"~₹33.5/kg",p:33,c:"#1D9E75",n:"33.5% (RBI WP)"},
+  {l:"Input costs (seeds, fert, pest)",v:"–₹10/kg",p:10,c:"#E24B4A",n:"est."},
+  {l:"Labour costs",v:"–₹8/kg",p:8,c:"#EF9F27",n:"est."},
+  {l:"Farmer net income (typical yr)",v:"~₹15/kg",p:15,c:"#639922",n:"~15%"}
+]);
+
+bWST('hws',[
+  {g:"Farm-to-retailer direct aggregation",p:"Ninjacart ($396M), WayCool ($231M), DeHaat ($270M, ₹3,000Cr FY25)",c:"partial",s:"Proven model at ~1–5% penetration. Rural SMH farmers almost entirely unserved by all three players."},
+  {g:"Mandi price discovery / market intelligence",p:"Agmarknet (govt, lagged data), e-NAM (1,656 mandis, limited horticulture volume)",c:"partial",s:"No actionable forward-looking sowing decision advisory at SMH scale. Full structural white space."},
+  {g:"On-farm grading & quality assessment",p:"DeHaat (primarily cereals), Intello Labs (B2B AI grading only)",c:"partial",s:"Horticulture on-farm grading for SMH is essentially unaddressed at any meaningful scale."},
+  {g:"First-mile cold chain / pre-cooling at farm",p:"Clycopic, Tessol, Inficold (all at pilot scale)",c:"partial",s:"Solutions exist but only 23 pre-cooling units nationally. SMH distribution at village level not cracked."},
+  {g:"Perishable crop inventory finance",p:"None at meaningful scale — WRS excludes perishables",c:"uncovered",s:"FULL WHITE SPACE — zero NBFCs/fintechs offer viable perishable inventory finance for SMH farmers."},
+  {g:"Pre-sowing price forecasting advisory",p:"Fasal (crop health IoT only, not price forecasting)",c:"partial",s:"Price forecasting for sowing decisions at SMH scale is completely absent. Full structural white space."},
+  {g:"Parametric insurance — horticulture",p:"PMFBY (limited, <5% enrolment), AIC, SBI General",c:"partial",s:"Parametric index insurance for horticulture essentially absent. PMFBY has poor settlement in practice."},
+  {g:"FPO activation for collective market access",p:"SFAC, NABARD (government schemes only)",c:"partial",s:"10,000+ FPOs registered; majority dormant/undercapitalised. No platform systematically activates them."},
+  {g:"Export market linkage for SMH farmers",p:"APEDA (govt), large export houses only",c:"covered",s:"Onion exports 8.5% of production (2022-23) — all via large operators. SMH access = essentially zero."},
+  {g:"Integrated SMH horticulture platform",p:"None",c:"uncovered",s:"FULL WHITE SPACE — all players are vertical point solutions serving fragments of the value chain."}
+]);
+
+// HORTICULTURE 5 PLATFORM IDEAS
+bIdeas('hi',[
+  {id:1,color:"#D85A30",title:"First-mile cold chain — village cold hub network",
+   tag:"Village-level pre-cooling infrastructure operated by micro-entrepreneurs — the foundational infrastructure layer that makes all other horticulture interventions viable",
+   prob:"30% of F&V perishes before reaching markets. NHB ICAP records only 23 pre-cooling units and 67 reefer vans nationally against 30 million hectares under horticulture. Without pre-cooling at farm level, every other intervention in the value chain leaks value. Operation Greens provides 50% capital subsidy — making this the most de-risked infrastructure play available.",
+   ev:["49.9 MT annual horticulture loss, 30% perishing pre-mandi (NHB/NABCONS 2022)","NHB ICAP: only 23 pre-cooling units and 67 reefer vans nationally (Feb 2024 data)","Cold storage deficit: 35 MMT (NCCD); 5,431 cold stores (21.94 MMT) mostly potato-only","Operation Greens (PMKSY ₹630 Cr FY24-25): 50% subsidy for cold chain infrastructure — significant capex de-risking"],
+   biz:"Cold storage rental fee (₹2–5/crate/day) + reefer transport booking commission + quality testing fee + Operation Greens subsidy pass-through. Micro-entrepreneur model: platform provides equipment financing + market linkage; operator earns from usage fees.",
+   scores:{impact:5,ws:4,feas:3,rev:4,climate:5},
+   stages:[{n:1,l:"Y0–6 months",d:"Design Village Cold Hub model. 3 high-density clusters in Maharashtra/Karnataka. Deploy 30 pilot hubs using Operation Greens subsidy."},{n:2,l:"Y1",d:"300 hubs operational. Reefer transport network live. 10,000 farmers accessing first-mile cold chain."},{n:3,l:"Y2",d:"1,000 hubs. Quality grading integrated at cold hub entry. Market linkage to processors and exporters."},{n:4,l:"Y3–5",d:"National cold hub network. 10,000+ hubs. Proprietary cold chain data layer. Seasonal demand forecasting."}],
+   dfi:"30% post-harvest loss reduction = direct SDG 12 + SDG 2. Climate resilience: cooling reduces heat-linked losses that worsen with rising temperatures. Operation Greens 50% subsidy halves capex — most capital-efficient DFI co-investment in horticulture infrastructure.",
+   risk:"Capital-intensive even with subsidy. Asset-light model required: equipment financing via NBFC partner; micro-entrepreneur operates. Platform provides market linkage and digital layer only."},
+  {id:2,color:"#185FA5",title:"Pre-sowing market intelligence platform",
+   tag:"AI-powered price forecasting and demand signals delivered 90 days before harvest — breaking the structural sowing-blind / coordinated overplanting / price crash cycle",
+   prob:"Farmers commit land, inputs, and labour 90–120 days before harvest with zero forward price intelligence. The RBI working paper establishes the structural mechanism: seasonal concentration (rabi onion 77% of supply) + limited cold storage buffering + long-distance transport → persistent volatility. No platform provides SMH farmers market intelligence for rational sowing decisions. This is pure white space.",
+   ev:["RBI working paper: structural model linking TOP price volatility to availability ratios, rainfall deviations, seasonal concentration","Onion cost dispersion: 6x across states (₹341–₹2,305/qtl, CACP 2021-22) — price intelligence must be state-specific","Agmarknet has 10+ years historical price time series available for ML model training","e-NAM 1,656 mandis registered but mixed price uplift evidence — platform can use this data infrastructure"],
+   biz:"Subscription advisory (₹200–500/season/farmer) + premium market linkage for farmers acting on signals + data licensing to agribusinesses, commodity traders, and government agencies. At 1M farmers: ₹200–500 crore annual subscription revenue.",
+   scores:{impact:5,ws:5,feas:4,rev:4,climate:4},
+   stages:[{n:1,l:"Y0–6 months",d:"Build price forecasting model using Agmarknet historical data + satellite crop area estimation. Pilot 500 farmers in one district."},{n:2,l:"Y1",d:"IVR/WhatsApp advisory delivery to 50,000 farmers. Measure price uplift vs non-user control group."},{n:3,l:"Y2",d:"Real-time demand signal integration with food processors and retailers. Forward contracting pilot."},{n:4,l:"Y3–5",d:"National price intelligence platform. Data licensing to commodity traders, insurers, government. 2M+ subscribers."}],
+   dfi:"Price discovery is a fundamental market access right. Reducing the volatility trap = direct income stabilisation for most vulnerable. Climate angle: climate variability increases price volatility — platform value increases as climate risk rises. SDG 2 + SDG 10.",
+   risk:"Forecast accuracy is critical — a wrong forecast damages trust immediately. Start with directional signals (plant more/less vs last year) not precise price predictions. Partner with ICAR/IIM for model validation."},
+  {id:3,color:"#1D9E75",title:"FPO activation & direct market linkage",
+   tag:"Activating India's 10,000+ dormant FPOs as collective market actors — giving smallholder farmers the aggregation power they individually lack against commission agents",
+   prob:"65M+ SMH horticulture farmers are fragmented across 0.74 ha average holdings with zero negotiating power. Commission agents extract 6–8% at mandis. FPOs exist — 10,000+ registered — but majority dormant or undercapitalised. WayCool's FPO-channel analysis (ICRIER) demonstrated measurable net price improvement vs mandi. The collective infrastructure exists; the digital activation and market linkage layer is missing.",
+   ev:["10,000+ FPOs registered (SFAC/NABARD) — majority dormant or inactive","ICRIER documents WayCool FPO-channel net price improvement vs direct APMC mandi sale (explicit comparison)","Ninjacart 60 Decibels impact report (2023): commissioned assessment showing farmer outcome improvements","MIDH provides up to ₹18L in equity grant to FPOs for market infrastructure (Dec 2024 revised guidelines)"],
+   biz:"Platform fee on GMV (1–2%) from institutional buyer + SaaS for FPO management + logistics coordination fee + embedded working capital for FPOs. At ₹500 crore GMV: ₹5–10 crore revenue; scalable to ₹5,000 crore GMV in 5 years.",
+   scores:{impact:4,ws:3,feas:4,rev:4,climate:3},
+   stages:[{n:1,l:"Y0–6 months",d:"Identify and assess 50 active FPOs in 3 target states. FPO management dashboard. Connect 5 FPOs to institutional buyers."},{n:2,l:"Y1",d:"200 active FPOs on platform. ₹100 crore GMV. Quality grading integrated. Working capital product launched."},{n:3,l:"Y2",d:"1,000 FPOs. ₹1,000 crore GMV. Export market linkage for 10% of produce. FPO credit rating product."},{n:4,l:"Y3–5",d:"5,000 FPOs. National marketplace. Become the operating system for India's horticulture FPO ecosystem."}],
+   dfi:"Collective action for smallholders is a 50-year proven intervention (Amul model). Women constitute majority of horticulture labour — FPO leadership targets can embed gender representation. SDG 2 + SDG 8.",
+   risk:"FPO quality is highly variable — many dormant on paper. Rigorous onboarding assessment required. Start with 50 genuinely functional FPOs and build outward with validated unit economics."},
+  {id:4,color:"#534AB7",title:"Perishable inventory finance & price-timing tool",
+   tag:"Enabling horticulture farmers to hold produce through price crashes and sell when prices recover — the most direct income protection product in the value chain",
+   prob:"Without working capital, farmers cannot hold back produce during price crashes — forced into distress sale at ₹2–3/kg when the market recovers to ₹8–12/kg within weeks. The Warehouse Receipt System structurally excludes perishables. Zero NBFCs or fintechs offer this product. This is the missing financial infrastructure for horticulture income resilience.",
+   ev:["UP Farrukhabad potato study (2022-23): farmers with storage access earn significantly higher net income than those forced to sell at harvest","2–3 weeks of storage financing during glut shifts realisation from ₹2–3/kg to ₹8–12/kg — 3–4x improvement (ICRISAT field data)","WRS excludes all perishable crops — no existing legal or credit infrastructure for this need","Operation Greens cold storage subsidy means infrastructure can be shared with Idea 1 (Village Cold Hubs)"],
+   biz:"Interest income on short-term inventory loans (annualised 18–24% APR on 2–6 week tenure) + storage fee sharing with Village Cold Hub network + insurance on stored inventory. At ₹100 crore loan book: ₹18–24 crore annual interest income.",
+   scores:{impact:5,ws:5,feas:3,rev:4,climate:4},
+   stages:[{n:1,l:"Y0–6 months",d:"Design perishable inventory assessment protocol. Partner with 2 NBFCs. Pilot 200 tomato farmers in Maharashtra during monsoon glut."},{n:2,l:"Y1",d:"1,000 farmers. ₹5 crore loan book. Refine quality assessment model. Integrate with Village Cold Hub network."},{n:3,l:"Y2",d:"10,000 farmers. ₹50 crore loan book. Insurance on stored inventory. Expand to onion and potato."},{n:4,l:"Y3–5",d:"100,000+ farmers. ₹500 crore loan book. First credit bureau for perishable crops in India."}],
+   dfi:"Missing financial infrastructure for climate resilience — climate variability increases glut frequency, making product more valuable as climate risk rises. Direct SDG 1 + SDG 13. IFC agriculture finance team has identified perishable inventory finance as a specific priority gap.",
+   risk:"Perishable quality degrades during loan tenure. Must integrate with cold hub (Idea 1) for quality-controlled storage. AI-driven quality assessment at origination + insurance for spoilage are non-negotiable risk mitigants."},
+  {id:5,color:"#639922",title:"Climate-smart horticulture advisory & parametric insurance",
+   tag:"Integrated climate risk advisory with parametric insurance — building resilience for the most climate-exposed value chain in Indian agriculture",
+   prob:"Horticulture crops are 3–5x more sensitive to temperature variability than cereals (MoAFW/ICAR). PMFBY horticulture enrolment is <5% of eligible farmers with poor claim settlement. Maharashtra 2023: ₹2,000+ crore destroyed by unseasonal rain in one week with no SMH insurance cover. Parametric insurance for horticulture essentially does not exist in India.",
+   ev:["Horticulture: 3–5x more climate-sensitive than cereals (MoAFW/ICAR-CRIDA studies)","PMFBY horticulture: enrolment <5% of eligible farmers; claim settlement <60% in available data","Maharashtra unseasonal rain 2023: ₹2,000+ crore loss — zero SMH had meaningful insurance","Protected cultivation under MIDH (HP): tomato net returns ₹2,27,142/polyhouse vs ₹17,158 (Sikkim) — location-dependent (DES 2024)"],
+   biz:"Insurance premium commission (15–20% of premium) + SaaS advisory subscription (₹100–300/season/farmer) + government scheme facilitation fee + protected cultivation input marketplace. Long-term: proprietary climate risk dataset licensed to reinsurers.",
+   scores:{impact:4,ws:4,feas:4,rev:3,climate:5},
+   stages:[{n:1,l:"Y0–6 months",d:"Climate advisory for 3 crops in 2 states. IVR/WhatsApp delivery. 5,000 farmers."},{n:2,l:"Y1",d:"First parametric insurance product live (rainfall-indexed for onion/tomato). IRDAI engagement."},{n:3,l:"Y2",d:"50,000 farmers. Protected cultivation advisory + input marketplace. State MOU for PMFBY facilitation."},{n:4,l:"Y3–5",d:"200,000+ farmers. National climate risk database. Reinsurance data licensing. Proprietary parametric products."}],
+   dfi:"Purest climate resilience play in horticulture. SDG 13 flagship product. Priority for IFC, CGAP, Gates Foundation, Omidyar Network. PMFBY facilitation creates immediate policy alignment and government co-investment potential.",
+   risk:"Parametric insurance requires IRDAI approval and actuarial validation. Partner with existing licensed insurer (AIC or SBI General) rather than seeking own licence. Use their regulatory shelf while building the technology layer."}
+]);
+
+// ===================== CEREALS VALUE CHAIN FLOW =====================
+bVCF('cvc',[
+  {h:"1. Inputs",bg:"#EAF3DE",tc:"#085041",a:["Seed companies","Fertilizer dealers","Pesticide cos.","IFFCO/KRIBHCO"],b:"Counterfeit seeds estimated 20–25% market share. Fertilizer adulteration common. Soil health cards issued but advisory uptake poor. Input cost: ₹30,000–55,000/ha for wheat.",m:"Input adulteration gap",mc:"#FAEEDA",mt:"#633806"},
+  {h:"2. Production",bg:"#9FE1CB",tc:"#04342C",a:["~100M+ SMH farmers","FPOs (emerging)"],b:"65% of farmland rainfed. Monsoon-dependent for kharif (rice). Wheat rabi is irrigated in north India. Crop diversification incentivised by policy but market linkage missing for millets.",m:"Climate exposure: high",mc:"#FAECE7",mt:"#993C1D"},
+  {h:"3. Harvest & threshing",bg:"#FAEEDA",tc:"#633806",a:["Combine hire services","Labour","Local traders"],b:"Combine harvester penetration growing. Post-harvest losses 6–18%. 60–70% of grain stored at household level using traditional methods (mud kothi, morai). Distress selling acute.",m:"PHT: 6–18% losses",mc:"#FAECE7",mt:"#993C1D"},
+  {h:"4. Storage",bg:"#EF9F27",tc:"#412402",a:["On-farm (60–70%)","PACS/village godowns","FCI warehouses","Arya.ag/StarAgri"],b:"FCI+state: 917.83 LMT covered/CAP capacity. PACS godowns expanding (5,937 new registered, 73,492 computerised by June 2025). WRS available for grains — but SMH farmers lack access.",m:"WRS available; SMH excluded",mc:"#EAF3DE",mt:"#27500A"},
+  {h:"5. Procurement / mandi",bg:"#F09595",tc:"#501313",a:["FCI / state agencies","APMC mandis","Private traders","NAFED"],b:"MSP: paddy ₹2,369/qtl, wheat ₹2,585/qtl. Only 15% paddy and 9.6% wheat farmers benefit. 75–85% sell in open markets. Punjab 95% vs UP 3.6% MSP access.",m:"75–85% miss MSP",mc:"#FCEBEB",mt:"#A32D2D"},
+  {h:"6. Processing & milling",bg:"#FCEBEB",tc:"#A32D2D",a:["Rice mills","Flour mills","FCI/PDS","Export channel"],b:"FCI distributes via PDS (subsidised for NFSA beneficiaries). Retail wheat ₹30–40/kg, rice ₹40–70/kg. Farmer gets ~40–55% of retail for MSP crops; less in open market.",m:"Farmer: 40–55% (MSP)",mc:"#EAF3DE",mt:"#27500A"}
+]);
+
+// CEREALS SUPPLY CHAIN GAPS
+bGG('cg',[
+  {i:"🏛️",bg:"#FCEBEB",st:"Market access",t:"MSP reach — 75–85% of farmers excluded",rows:[
+    {l:"Only 15% of paddy and 9.6% of wheat farmers benefit from MSP-backed procurement (ICAR-NAEP) — despite ₹3.33 lakh crore in annual MSP payouts (PIB 2025)",s:"ic"},
+    {l:"Geographic concentration extreme: Punjab ~95% of paddy farmers at MSP; Uttar Pradesh — with far more farmers — only ~3.6% (Wikipedia MSP; EPW analysis)",s:"ic"},
+    {l:"Barriers for excluded farmers: lack of awareness (only 23% MSP awareness), no logistics to procurement centres, quality testing barriers, no formal land documentation",s:"ic"}],
+   q:"₹3.33 lakh crore annual programme reaches fewer than 10–15% of eligible SMH farmers. A platform that facilitates registration, quality compliance, and logistics coordination for UP/Bihar/WB farmers could unlock ₹15,000–25,000/ha additional income for the excluded 85%."},
+  {i:"🏚️",bg:"#FAECE7",st:"Storage layer",t:"On-farm storage inadequacy & post-harvest losses",rows:[
+    {l:"60–70% of grain stored at household level using traditional methods — mud kothi, morai — with 6–18% losses from pests, moisture, contamination (CIPHET 2019; ICAR 2023)",s:"ic"},
+    {l:"FCI+state covered storage: 917.83 LMT — but distribution is uneven; many farmers more than 50 km from formal warehouse (ICRIER report)",s:"ih"},
+    {l:"Distress selling at harvest: farmers sell immediately due to cash flow constraints, accepting below-MSP prices. WRS exists for grains but SMH farmers don't access it",s:"ih"}],
+   q:"12 MT+ of cereals lost annually to post-harvest issues worth ₹15,000–20,000 crore (StarAgri, CIPHET estimates). Warehouse receipt finance (WRS) for grains exists legally — but requires platform to bridge the last-mile access gap for SMH farmers."},
+  {i:"🌱",bg:"#FAEEDA",st:"Input stage",t:"Input quality — counterfeit seeds & adulteration",rows:[
+    {l:"Counterfeit/substandard seeds estimated at 20–25% of market share — a primary driver of yield gap vs potential (ICAR studies)",s:"ih"},
+    {l:"Fertilizer adulteration common at local dealer level; farmers have no way to verify quality before purchase or application",s:"ih"},
+    {l:"Soil health card scheme operational but advisory uptake poor; most farmers apply inputs without soil test data",s:"ih"}],
+   q:"A 10% improvement in seed quality (shifting from counterfeit to certified) translates to 8–12% yield improvement — equivalent to ₹4,000–8,000/ha income gain. AgroStar's verified input model (5–9M farmers) demonstrates the demand exists. Gap is depth of rural penetration."},
+  {i:"💡",bg:"#FCEBEB",st:"Market intelligence",t:"Price discovery & open market access",rows:[
+    {l:"Most SMH cereal farmers sell at open mandi on day of harvest with no comparison of prices across alternative mandis",s:"ih"},
+    {l:"Digital Agriculture Mission (AgriStack) is building farmer data infrastructure but open mandi price intelligence for SMH remains fragmented",s:"ih"},
+    {l:"AGMARKNET provides historical price data but real-time, accessible, actionable price comparison for individual farmers is absent",s:"imm"}],
+   q:"A farmer with access to real-time price comparison across 5 nearby mandis and WRS finance to wait for higher prices can improve net realisation by 8–15% vs same-day distress sale. No platform integrates both signals for SMH cereal farmers at scale."},
+  {i:"🌾",bg:"#FAECE7",st:"Diversification",t:"Climate-smart diversification — millets underleveraged",rows:[
+    {l:"Millets are more climate-resilient than rice — yields vary significantly less during extreme weather (Columbia University/ScienceDaily, Environmental Research Letters)",s:"ih"},
+    {l:"India's rice cultivation requires 3,000–3,500L water/kg; groundwater depletion in Punjab/Haryana threatens long-term viability; government actively incentivising shift",s:"ih"},
+    {l:"Millet market development gap: farmers know millets are resilient but lack organised market linkages, assured procurement, and premium pricing signals",s:"ih"}],
+   q:"NICRA projects rice yields down 20% by 2050 (rain-fed) without adaptation. A farmer who shifts 20% of their rice area to millets reduces climate vulnerability while accessing growing millet market (Shree Anna push, export potential). Platform must provide both advisory AND market linkage."},
+  {i:"💳",bg:"#E6F1FB",st:"Financial layer",t:"Warehouse receipt finance gap for SMH farmers",rows:[
+    {l:"Warehouse Receipt System (WRS) exists for grains and is legally functional — unlike horticulture where it's structurally absent — but SMH farmers don't access it",s:"ih"},
+    {l:"Access barriers: farmers need WDRA-registered warehouses, quality certification, and formal documentation; logistics make this prohibitive for smallholders",s:"ih"},
+    {l:"Arya.ag ($186M equity+debt) has demonstrated WRS at scale for grain aggregators and traders — but almost no direct SMH farmer access",s:"ih"}],
+   q:"WRS-backed grain finance enables farmers to hold produce 30–90 days after harvest and sell at higher seasonal prices. Arya.ag model works at scale for traders; no platform has extended this to individual SMH farmers with small lots (1–5 tonnes). This is the gap."}
+]);
+
+bWF('cwf',[
+  {l:"Consumer retail price",v:"₹55/kg (rice, retail)",p:100,c:"#185FA5",n:"Baseline"},
+  {l:"Retailer/distributor margin",v:"–₹8/kg",p:15,c:"#E24B4A",n:"~15%"},
+  {l:"Trader/processor margin",v:"–₹10/kg",p:18,c:"#E24B4A",n:"~18%"},
+  {l:"Milling cost + transport",v:"–₹5/kg",p:9,c:"#EF9F27",n:"~9%"},
+  {l:"Farmer gross (open market)",v:"~₹22–27/kg",p:45,c:"#1D9E75",n:"~40–50%"},
+  {l:"Input costs (seed, fert, irrigation)",v:"–₹8/kg",p:15,c:"#E24B4A",n:"est."},
+  {l:"Labour + harvest costs",v:"–₹5/kg",p:9,c:"#EF9F27",n:"est."},
+  {l:"Farmer net income",v:"~₹9–14/kg",p:22,c:"#639922",n:"~16–25%"}
+]);
+
+bWST('cws',[
+  {g:"Input commerce (seeds, fertilizers, pesticides)",p:"AgroStar ($111M, 5–9M farmers), BigHaat ($10M+), BharatAgri, DeHaat",c:"partial",s:"Input supply well-served digitally. Gap is quality assurance (counterfeit seeds) and rural depth beyond district HQs."},
+  {g:"Crop advisory & agronomy",p:"DeHaat ($270M, 2M farmers), AgroStar, BharatAgri, Krishify, CropIn (B2B)",c:"partial",s:"Advisory well-served for large farmers in 8–10 states. SMH in UP/Bihar/Odisha still largely unserved."},
+  {g:"Grain warehousing + WRS finance",p:"Arya.ag ($186M equity+debt), StarAgri (2,200 warehouses, 5MT capacity)",c:"partial",s:"Well-served for traders and aggregators. SMH farmers with 1–5 tonne lots essentially excluded from WRS access."},
+  {g:"MSP access facilitation",p:"Government e-procurement portals (e-samyukti, eSamridhi)",c:"partial",s:"Government portals exist but require documentation, logistics, and digital literacy most SMH farmers lack. Platform can bridge this gap."},
+  {g:"Mandi price discovery & comparison",p:"Agmarknet (govt, data quality issues), e-NAM (limited adoption)",c:"partial",s:"Data exists but is fragmented, lagged, and not actionable for individual SMH farmer decisions at the time they matter."},
+  {g:"Climate-smart diversification advisory",p:"None with market linkage",c:"uncovered",s:"FULL WHITE SPACE — ICAR has the agronomic knowledge; no platform provides millet/maize diversification advisory WITH market linkage and procurement guarantee."},
+  {g:"Grain finance for SMH farmers (<5 tonne lots)",p:"None at meaningful scale",c:"uncovered",s:"FULL WHITE SPACE — WRS works for large lots via Arya.ag/StarAgri; SMH smallholder grain finance with small lot WRS is completely absent."},
+  {g:"Certified input quality assurance",p:"None at scale",c:"uncovered",s:"FULL WHITE SPACE — counterfeit seeds 20–25% market share; no platform has built a credible quality verification system for inputs at SMH farmer level."},
+  {g:"Integrated cereal farmer household platform",p:"None",c:"uncovered",s:"FULL WHITE SPACE — DeHaat is the closest but primarily input-focused and urban-proximate. Integrated farm-gate-to-market for SMH in eastern India absent."}
+]);
+
+// CEREALS 5 PLATFORM IDEAS
+bIdeas('ci',[
+  {id:1,color:"#639922",title:"MSP access facilitation platform",
+   tag:"Digital registration, logistics coordination, and quality compliance documentation enabling excluded farmers in UP, Bihar, WB, MP to access the ₹3.33L Cr MSP system",
+   prob:"Only 15% of paddy and 9.6% of wheat farmers benefit from MSP procurement despite ₹3.33 lakh crore in annual payouts. Geographic concentration is extreme: Punjab ~95%, UP only 3.6%. The barriers are not eligibility — every registered farmer is eligible — but registration complexity, distance to procurement centres, quality testing requirements, and lack of documentation. A platform that removes these barriers unlocks the single largest untapped income transfer in Indian agriculture.",
+   ev:["Only 15% paddy and 9.6% wheat farmers benefit from MSP-backed procurement (ICAR-NAEP data)","Punjab ~95% vs UP ~3.6% MSP access — same scheme, same eligibility, 26x difference in access (Wikipedia MSP; EPW analysis)","FY2024-25: ₹3.33L Cr total MSP payouts; 1.84 crore farmers benefited — leaving 8–10 crore cereal farmers outside","Digital Agriculture Mission (AgriStack) building farmer ID + land records — creating the data foundation for MSP access facilitation"],
+   biz:"Registration and facilitation fee (₹200–500/farmer/season) + logistics coordination margin (for transport to procurement centres) + SaaS to state procurement agencies (₹5–10/farmer/season). At 5M newly enrolled farmers: ₹100–250 crore annual revenue from facilitation alone.",
+   scores:{impact:5,ws:4,feas:4,rev:3,climate:3},
+   stages:[{n:1,l:"Y0–6 months",d:"Partner with 2 state procurement agencies (MP, Bihar). Build farmer registration workflow. Pilot in 5 districts with 5,000 farmers."},{n:2,l:"Y1",d:"100,000 farmers enrolled. Logistics network to procurement centres. Quality testing coordination."},{n:3,l:"Y2",d:"1M farmers across 3 states. ₹50–100 crore additional MSP income directed to farmers. State government MOU."},{n:4,l:"Y3–5",d:"National scale. 5M+ farmers. Revenue from facilitation + government SaaS. AgriStack integration."}],
+   dfi:"Most direct income transfer narrative in cereals: ₹15,000–25,000/ha additional income for excluded farmers in India's poorest states. SDG 1 (poverty reduction via income uplift). Government policy alignment is total — the platform enhances a government programme, it does not compete with it. NABARD and state governments actively fund MSP access expansion.",
+   risk:"State government partnerships are politically complex and can change with elections. Platform must be designed as infrastructure (not advocacy). Work with state agencies as B2B2C — platform is the technology provider, state is the delivery partner."},
+  {id:2,color:"#185FA5",title:"Warehouse receipt finance for smallholders",
+   tag:"Bridging the last-mile access gap to India's existing Warehouse Receipt System — enabling SMH farmers to store grain and sell at optimal prices rather than distress-selling at harvest",
+   prob:"WRS exists for grains and is legally functional — unlike horticulture where it's structurally absent — but SMH farmers with 1–5 tonne lots are completely excluded from accessing it. Arya.ag and StarAgri have demonstrated WRS at scale for traders and aggregators. No player has solved the last-mile access problem for the individual smallholder farmer. Without WRS access, farmers distress-sell at harvest when prices are lowest, often well below MSP.",
+   ev:["WRS-backed grain finance demonstrated at scale: Arya.ag $186M equity+debt, StarAgri 2,200+ warehouses 5MT capacity — both serving traders/aggregators not SMH farmers","Farmers selling via WRS (holding 60–90 days post-harvest) achieve 8–18% higher seasonal prices (post-harvest loss study data + seasonal price patterns)","India has 917.83 LMT covered grain storage capacity — infrastructure exists; access and documentation are the barriers","PACS godown network expanding (5,937 new registered, 73,492 computerised by June 2025) — creating the storage infrastructure layer for SMH WRS access"],
+   biz:"Interest income on WRS-backed grain loans (annualised 14–18% APR) + storage facility management fee + quality certification fee + warehousing margin from PACS partnership. At ₹500 crore loan book: ₹70–90 crore annual interest income.",
+   scores:{impact:5,ws:4,feas:4,rev:5,climate:3},
+   stages:[{n:1,l:"Y0–6 months",d:"Partner with 3 WDRA-registered warehouses in wheat belt. Design SMH-adapted documentation process. Pilot 500 farmers."},{n:2,l:"Y1",d:"5,000 farmers. ₹25 crore loan book. Integrate with PACS godowns. Digital quality assessment at farm level."},{n:3,l:"Y2",d:"50,000 farmers. ₹250 crore loan book. Expand to rice belt (WB, Odisha, Bihar)."},{n:4,l:"Y3–5",d:"500,000+ farmers. ₹2,500 crore loan book. Largest SMH grain finance platform in India."}],
+   dfi:"Financial inclusion + income stabilisation + climate resilience in one product. Prevents distress selling which is a primary driver of rural poverty cycles. SDG 1 + SDG 8. Blended finance: first-loss tranche from DFI/NABARD de-risks the small-lot lending portfolio for commercial NBFCs.",
+   risk:"Quality of grain at deposit assessment is critical for lending. CIPHET estimates 6–18% losses — platform must establish quality standards at origination. Partner with WDRA-registered warehouses for quality certification. Insurance cover for quality deterioration during loan tenure."},
+  {id:3,color:"#BA7517",title:"Certified input quality assurance marketplace",
+   tag:"Platform-verified seeds, fertilizers, and pesticides — eliminating the 20–25% counterfeit seed problem and fertilizer adulteration that silently destroys cereal farmer yields",
+   prob:"Counterfeit or substandard seeds are estimated at 20–25% of total seed market share in India. Fertilizer adulteration is common at local dealer level. Soil health cards are issued but rarely inform input application. A farmer using counterfeit seeds loses 8–12% of yield potential before the crop is even in the ground — an invisible income loss that no platform has systematically addressed.",
+   ev:["Counterfeit/substandard seeds estimated 20–25% of India's seed market (ICAR studies)","Fertilizer adulteration at local dealer level well-documented; quality testing absent at point of purchase for SMH farmers","DeHaat's input marketplace model (₹3,000 Cr FY25 revenue) demonstrates demand for organised input commerce","AgroStar serving 5–9M farmers with verified inputs — demonstrating the model works; gap is deeper rural penetration in eastern India"],
+   biz:"Transaction margin on verified input sales (8–12% on seed, 5–8% on fertilizers) + quality testing fee (₹20–50/test) + subscription advisory (₹100–200/season). At 1M farmers: ₹300–500 crore annual revenue from input commerce with quality premium.",
+   scores:{impact:4,ws:3,feas:4,rev:4,climate:3},
+   stages:[{n:1,l:"Y0–6 months",d:"Partner with 5 certified seed companies and 3 fertilizer manufacturers. Build quality verification system. Pilot in 2 districts."},{n:2,l:"Y1",d:"100,000 farmers. Input quality score visible at point of purchase. Farmer yield tracking linked to input quality."},{n:3,l:"Y2",d:"500,000 farmers. Soil health advisory integrated. Private label certified seed product launched."},{n:4,l:"Y3–5",d:"5M+ farmers. Most trusted input brand for SMH farmers. Data licensing to insurance companies for yield correlation."}],
+   dfi:"Food security and farmer income uplift from eliminating invisible losses. SDG 2 (zero hunger) + SDG 8. Input quality assurance is a climate adaptation measure — certified stress-tolerant varieties are the first line of adaptation for climate-vulnerable farmers. Government alignment: NFSM explicitly targets certified seed adoption.",
+   risk:"Building trust for verified inputs requires significant farmer education and field demonstration. 'Seeing is believing' — first adopter farmers must visibly outperform non-users. Start with seed quality (highest impact, most measurable) before tackling fertilizers."},
+  {id:4,color:"#993356",title:"Climate-smart crop diversification & millet market linkage",
+   tag:"Advisory platform with assured market linkage enabling SMH farmers to shift from climate-vulnerable rice toward more resilient millets, maize, and pulses",
+   prob:"India's rice cultivation is on a path of increasing climate vulnerability — NICRA projects 7–20% yield decline by 2050 for rice without adaptation, while millets are significantly more climate-resilient. But farmers cannot diversify to millets without seeing a credible buyer at the end of the season. Government policy (Shree Anna, NFSM millets) is pushing diversification — but the market linkage layer that makes it economically rational for individual SMH farmers is missing.",
+   ev:["NICRA: rain-fed rice yields down 20% by 2050 without adaptation; millets much more resilient (Columbia University/ScienceDaily research)","India is world's largest millet producer but domestic market development is nascent — export potential growing with Shree Anna push","NFSM millets + NMEO have created procurement support and incentive structure; implementation gap is the market linkage for SMH farmers","2024: 3.2 million ha of crops affected by extreme weather events (CSE/IMD) — climate diversification imperative is becoming visible to farmers"],
+   biz:"Market linkage platform fee (2–3% of GMV) from institutional buyers (food processors, exporters, retailers) + subscription advisory (₹100–200/season) + premium seed access margin. At 500,000 farmers shifting 0.5 ha to millets: ₹25–50 crore annual platform revenue with meaningful income improvement per farmer.",
+   scores:{impact:4,ws:4,feas:4,rev:3,climate:5},
+   stages:[{n:1,l:"Y0–6 months",d:"Map millet buyer ecosystem (processors, exporters, consumer brands). Design procurement guarantee structure. Pilot 1,000 farmers in Rajasthan/MP."},{n:2,l:"Y1",d:"10,000 farmers. ₹20 crore GMV of millet traded. Climate advisory integrated with sowing recommendations."},{n:3,l:"Y2",d:"100,000 farmers. ₹200 crore GMV. Expand to maize and pulses. State government partnership for Shree Anna programme."},{n:4,l:"Y3–5",d:"1M+ farmers. ₹2,000 crore GMV. National millet + coarse cereal marketplace. Climate-smart food supply chain."}],
+   dfi:"Purest climate resilience play in cereals. SDG 13 flagship for agricultural adaptation. Millet diversification also addresses SDG 2 (nutrition) and SDG 6 (water) as millets use 70% less water than rice. IFC, Gates Foundation, and bilateral donors (GIZ, USAID) have all identified millet market development as a priority for climate-smart agriculture investment.",
+   risk:"Millet market remains thin in most states — buyer aggregation before farmer adoption is essential. Sequence: secure 3–5 institutional buyer commitments before advising farmers to switch. Do not create a diversification trap where farmers grow millets but cannot sell."},
+  {id:5,color:"#534AB7",title:"Digital mandi price discovery & collective grain selling",
+   tag:"Real-time mandi price comparison + collective selling coordination enabling SMH cereal farmers to make informed selling decisions and negotiate better prices",
+   prob:"Most SMH cereal farmers sell at the nearest mandi on the day of harvest with no visibility of prices at alternative mandis, no ability to compare, and no bargaining power individually. AGMARKNET data exists but is lagged and not actionable. e-NAM has integrated mandis but adoption is mixed. The farmer's information disadvantage relative to traders is systematic — and directly translates into lower prices.",
+   ev:["Only 23% of farmers nationally are aware of MSP (Wikipedia MSP article) — the same information gap applies to mandi price awareness","AGMARKNET and e-NAM provide market data but require literacy and connectivity that most SMH farmers in Bihar/WB/Odisha lack","Price disparity across mandis within a 50 km radius can be 10–20% for the same grain on the same day (AGMARKNET data patterns)","DeHaat's model: shows market price at each quality grade to farmers at harvest — 10–15% higher realisation reported"],
+   biz:"Subscription (₹100–200/year) for real-time price alerts + collective selling coordination fee (1–2% of GMV) from institutional buyers + embedded WRS finance integration with Idea 2. At 2M subscribers: ₹20–40 crore annual subscription revenue.",
+   scores:{impact:4,ws:3,feas:4,rev:4,climate:3},
+   stages:[{n:1,l:"Y0–6 months",d:"Integrate AGMARKNET + e-NAM APIs. Build IVR + WhatsApp price alert system for 5 key grains. Pilot 10,000 farmers."},{n:2,l:"Y1",d:"Collective selling coordination for 50,000 farmers. Measure realisation uplift vs non-platform control group."},{n:3,l:"Y2",d:"500,000 farmers. Integrate with WRS finance (Idea 2) for optimal price timing. Forward price signals."},{n:4,l:"Y3–5",d:"5M+ farmers. Real-time grain market intelligence product. Data licensing to traders, processors, government."}],
+   dfi:"Market transparency and price discovery are fundamental market access rights. Reducing information asymmetry = direct income improvement for the most marginalised sellers. SDG 10 (reduced inequality between informed and uninformed market participants). Complements Digital Agriculture Mission / AgriStack.",
+   risk:"Price information without logistics to act on it has limited impact. Bundle with transport coordination or WRS access (Idea 2) — a farmer who knows a better price exists but can't physically reach that mandi or store their grain benefits marginally. The combination of ideas 2 and 5 creates the full income improvement."}
+]);
+
+// ===================== FINAL SYNTHESIS DATA =====================
+
+// All 15 ideas ranked by combined score for the ranking table
+const allIdeas=[
+  {vc:"Dairy",id:"D2",title:"Dairy income digitisation & credit bridge",color:"#185FA5",scores:{impact:5,ws:4,feas:5,rev:5,climate:3},avg:4.4},
+  {vc:"Dairy",id:"D1",title:"Feed intelligence & marketplace",color:"#1D9E75",scores:{impact:5,ws:5,feas:4,rev:4,climate:4},avg:4.4},
+  {vc:"Horti",id:"H2",title:"Pre-sowing market intelligence platform",color:"#185FA5",scores:{impact:5,ws:5,feas:4,rev:4,climate:4},avg:4.4},
+  {vc:"Horti",id:"H4",title:"Perishable inventory finance & price-timing",color:"#534AB7",scores:{impact:5,ws:5,feas:3,rev:4,climate:4},avg:4.2},
+  {vc:"Cereals",id:"C2",title:"Warehouse receipt finance for smallholders",color:"#185FA5",scores:{impact:5,ws:4,feas:4,rev:5,climate:3},avg:4.2},
+  {vc:"Cereals",id:"C1",title:"MSP access facilitation platform",color:"#639922",scores:{impact:5,ws:4,feas:4,rev:3,climate:3},avg:3.8},
+  {vc:"Dairy",id:"D5",title:"Last-mile dairy micro-entrepreneurs",color:"#0F6E56",scores:{impact:5,ws:4,feas:3,rev:4,climate:3},avg:3.8},
+  {vc:"Horti",id:"H1",title:"First-mile cold chain — village cold hubs",color:"#D85A30",scores:{impact:5,ws:4,feas:3,rev:4,climate:5},avg:4.2},
+  {vc:"Horti",id:"H5",title:"Climate-smart horticulture advisory & insurance",color:"#639922",scores:{impact:4,ws:4,feas:4,rev:3,climate:5},avg:4.0},
+  {vc:"Cereals",id:"C4",title:"Climate-smart diversification & millet linkage",color:"#993356",scores:{impact:4,ws:4,feas:4,rev:3,climate:5},avg:4.0},
+  {vc:"Dairy",id:"D4",title:"Climate-resilient fodder system",color:"#7F77DD",scores:{impact:4,ws:5,feas:3,rev:3,climate:5},avg:4.0},
+  {vc:"Horti",id:"H3",title:"FPO activation & direct market linkage",color:"#1D9E75",scores:{impact:4,ws:3,feas:4,rev:4,climate:3},avg:3.6},
+  {vc:"Cereals",id:"C5",title:"Digital mandi price discovery & collective selling",color:"#534AB7",scores:{impact:4,ws:3,feas:4,rev:4,climate:3},avg:3.6},
+  {vc:"Cereals",id:"C3",title:"Certified input quality assurance marketplace",color:"#BA7517",scores:{impact:4,ws:3,feas:4,rev:4,climate:3},avg:3.6},
+  {vc:"Dairy",id:"D3",title:"Tele-vet & animal health intelligence",color:"#993C1D",scores:{impact:4,ws:3,feas:4,rev:3,climate:4},avg:3.6},
+];
+
+const rt=document.getElementById('ranking-table');
+if(rt){
+  const th=document.createElement('tr');
+  th.innerHTML='<th>#</th><th>Idea</th><th>Value chain</th><th>Impact</th><th>White space</th><th>Feasibility</th><th>Revenue</th><th>Climate</th><th>Avg /5</th>';
+  rt.appendChild(th);
+  allIdeas.forEach((r,i)=>{
+    const tr=document.createElement('tr');
+    const isTop5=i<5;
+    tr.style.background=isTop5?'var(--bgS)20':'';
+    tr.innerHTML=`<td style="font-weight:500;color:${r.color}">${i+1}</td>
+      <td style="${isTop5?'font-weight:500':'color:var(--tx2)'}">${r.title}</td>
+      <td><span class="pl ${r.vc==='Dairy'?'pb':r.vc==='Horti'?'pa':'pg2'}">${r.vc}</span></td>
+      <td><span class="sc s${r.scores.impact}">${r.scores.impact}</span></td>
+      <td><span class="sc s${r.scores.ws}">${r.scores.ws}</span></td>
+      <td><span class="sc s${r.scores.feas}">${r.scores.feas}</span></td>
+      <td><span class="sc s${r.scores.rev}">${r.scores.rev}</span></td>
+      <td><span class="sc s${r.scores.climate}">${r.scores.climate}</span></td>
+      <td style="font-weight:500;color:${r.color}">${r.avg.toFixed(1)}</td>`;
+    rt.appendChild(tr);
+  });
+}
+
+// THE 5 FINAL CROSS-CHAIN PLATFORM IDEAS
+bIdeas('synth-ideas',[
+  {id:"F1",color:"#185FA5",title:"Farmer financial identity & income digitisation (cross-chain)",
+   tag:"The foundational data infrastructure layer — converting dairy milk records, grain WRS documentation, and horticulture FPO transactions into verified financial identity for 80M+ SMH households",
+   prob:"The same farmer household that has no formal credit access today generates measurable, recurring income from three separate value chains — daily milk sales, seasonal grain sales, and vegetable sales. None of these income streams is captured in any formal record. Without financial identity, farmers cannot access credit, insurance, government schemes, or any formal financial product. This single gap is the bottleneck for every other intervention. It must be solved first.",
+   ev:["80M dairy farmers: daily/fortnightly milk payments with no formal record (DAHD data)","75–85% of cereal farmers sell in open markets below MSP with no documentation (ICAR-NAEP)","World Bank 2025: only 41% of women-headed agri HHs borrow formally vs 51% of men","Stellapps mooPay (dairy income) + Arya.ag (grain WRS) + FPO transaction records = three proven income record models to integrate"],
+   biz:"SaaS to cooperatives and FPOs (₹2–5/farmer/month) + lending commission from NBFC partners (1–2% of loan disbursed) + insurance premium share + data licensing to banks, insurers, commodity traders. At 5M farmers: ₹500–1,000 crore annual revenue from financial services enabled by the income data layer.",
+   scores:{impact:5,ws:5,feas:5,rev:5,climate:3},
+   stages:[{n:1,l:"Y0–Y1",d:"Dairy income records in 2 geographies. Grain WRS documentation pilots. First credit product live with NBFC partner."},{n:2,l:"Y1–Y2",d:"1M farmers with verified income records. Insurance products launched. AgriStack integration."},{n:3,l:"Y2–Y4",d:"5M farmers. Licensed income data infrastructure. Women-targeted savings and credit products."},{n:4,l:"Y4–Y8",d:"De facto rural income data utility. National scale. Licensing revenue dominant revenue stream."}],
+   dfi:"The foundational SDG play: SDG 1 (credit access unlocks income improvement), SDG 5 (women gaining financial identity), SDG 8 (formal financial inclusion). CGAP, IFC, and World Bank have all identified rural income digitisation as the single most important gap in agricultural finance. Blended finance: first-loss guarantee on the initial loan portfolio de-risks the business case for commercial NBFCs.",
+   risk:"Data quality and farmer trust are the foundational risks. Farmers must consent to income data being used for financial services. Position as farmer-controlled data (they benefit most). Never sell data without explicit farmer consent — the business model is credit and insurance facilitation, not data brokerage."},
+  {id:"F2",color:"#D85A30",title:"First-mile market access infrastructure (cold hubs + DMEs + PACS)",
+   tag:"Physical and digital infrastructure at the village level bridging the last-mile gap between 120M SMH farmers and organised markets — across perishables, dairy, and grains",
+   prob:"The last-mile infrastructure gap is the single most important structural barrier between SMH farmers and organised markets. Without village-level collection (dairy DMEs), village-level cold storage (horticulture cold hubs), or village-level grain storage linked to WRS (PACS godowns), every other digital intervention is limited by the physical reality that most SMH farmers are too fragmented and too remote to access organised channels individually.",
+   ev:["465k+ villages have no dairy cooperative (NDDB) — hence no organised milk collection","23 pre-cooling units nationally vs 30 million ha under horticulture (NHB ICAP)","60–70% of grain stored at household level using traditional methods with 6–18% losses (CIPHET)","PACS godown network expanding: 5,937 new registered, 73,492 computerised by June 2025 — infrastructure being built that platform can leverage"],
+   biz:"Revenue from: Village Cold Hub storage fees (₹2–5/crate/day) + DME per-litre commission (₹0.50–1.00/L) + PACS warehouse management fee + last-mile logistics coordination margin. Network effect: each infrastructure node becomes distribution point for inputs, advisory, and financial services. At 10,000 nodes: ₹300–600 crore annual infrastructure revenue.",
+   scores:{impact:5,ws:4,feas:3,rev:4,climate:5},
+   stages:[{n:1,l:"Y0–Y1",d:"100 DMEs (dairy) + 30 Village Cold Hubs (horti) + 3 PACS godown partnerships. Pilot geographies in Karnataka + Maharashtra."},{n:2,l:"Y1–Y3",d:"1,000 DMEs + 300 cold hubs + 50 PACS godowns. Operation Greens subsidy applied. Unit economics validated."},{n:3,l:"Y3–Y5",d:"5,000 infrastructure nodes across 8 states. Each node serves as distribution for inputs, advisory, financial services."},{n:4,l:"Y5–Y8",d:"10,000+ nodes. National coverage. Infrastructure network becomes primary moat — switching cost for farmers is the physical node in their village."}],
+   dfi:"Infrastructure investment for climate resilience: cold chain reduces heat-linked post-harvest losses that worsen with rising temperatures; PACS storage reduces flood/drought-induced distress selling; DMEs extend cooperative reach to unserved villages. Operation Greens 50% subsidy for cold chain + NABARD PACS investment = substantial DFI co-investment potential. SDG 2 + SDG 12 + SDG 13.",
+   risk:"Capital-intensive: each Village Cold Hub costs ₹3–8 lakh net of subsidy. Asset-light model required: equipment financing via NBFC partner, micro-entrepreneur operates, platform provides digital layer and market linkage. Total capex requirement for 10,000 nodes: ₹300–800 crore — large but manageable over 5 years with blended finance."},
+  {id:"F3",color:"#BA7517",title:"Input intelligence & quality marketplace (cross-chain)",
+   tag:"Single platform for quality-verified feed, seeds, fertilizers, and crop protection products — replacing the fragmented, adulteration-ridden input supply chain that silently destroys farmer income",
+   prob:"The input supply chain is the least disrupted and most economically important part of the farming system. Dairy feed is 60–70% of production cost with no organised market. Counterfeit seeds are 20–25% of the cereal input market. Pesticide overuse and adulteration in horticulture are chronic. Every rupee saved on input cost is additional income for the farmer — and the platform captures a margin on a transaction that is already happening.",
+   ev:["Dairy: feed = 60–70% of milk production cost; no organised feed marketplace at scale (DAHD/IIMA)","Cereals: counterfeit/substandard seeds estimated 20–25% of total market (ICAR studies)","Horticulture: pesticide overuse and certified seed access poor for SMH farmers","DeHaat's input marketplace (₹3,000 Cr FY25 revenue) + AgroStar ($111M, 5–9M farmers) demonstrate demand; neither is cross-chain"],
+   biz:"Transaction margin on verified inputs (8–12% seeds, 5–8% fertilizers, 10–15% feed) + SaaS advisory subscription (₹50–100/month) + data monetisation to input manufacturers. At 2M farmers spending ₹30,000/year on inputs: ₹1,800–3,600 crore GMV; platform revenue ₹150–300 crore annually.",
+   scores:{impact:4,ws:4,feas:4,rev:5,climate:4},
+   stages:[{n:1,l:"Y0–Y1",d:"Launch feed marketplace (dairy, 3 states). Verified seed catalogue (cereals, 2 states). 50,000 farmers."},{n:2,l:"Y1–Y3",d:"Cross-chain input platform. 500,000 farmers. Quality scoring for all products. Soil advisory integration."},{n:3,l:"Y3–Y5",d:"1M farmers. Private label certified seed brand. AI-driven crop-specific input recommendations."},{n:4,l:"Y5–Y8",d:"5M+ farmers. Market leader in organised SMH input supply. Data licensing to insurers for yield correlation."}],
+   dfi:"Input quality improvement is a climate adaptation measure: certified stress-tolerant varieties are the first line of defence for climate-vulnerable farmers. Reducing feed costs in dairy is direct income uplift for women (who manage dairy). SDG 2 + SDG 8. Lower input costs + higher input quality = sustainable productivity growth without yield plateauing.",
+   risk:"Competing against deeply entrenched local dealer networks that offer credit and trust. Platform must match credit terms (input credit) and build trust through demonstration plots and field agents. Last-mile distribution remains a challenge — use DME network (F2) as input distribution channel."},
+  {id:"F4",color:"#1D9E75",title:"Market intelligence & price discovery (cross-chain)",
+   tag:"Integrated price forecasting, market access signals, and selling decision support across dairy, horticulture, and cereals — giving SMH farmers the information they need when decisions are made",
+   prob:"The information asymmetry between farmers and traders is the structural root cause of low farmer price realisation across all three value chains. Dairy farmers don't know the fat content pricing they should receive. Horticulture farmers commit to crops 90–120 days before knowing market prices. Cereal farmers sell at the nearest mandi on harvest day without comparing alternatives. The platform that solves information access solves income capture.",
+   ev:["Horticulture: RBI working paper documents farmer gets 33.5–36.7% of consumer price — glut events reduce to 5–10% due to zero price discovery at sowing","Cereals: only 23% of farmers nationally are aware of MSP (same information gap applies to market prices)","Dairy: doodhwala vs coop gap ₹2–3/L = information gap about cooperative access + quality-based pricing","DeHaat model: real-time market price display at harvest → 10–15% higher price realisation reported"],
+   biz:"Subscription for price intelligence service (₹200–400/year/farmer) + premium market linkage fee (1–2% of GMV) from institutional buyers + data licensing to commodity traders, processors, and government agencies. At 3M subscribers: ₹60–120 crore annual subscription revenue.",
+   scores:{impact:5,ws:4,feas:4,rev:4,climate:4},
+   stages:[{n:1,l:"Y0–Y1",d:"Integrate AGMARKNET + dairy cooperative pricing + APMC mandi data. IVR + WhatsApp delivery. 100,000 farmers."},{n:2,l:"Y1–Y3",d:"Price forecasting model live for horticulture (pre-sowing advisory). MSP awareness campaign + facilitation. 1M farmers."},{n:3,l:"Y3–Y5",d:"Cross-chain market intelligence product. Forward contracting pilot. Data licensing to institutional players."},{n:4,l:"Y5–Y8",d:"5M+ farmers. National market intelligence platform. Most comprehensive real-time agri price database in India."}],
+   dfi:"Market transparency is a fundamental market access right for the most marginalised sellers. Reducing information asymmetry directly reduces income inequality between farmers and traders. SDG 10 + SDG 2. Climate angle: as climate increases price volatility, better information becomes more valuable — platform value grows with climate risk.",
+   risk:"Price data quality is critical — wrong signals cause real harm. Partner with AGMARKNET/e-NAM for official data, not scraping. Build trust slowly: start with confirmed/lagged prices before moving to forward-looking forecasts. Regulatory clarity needed for forward contracts with farmers."},
+  {id:"F5",color:"#993356",title:"Climate resilience bundle — insurance, advisory & diversification",
+   tag:"Integrated parametric insurance, climate-smart advisory, and crop diversification support across all three value chains — the platform's climate action commitment and DFI differentiation story",
+   prob:"Climate change is simultaneously the biggest threat to SMH farmer incomes and the strongest rationale for DFI/philanthropic investment in the platform. NICRA projects 6–25% wheat yield decline by 2100, 7–20% rice decline by 2050. Horticulture crops are 3–5x more climate-sensitive than cereals. Dairy is losing 0.36–0.38 MT/year from heat stress alone. Yet parametric insurance for agriculture is virtually absent, climate advisory is unfunded and fragmented, and crop diversification to climate-resilient crops lacks market linkage. This idea bundles all three.",
+   ev:["NICRA: wheat yields down 6–25% by 2100; irrigated rice down 7–10% by 2050/2080 (Business Standard Jan 2025)","Horticulture 3–5x more climate-sensitive than cereals (ICAR-CRIDA 2022); Maharashtra 2023: ₹2,000+ crore lost in one week with zero SMH insurance","Dairy: Cambridge peer-reviewed study — North India to lose 0.36–0.38 MT/yr milk from heat stress by 2030s (RCP4.5)","2024: 3.2M ha of crops affected by extreme weather events (CSE/IMD); PMFBY horticulture enrolment <5% of eligible farmers"],
+   biz:"Insurance premium commission (15–20% of premium, across all three chains) + SaaS climate advisory subscription (₹100–300/season) + parametric product development fees from insurance partners + reinsurance data licensing. At 2M insured farmers: ₹50–150 crore annual insurance commission revenue.",
+   scores:{impact:4,ws:5,feas:4,rev:3,climate:5},
+   stages:[{n:1,l:"Y0–Y1",d:"Climate advisory content across dairy (fodder), horti (tomato/onion), cereals (wheat heat). 50,000 farmers."},{n:2,l:"Y1–Y3",d:"First parametric insurance products live (rainfall-indexed for horti, temperature-indexed for dairy). IRDAI engagement."},{n:3,l:"Y3–Y5",d:"500,000 insured farmers. Millet diversification market linkage live. Protected cultivation advisory."},{n:4,l:"Y5–Y8",d:"2M+ insured farmers. National climate risk database. Proprietary actuarial models. Reinsurance partnerships."}],
+   dfi:"The DFI anchor product for the entire platform. Three SDGs in one idea: SDG 13 (climate action), SDG 1 (income protection), SDG 2 (food security). Parametric insurance innovation is a stated priority for IFC, CGAP, Gates Foundation, Omidyar, and all major climate finance providers. The proprietary climate risk dataset that emerges from this idea has significant standalone commercial value to the insurance and reinsurance industry.",
+   risk:"Parametric insurance product development requires actuarial expertise and IRDAI regulatory approval — a 12–18 month process. Start with PMFBY facilitation (immediate, no new regulatory approval) while developing proprietary parametric products. Partner with AIC or SBI General for regulatory shelf rather than applying for own insurance licence."}
+]);
+
+document.getElementById('n-p00').classList.add('active');
+</script>
+</main>
+</body>
+</html>
