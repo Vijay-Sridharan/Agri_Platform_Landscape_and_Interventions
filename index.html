@@ -1145,267 +1145,168 @@ bIdeas('ci',[
    risk:"Price information without logistics to act on it has limited impact. Bundle with transport coordination or WRS access (Idea 2) — a farmer who knows a better price exists but can't physically reach that mandi or store their grain benefits marginally. The combination of ideas 2 and 5 creates the full income improvement."}
 ]);
 
+
 // ===================== FINAL SYNTHESIS DATA =====================
 
-// All 15 ideas ranked by combined score for the ranking table
+// All 20 ideas (5 per Tier-1 chain) — scored and ranked
+// sel:true = selected into Final 5
 const allIdeas=[
-  // ── SHORTLISTED — avg ≥ 3.8 (top 15) ── FINAL 5 SELECTED for cross-chain integration ──
-  {vc:"Dairy",    id:"D2", sel:true,  itype:"Services — Digitisation",         title:"Dairy income digitisation & credit bridge",         color:"#185FA5",scores:{impact:5,ws:4,feas:5,rev:5,climate:3},avg:4.4},
-  {vc:"Dairy",    id:"D1", sel:true,  itype:"Services — Advisory & Marketplace",title:"Feed intelligence & marketplace",                   color:"#1D9E75",scores:{impact:5,ws:5,feas:4,rev:4,climate:4},avg:4.4},
-  {vc:"Horti",    id:"H2", sel:true,  itype:"Services — Market linkage",        title:"Pre-sowing market intelligence platform",           color:"#8832C8",scores:{impact:5,ws:5,feas:4,rev:4,climate:4},avg:4.4},
-  {vc:"Pulses",   id:"PO1",sel:true,  itype:"Services — Market linkage",        title:"Pre-sowing demand signal platform",                 color:"#7B3FA0",scores:{impact:5,ws:5,feas:4,rev:4,climate:4},avg:4.4},
-  {vc:"Horti",    id:"H4", sel:true,  itype:"FS — Lending",                     title:"Perishable inventory finance & price-timing",       color:"#534AB7",scores:{impact:5,ws:5,feas:3,rev:4,climate:4},avg:4.2},
-  {vc:"Cereals",  id:"C2", sel:false, itype:"FS — Lending",                     title:"Warehouse receipt finance for smallholders",        color:"#185FA5",scores:{impact:5,ws:4,feas:4,rev:5,climate:3},avg:4.2},
-  {vc:"Horti",    id:"H1", sel:false, itype:"Micro-infra",                      title:"First-mile cold chain — village cold hubs",         color:"#D85A30",scores:{impact:5,ws:4,feas:3,rev:4,climate:5},avg:4.2},
-  {vc:"Pulses",   id:"PO2",sel:false, itype:"Services — Market linkage",        title:"Direct processor linkage marketplace",              color:"#9B5EC0",scores:{impact:5,ws:5,feas:4,rev:4,climate:3},avg:4.2},
-  {vc:"Pulses",   id:"PO4",sel:false, itype:"Services — Advisory",              title:"Certified seed & climate-smart variety advisory",   color:"#5C9E2A",scores:{impact:4,ws:4,feas:4,rev:4,climate:5},avg:4.2},
-  {vc:"Dairy",    id:"D4", sel:false, itype:"Services — Advisory",              title:"Climate-resilient fodder system",                   color:"#7F77DD",scores:{impact:4,ws:5,feas:3,rev:3,climate:5},avg:4.0},
-  {vc:"Horti",    id:"H5", sel:true,  itype:"FS — Insurance",                   title:"Climate-smart advisory & parametric insurance",     color:"#639922",scores:{impact:4,ws:4,feas:4,rev:3,climate:5},avg:4.0},
-  {vc:"Cereals",  id:"C4", sel:false, itype:"Services — Advisory",              title:"Climate-smart diversification & millet linkage",    color:"#993356",scores:{impact:4,ws:4,feas:4,rev:3,climate:5},avg:4.0},
-  {vc:"Dairy",    id:"D5", sel:false, itype:"Micro-infra",                      title:"Last-mile dairy micro-entrepreneurs (DMEs)",        color:"#0F6E56",scores:{impact:5,ws:4,feas:3,rev:4,climate:3},avg:3.8},
-  {vc:"Cereals",  id:"C1", sel:false, itype:"Services — Market linkage",        title:"MSP access facilitation platform",                  color:"#639922",scores:{impact:5,ws:4,feas:4,rev:3,climate:3},avg:3.8},
-  {vc:"Pulses",   id:"PO5",sel:false, itype:"Services — Market linkage",        title:"Oilseed import substitution aggregation",           color:"#BA7517",scores:{impact:4,ws:4,feas:3,rev:4,climate:4},avg:3.8},
-  // ── REVIEWED — below shortlist threshold ──
-  {vc:"Dairy",    id:"D3", sel:false, itype:"Services — Advisory",              title:"Tele-vet & animal health intelligence",             color:"#993C1D",scores:{impact:4,ws:3,feas:4,rev:3,climate:4},avg:3.6},
-  {vc:"Horti",    id:"H3", sel:false, itype:"Services — Market linkage",        title:"FPO activation & direct market linkage",            color:"#1D9E75",scores:{impact:4,ws:3,feas:4,rev:4,climate:3},avg:3.6},
-  {vc:"Cereals",  id:"C3", sel:false, itype:"Services — Advisory",              title:"Certified input quality assurance marketplace",     color:"#BA7517",scores:{impact:4,ws:3,feas:4,rev:4,climate:3},avg:3.6},
-  {vc:"Cereals",  id:"C5", sel:false, itype:"Services — Digitisation",          title:"Digital mandi price discovery & collective selling",color:"#534AB7",scores:{impact:4,ws:3,feas:4,rev:4,climate:3},avg:3.6},
-  {vc:"Pulses",   id:"PO3",sel:false, itype:"Services — Market linkage",        title:"NAFED procurement access facilitation",             color:"#5C9E2A",scores:{impact:4,ws:4,feas:4,rev:3,climate:3},avg:3.6},
+  {vc:"Dairy",   id:"D2", sel:true,  itype:"Services \u2014 Digitisation",          title:"Dairy income digitisation & credit bridge",         color:"#185FA5",scores:{impact:5,ws:4,feas:5,rev:5,climate:3},avg:4.4},
+  {vc:"Dairy",   id:"D1", sel:true,  itype:"Services \u2014 Advisory & Marketplace", title:"Feed intelligence & marketplace",                   color:"#1D9E75",scores:{impact:5,ws:5,feas:4,rev:4,climate:4},avg:4.4},
+  {vc:"Horti",   id:"H2", sel:true,  itype:"Services \u2014 Market linkage",         title:"Pre-sowing market intelligence platform",           color:"#8832C8",scores:{impact:5,ws:5,feas:4,rev:4,climate:4},avg:4.4},
+  {vc:"Pulses",  id:"PO1",sel:true,  itype:"Services \u2014 Market linkage",         title:"Pre-sowing demand signal platform",                 color:"#7B3FA0",scores:{impact:5,ws:5,feas:4,rev:4,climate:4},avg:4.4},
+  {vc:"Horti",   id:"H4", sel:true,  itype:"FS \u2014 Lending",                      title:"Perishable inventory finance & price-timing",       color:"#534AB7",scores:{impact:5,ws:5,feas:3,rev:4,climate:4},avg:4.2},
+  {vc:"Cereals", id:"C2", sel:false, itype:"FS \u2014 Lending",                      title:"Warehouse receipt finance for smallholders",        color:"#185FA5",scores:{impact:5,ws:4,feas:4,rev:5,climate:3},avg:4.2},
+  {vc:"Horti",   id:"H1", sel:false, itype:"Micro-infra",                            title:"First-mile cold chain \u2014 village cold hubs",    color:"#D85A30",scores:{impact:5,ws:4,feas:3,rev:4,climate:5},avg:4.2},
+  {vc:"Pulses",  id:"PO2",sel:false, itype:"Services \u2014 Market linkage",         title:"Direct processor linkage marketplace",              color:"#9B5EC0",scores:{impact:5,ws:5,feas:4,rev:4,climate:3},avg:4.2},
+  {vc:"Pulses",  id:"PO4",sel:false, itype:"Services \u2014 Advisory",               title:"Certified seed & climate-smart variety advisory",   color:"#5C9E2A",scores:{impact:4,ws:4,feas:4,rev:4,climate:5},avg:4.2},
+  {vc:"Dairy",   id:"D4", sel:false, itype:"Services \u2014 Advisory",               title:"Climate-resilient fodder system",                   color:"#7F77DD",scores:{impact:4,ws:5,feas:3,rev:3,climate:5},avg:4.0},
+  {vc:"Horti",   id:"H5", sel:true,  itype:"FS \u2014 Insurance",                    title:"Climate-smart advisory & parametric insurance",     color:"#639922",scores:{impact:4,ws:4,feas:4,rev:3,climate:5},avg:4.0},
+  {vc:"Cereals", id:"C4", sel:false, itype:"Services \u2014 Advisory",               title:"Climate-smart diversification & millet linkage",    color:"#993356",scores:{impact:4,ws:4,feas:4,rev:3,climate:5},avg:4.0},
+  {vc:"Dairy",   id:"D5", sel:false, itype:"Micro-infra",                            title:"Last-mile dairy micro-entrepreneurs (DMEs)",        color:"#0F6E56",scores:{impact:5,ws:4,feas:3,rev:4,climate:3},avg:3.8},
+  {vc:"Cereals", id:"C1", sel:false, itype:"Services \u2014 Market linkage",         title:"MSP access facilitation platform",                  color:"#639922",scores:{impact:5,ws:4,feas:4,rev:3,climate:3},avg:3.8},
+  {vc:"Pulses",  id:"PO5",sel:false, itype:"Services \u2014 Market linkage",         title:"Oilseed import substitution aggregation",           color:"#BA7517",scores:{impact:4,ws:4,feas:3,rev:4,climate:4},avg:3.8},
+  {vc:"Dairy",   id:"D3", sel:false, itype:"Services \u2014 Advisory",               title:"Tele-vet & animal health intelligence",             color:"#993C1D",scores:{impact:4,ws:3,feas:4,rev:3,climate:4},avg:3.6},
+  {vc:"Horti",   id:"H3", sel:false, itype:"Services \u2014 Market linkage",         title:"FPO activation & direct market linkage",            color:"#1D9E75",scores:{impact:4,ws:3,feas:4,rev:4,climate:3},avg:3.6},
+  {vc:"Cereals", id:"C3", sel:false, itype:"Services \u2014 Advisory",               title:"Certified input quality assurance marketplace",     color:"#BA7517",scores:{impact:4,ws:3,feas:4,rev:4,climate:3},avg:3.6},
+  {vc:"Cereals", id:"C5", sel:false, itype:"Services \u2014 Digitisation",           title:"Digital mandi price discovery & collective selling",color:"#534AB7",scores:{impact:4,ws:3,feas:4,rev:4,climate:3},avg:3.6},
+  {vc:"Pulses",  id:"PO3",sel:false, itype:"Services \u2014 Market linkage",         title:"NAFED procurement access facilitation",             color:"#5C9E2A",scores:{impact:4,ws:4,feas:4,rev:3,climate:3},avg:3.6},
 ];
 
-const vcColor={Dairy:"pb",Horti:"pa",Cereals:"pg2",Pulses:"pp"};
+const vcBadge={Dairy:"pb",Horti:"pa",Cereals:"pg2",Pulses:"pp"};
 const rt=document.getElementById('ranking-table');
 if(rt){
-  const th=document.createElement('tr');
-  th.innerHTML='<th>#</th><th>Idea</th><th>Chain</th><th>Type</th><th>Impact</th><th>WS</th><th>Feas.</th><th>Rev.</th><th>Climate</th><th>Avg</th><th>Status</th>';
-  rt.appendChild(th);
-  allIdeas.forEach((r,i)=>{
-    const tr=document.createElement('tr');
-    const isShortlist=i<15; const isFinal=r.sel;
-    tr.style.background=isFinal?'rgba(100,180,80,0.08)':isShortlist?'rgba(24,95,165,0.04)':'';
-    const statusBadge=isFinal
-      ?'<span class="pl pg2" style="font-size:10px">✓ Final 5</span>'
+  const hrow=document.createElement('tr');
+  hrow.innerHTML='<th>#</th><th>Idea</th><th>Chain</th><th>Type</th><th>Impact</th><th>WS</th><th>Feas.</th><th>Rev.</th><th>Climate</th><th>Avg</th><th>Status</th>';
+  rt.appendChild(hrow);
+  allIdeas.forEach(function(r,i){
+    const row=document.createElement('tr');
+    const isShortlist=i<15;
+    const isFinal=r.sel;
+    row.style.background=isFinal?'rgba(100,180,80,0.08)':isShortlist?'rgba(24,95,165,0.04)':'';
+    var statusBadge=isFinal
+      ?'<span class="pl pg2" style="font-size:10px">\u2713 Final 5</span>'
       :isShortlist
         ?'<span class="pl pb" style="font-size:10px">Shortlisted</span>'
         :'<span class="pl" style="background:var(--bg3);color:var(--tx3);font-size:10px">Reviewed</span>';
-    const typeColor=r.itype.startsWith('FS')?'#534AB7':r.itype.startsWith('Micro')?'#993C1D':'#1D9E75';
-    tr.innerHTML=\`<td style="font-weight:500;color:\${r.color};\${!isShortlist?'opacity:.55':''}">\${i+1}</td>
-      <td style="\${isFinal?'font-weight:500':isShortlist?'':'color:var(--tx3)'}">\${r.title}</td>
-      <td><span class="pl \${vcColor[r.vc]||'pg2'}" style="font-size:10px">\${r.vc}</span></td>
-      <td style="font-size:10px;color:\${typeColor};white-space:nowrap">\${r.itype}</td>
-      <td><span class="sc s\${r.scores.impact}">\${r.scores.impact}</span></td>
-      <td><span class="sc s\${r.scores.ws}">\${r.scores.ws}</span></td>
-      <td><span class="sc s\${r.scores.feas}">\${r.scores.feas}</span></td>
-      <td><span class="sc s\${r.scores.rev}">\${r.scores.rev}</span></td>
-      <td><span class="sc s\${r.scores.climate}">\${r.scores.climate}</span></td>
-      <td style="font-weight:500;color:\${r.color};\${!isShortlist?'opacity:.55':''}">\${r.avg.toFixed(1)}</td>
-      <td>\${statusBadge}</td>\`;
-    rt.appendChild(tr);
+    var typeColor=r.itype.indexOf('FS')===0?'#534AB7':r.itype.indexOf('Micro')===0?'#993C1D':'#1D9E75';
+    var fadeStyle=!isShortlist?'opacity:.55':'';
+    var titleStyle=isFinal?'font-weight:500':isShortlist?'':'color:var(--tx3)';
+    var vcClass=vcBadge[r.vc]||'pg2';
+    var s=r.scores;
+    row.innerHTML='<td style="font-weight:500;color:'+r.color+';'+fadeStyle+'">'+(i+1)+'</td>'
+      +'<td style="'+titleStyle+'">'+r.title+'</td>'
+      +'<td><span class="pl '+vcClass+'" style="font-size:10px">'+r.vc+'</span></td>'
+      +'<td style="font-size:10px;color:'+typeColor+';white-space:nowrap">'+r.itype+'</td>'
+      +'<td><span class="sc s'+s.impact+'">'+s.impact+'</span></td>'
+      +'<td><span class="sc s'+s.ws+'">'+s.ws+'</span></td>'
+      +'<td><span class="sc s'+s.feas+'">'+s.feas+'</span></td>'
+      +'<td><span class="sc s'+s.rev+'">'+s.rev+'</span></td>'
+      +'<td><span class="sc s'+s.climate+'">'+s.climate+'</span></td>'
+      +'<td style="font-weight:500;color:'+r.color+';'+fadeStyle+'">'+r.avg.toFixed(1)+'</td>'
+      +'<td>'+statusBadge+'</td>';
+    rt.appendChild(row);
   });
 }
 
 // THE 5 FINAL CROSS-CHAIN PLATFORM IDEAS
 bIdeas('synth-ideas',[
-  {id:"F1",color:"#185FA5",itype:"Services — Digitisation",
+  {id:"F1",color:"#185FA5",itype:"Services \u2014 Digitisation",
    title:"Farmer financial identity & income digitisation (4-chain)",
-   tag:"The foundational data infrastructure layer — converting dairy milk records, grain & pulse WRS documentation, horticulture FPO transactions, and NAFED payment receipts into verified financial identity for 100M+ SMH households across all four value chains",
-   prob:"The same farmer household that has no formal credit access today generates measurable, recurring income across four value chains simultaneously — daily milk sales, seasonal grain sales, vegetable sales, and pulse/oilseed harvests. None of these income streams is captured in any formal record. Without financial identity, farmers cannot access credit, insurance, government schemes, or formal financial products. This bottleneck sits upstream of every other intervention. Solving it first multiplies the impact of all subsequent ideas.",
-   ev:["80M dairy farmers: daily/fortnightly milk payments with zero formal record (DAHD data); Stellapps mooPay proven at 3.1M farmers",
-       "75–85% of cereal farmers + ~75% of pulse/oilseed farmers sell in open markets with no price documentation (ICAR-NAEP; NAFED data)",
-       "World Bank 2025: only 41% of women-headed agri HHs borrow formally vs 51% of men — income digitisation directly closes this gap",
-       "AgriStack Farmer Registry: 19 states signed MoUs — digital farmer ID foundation being built that platform income layer can sit on top of"],
-   biz:"SaaS to cooperatives, FPOs, and NAFED procurement centres (₹2–5/farmer/month) + lending commission from NBFC partners (1–2% of loan disbursed) + insurance premium share + data licensing to banks, insurers, commodity traders. At 5M farmers: ₹500–1,000 crore annual revenue entirely from financial services enabled by the income data layer. Zero capex.",
+   tag:"The foundational data infrastructure layer \u2014 converting dairy milk records, grain & pulse WRS documentation, horticulture FPO transactions, and NAFED payment receipts into verified financial identity for 100M+ SMH households across all four Tier-1 value chains",
+   prob:"The same farmer household that has no formal credit access today generates measurable, recurring income across four value chains simultaneously \u2014 daily milk sales, seasonal grain sales, vegetable sales, and pulse/oilseed harvests. None of these income streams is captured in any formal record. Without financial identity, farmers cannot access credit, insurance, government schemes, or formal financial products. This bottleneck sits upstream of every other intervention. Solving it first multiplies the impact of all subsequent ideas.",
+   ev:["80M dairy farmers: daily/fortnightly milk payments with zero formal record (DAHD); Stellapps mooPay proven at 3.1M farmers ($26M Series C 2024)",
+       "75\u201385% of cereal farmers + ~75% of pulse/oilseed farmers sell in open markets with no price documentation (ICAR-NAEP; NAFED data)",
+       "World Bank 2025: only 41% of women-headed agri HHs borrow formally vs 51% of men \u2014 income digitisation directly closes this SDG 5 gap",
+       "AgriStack Farmer Registry: 19 states signed MoUs \u2014 digital farmer ID foundation being built that the platform income layer sits on top of"],
+   biz:"SaaS to cooperatives, FPOs, and NAFED procurement centres (\u20b92\u20135/farmer/month) + lending commission from NBFC partners (1\u20132% of loan disbursed) + insurance premium share + data licensing to banks, insurers, commodity traders. At 5M farmers: \u20b9500\u20131,000 crore annual revenue entirely from financial services enabled by the income data layer. Zero capex.",
    scores:{impact:5,ws:5,feas:5,rev:5,climate:3},
-   stages:[{n:1,l:"Y0–Y1",d:"Dairy income records live in 2 geographies. Grain + pulse WRS documentation pilots. First credit product live with NBFC partner on dairy income history."},{n:2,l:"Y1–Y2",d:"1M farmers with verified cross-chain income records. Insurance products launched. AgriStack integration for farmer ID."},{n:3,l:"Y2–Y4",d:"5M farmers. Licensed income data infrastructure. Women-targeted savings + credit products across all 4 chains."},{n:4,l:"Y4–Y8",d:"De facto rural income data utility. National scale. Licensing revenue to banks and insurers becomes dominant stream."}],
-   dfi:"The foundational SDG play: SDG 1 (credit access unlocks income improvement), SDG 5 (women in all 4 chains gaining financial identity for the first time), SDG 8 (formal financial inclusion for 100M+ excluded households). CGAP, IFC, and World Bank have identified rural income digitisation as the single most important gap in agricultural finance globally. Blended finance: first-loss guarantee on initial loan portfolio de-risks the business case for commercial NBFCs entering rural lending.",
-   risk:"Data quality and farmer trust are foundational risks. Farmers must actively consent to income data use. Position as farmer-controlled data (they benefit most directly through credit access). Never sell data without explicit farmer consent — the business model is credit and insurance facilitation, not data brokerage."},
-  {id:"F2",color:"#7B3FA0",itype:"Services — Market linkage",
+   stages:[
+     {n:1,l:"Y0\u2013Y1",d:"Dairy income records live in 2 geographies. Grain + pulse WRS documentation pilots. First credit product with NBFC partner on dairy income history."},
+     {n:2,l:"Y1\u2013Y2",d:"1M farmers with verified cross-chain income records. Insurance products launched. AgriStack integration for farmer ID."},
+     {n:3,l:"Y2\u2013Y4",d:"5M farmers. Licensed income data infrastructure. Women-targeted savings + credit products across all 4 chains."},
+     {n:4,l:"Y4\u2013Y8",d:"De facto rural income data utility. National scale. Licensing revenue to banks and insurers becomes dominant stream."}
+   ],
+   dfi:"The foundational SDG play: SDG 1 (credit access unlocks income improvement), SDG 5 (women in all 4 chains gaining financial identity), SDG 8 (formal financial inclusion for 100M+ excluded households). CGAP, IFC, and World Bank have identified rural income digitisation as the single most important gap in agricultural finance globally. Blended finance: first-loss guarantee on initial loan portfolio de-risks the business case for commercial NBFCs entering rural lending.",
+   risk:"Data quality and farmer trust are foundational risks. Farmers must actively consent to income data use. Position as farmer-controlled data (they benefit most directly through credit access). Never sell data without explicit farmer consent \u2014 the business model is credit and insurance facilitation, not data brokerage."},
+
+  {id:"F2",color:"#7B3FA0",itype:"Services \u2014 Market linkage",
    title:"Cross-chain pre-sowing market intelligence & price discovery",
-   tag:"AI-powered demand signals and price forecasting delivered before sowing decisions across horticulture, pulses, oilseeds, and cereals — breaking the coordinated overplanting and import cycle that costs India ₹25,000–50,000 crore annually in unnecessary imports and farmer income losses",
-   prob:"The single most damaging structural failure in Indian agriculture is information asymmetry at the moment of decision. Horticulture farmers commit land 90–120 days before harvest with zero price intelligence. Pulse and oilseed farmers sow kharif crops in June with no demand signals — creating the tur price cycle that swings from shortage (retail ₹200–300/kg in 2023) to glut (below MSP in 2024) every 4–5 years. Cereal farmers miss MSP not due to ineligibility but due to registration and awareness gaps. All three failures share one root cause: information unavailability when decisions are made. This is the platform that solves it.",
-   ev:["Tur dal price cycle: ₹100–120/kg (2021) → ₹200–300/kg (2023) → below MSP (2024) — structural volatility from coordinated sowing with zero market intelligence (NAFED data)",
-       "Horticulture: RBI working paper establishes structural link between sowing blindness and price collapse; farmer gets 5–10% of consumer price in glut events (vs 33–37% in balanced years)",
-       "Only 23% of cereal farmers nationally aware of MSP — same information gap applies to open mandi price comparison; DeHaat model: real-time price display → 10–15% higher realisation",
-       "Agmarknet: 10+ years historical price series for all crops; ISRO Bhuvan satellite crop area estimation validated for kharif crops — ML model training data exists"],
-   biz:"Subscription advisory (₹200–400/season/farmer) + premium market linkage fee (1–2% GMV) for farmers acting on signals + data licensing to commodity traders, food processors, NAFED for procurement planning, government for price stabilisation. At 3M subscribers across 4 chains: ₹60–120 crore annual subscription + ₹20–40 crore data licensing. Zero capex.",
+   tag:"AI-powered demand signals and price forecasting delivered before sowing decisions across horticulture, pulses, oilseeds, and cereals \u2014 breaking the coordinated overplanting and import cycle that costs India \u20b925,000\u201350,000 crore annually in unnecessary imports and farmer income losses",
+   prob:"The single most damaging structural failure in Indian agriculture is information asymmetry at the moment of decision. Horticulture farmers commit land 90\u2013120 days before harvest with zero price intelligence. Pulse and oilseed farmers sow kharif crops in June with no demand signals \u2014 creating the tur price cycle (shortage \u20b9200\u2013300/kg in 2023, glut below MSP in 2024). Cereal farmers miss MSP not due to ineligibility but due to registration and awareness gaps. All three failures share one root cause: information unavailability when decisions are made. This is the platform that solves it.",
+   ev:["Tur dal cycle: \u20b9100\u2013120/kg (2021) \u2192 \u20b9200\u2013300/kg (2023) \u2192 below MSP (2024) \u2014 structural volatility from coordinated sowing with zero market intelligence (NAFED price series)",
+       "Horticulture: RBI working paper establishes link between sowing blindness and price collapse; farmer gets 5\u201310% of consumer price in glut events vs 33\u201337% in balanced years",
+       "Only 23% of cereal farmers nationally aware of MSP \u2014 same information gap applies to open mandi price comparison; DeHaat: real-time price display \u2192 10\u201315% higher realisation",
+       "Agmarknet: 10+ years historical price series for all crops; ISRO Bhuvan satellite crop area estimation validated for kharif crops \u2014 ML training data exists today"],
+   biz:"Subscription advisory (\u20b9200\u2013400/season/farmer) + premium market linkage fee (1\u20132% GMV) for farmers acting on signals + data licensing to commodity traders, food processors, NAFED for procurement planning. At 3M subscribers across 4 chains: \u20b960\u2013120 crore annual subscription + \u20b920\u201340 crore data licensing. Zero capex.",
    scores:{impact:5,ws:5,feas:4,rev:4,climate:4},
-   stages:[{n:1,l:"Y0–Y1",d:"Build price model: Agmarknet + NAFED import data + satellite area estimation. IVR/WhatsApp pilot in 3 districts each for horti (onion/tomato) and tur."},{n:2,l:"Y1–Y3",d:"Multi-crop pre-sowing advisory live. MSP facilitation layer for cereals. 500,000 farmers across 3 states."},{n:3,l:"Y3–Y5",d:"Forward contracting pilot. Processor demand integration. Data licensing to NAFED for pulse procurement planning. 3M subscribers."},{n:4,l:"Y5–Y8",d:"National crop intelligence platform. Most comprehensive real-time agri price database in India. Government price stabilisation tool."}],
-   dfi:"Market transparency is the highest-leverage, zero-capex intervention in Indian agriculture. Reducing information asymmetry simultaneously stabilises farmer income (SDG 1), reduces import dependence (SDG 2), and addresses inequality between informed traders and uninformed farmers (SDG 10). Climate angle: as climate variability increases price unpredictability, the platform becomes MORE valuable — it is the only intervention whose value grows with climate risk rather than declining.",
-   risk:"Forecast accuracy is critical — wrong signals cause real income harm. Start with directional signals only (relative demand vs last year's planted area) before moving to price forecasts. Partner with ICAR, IIM Ahmedabad, and TNAU for model validation before publishing. Build credibility over 2 seasons before monetising data."},
-  {id:"F3",color:"#534AB7",itype:"FS — Lending",
+   stages:[
+     {n:1,l:"Y0\u2013Y1",d:"Build price model: Agmarknet + NAFED import data + satellite area estimation. IVR/WhatsApp pilot in 3 districts each for horti (onion/tomato) and tur."},
+     {n:2,l:"Y1\u2013Y3",d:"Multi-crop pre-sowing advisory live. MSP facilitation layer for cereals. 500,000 farmers across 3 states."},
+     {n:3,l:"Y3\u2013Y5",d:"Forward contracting pilot. Processor demand integration. Data licensing to NAFED for pulse procurement planning. 3M subscribers."},
+     {n:4,l:"Y5\u2013Y8",d:"National crop intelligence platform. Most comprehensive real-time agri price database in India. Government price stabilisation tool."}
+   ],
+   dfi:"Market transparency is the highest-leverage, zero-capex intervention in Indian agriculture. Reducing information asymmetry simultaneously stabilises farmer income (SDG 1), reduces import dependence (SDG 2), and addresses inequality between informed traders and uninformed farmers (SDG 10). Climate angle: as climate variability increases price unpredictability, the platform becomes MORE valuable \u2014 it is the only intervention whose value grows with climate risk rather than declining.",
+   risk:"Forecast accuracy is critical \u2014 wrong signals cause real income harm. Start with directional signals only (relative demand vs last year's planted area) before moving to price forecasts. Partner with ICAR, IIM Ahmedabad, and TNAU for model validation before publishing. Build credibility over 2 seasons before monetising data."},
+
+  {id:"F3",color:"#534AB7",itype:"FS \u2014 Lending",
    title:"Smallholder inventory & working capital finance (cross-chain)",
-   tag:"Short-tenure loans against stored perishable, grain, and pulse/oilseed inventory — enabling farmers to hold through price crashes and sell when prices recover, without requiring any new physical infrastructure as primary capital",
-   prob:"The working capital trap is the direct mechanical cause of distress selling across all four chains. Horti farmers sell tomatoes at ₹2–3/kg during glut because they cannot hold 2–3 weeks for recovery to ₹8–12/kg. Cereal farmers sell wheat at open mandi on harvest day because cash debt pressure forces immediate sale, missing MSP or higher-priced windows. Pulse and oilseed farmers sell at harvest-day lows for the same reason. The Warehouse Receipt System is legally available for grains and pulses (unlike horticulture where it is structurally absent) but SMH farmers with 1–5 tonne lots are excluded. This idea bridges that gap using existing cold hub and PACS infrastructure as delivery, with no primary capex.",
-   ev:["Horti: 2–3 weeks holding time during tomato/onion glut shifts price from ₹2–3/kg to ₹8–12/kg — 3–4x improvement (ICRISAT UP Farrukhabad field data)",
-       "Grain WRS: Arya.ag ($186M equity+debt) demonstrated WRS at scale for aggregators; no player has extended this to individual SMH smallholder lots of 1–5 tonnes",
-       "Pulses: tur dal price recovery post-harvest glut averages 15–25% over 45–60 days (NAFED price series 2018–24) — working capital enables farmers to capture this seasonal uplift",
-       "WDRA-registered warehouses: 5,937 new PACS godowns registered, 73,492 computerised by June 2025 — existing delivery infrastructure the platform can use"],
-   biz:"Interest income on short-term inventory loans (annualised 18–24% APR on 2–8 week tenure) + warehouse/cold storage fee-sharing with existing infrastructure operators + insurance premium on stored inventory. At ₹200 crore blended loan book (perishables + grain + pulse): ₹36–48 crore annual interest income. NBFC partnership for capital — platform provides underwriting, farmer interface, and quality assessment only.",
+   tag:"Short-tenure loans against stored perishable, grain, and pulse/oilseed inventory \u2014 enabling farmers to hold through price crashes and sell when prices recover, using existing cold hub and PACS infrastructure as delivery with no primary capex",
+   prob:"The working capital trap is the direct mechanical cause of distress selling across all four chains. Horti farmers sell tomatoes at \u20b92\u20133/kg during glut because they cannot hold 2\u20133 weeks for recovery to \u20b98\u201312/kg. Cereal farmers sell wheat at open mandi on harvest day because cash debt pressure forces immediate sale, missing MSP. Pulse and oilseed farmers sell at harvest-day lows for the same reason. The Warehouse Receipt System is legally available for grains and pulses but SMH farmers with 1\u20135 tonne lots are excluded. This idea bridges that gap using existing cold hub and PACS infrastructure, with no primary capex.",
+   ev:["Horti: 2\u20133 weeks holding during tomato/onion glut shifts price from \u20b92\u20133/kg to \u20b98\u201312/kg \u2014 3\u20134x improvement (ICRISAT UP Farrukhabad field data)",
+       "Grain WRS: Arya.ag ($186M equity+debt) demonstrated WRS at scale for aggregators; no player has extended this to individual SMH smallholder lots of 1\u20135 tonnes",
+       "Pulses: tur dal price recovery post-harvest glut averages 15\u201325% over 45\u201360 days (NAFED price series 2018\u201324) \u2014 working capital lets farmers capture this seasonal uplift",
+       "PACS godowns: 5,937 new registered, 73,492 computerised by June 2025 \u2014 existing delivery infrastructure the platform can use immediately, no capex"],
+   biz:"Interest income on short-term inventory loans (annualised 18\u201324% APR on 2\u20138 week tenure) + warehouse/cold storage fee-sharing with existing infrastructure operators + insurance premium on stored inventory. At \u20b9200 crore blended loan book: \u20b936\u201348 crore annual interest income. NBFC partnership for capital \u2014 platform provides underwriting, farmer interface, and quality assessment only.",
    scores:{impact:5,ws:5,feas:3,rev:4,climate:4},
-   stages:[{n:1,l:"Y0–Y1",d:"Design quality assessment protocol for perishables + grain. Partner with 2 NBFCs. Pilot 300 tomato/onion farmers (horti) and 500 wheat farmers (cereals) using existing cold hub / PACS godown inventory."},{n:2,l:"Y1–Y3",d:"₹25 crore loan book. 5,000 farmers. Pulse/oilseed WRS integrated. Insurance on stored inventory. Quality-based loan sizing."},{n:3,l:"Y3–Y5",d:"₹150 crore loan book. 50,000 farmers across 3 chains. Credit bureau data for pulse/oilseed farmers — first in India."},{n:4,l:"Y5–Y8",d:"₹500 crore loan book. 150,000+ farmers. Proprietary quality degradation model = moat for perishable underwriting. Partnership with major NBFCs/banks."}],
-   dfi:"The missing financial infrastructure for climate resilience: climate variability increases glut frequency, making this product MORE valuable as climate risk rises — rare alignment between commercial and climate mandate. Direct SDG 1 (income protection from distress selling). IFC agriculture finance team has explicitly identified perishable inventory finance as a priority gap for blended capital in India. First-loss guarantee from DFI de-risks the NBFC's entry into this new asset class.",
-   risk:"Perishable quality degrades during loan tenure — underwriting risk is real. Non-negotiable: all perishable loans must be backed by cold hub storage (from F2/H1 infrastructure) with AI-driven quality assessment at origination + spoilage insurance. Grain and pulse WRS loans are materially lower risk — start with these to validate the model before scaling perishable lending."},
-  {id:"F4",color:"#BA7517",itype:"Services — Advisory & Marketplace",
+   stages:[
+     {n:1,l:"Y0\u2013Y1",d:"Design quality assessment protocol for perishables + grain. Partner with 2 NBFCs. Pilot 300 horti farmers and 500 cereal farmers using existing cold hub/PACS inventory."},
+     {n:2,l:"Y1\u2013Y3",d:"\u20b925 crore loan book. 5,000 farmers. Pulse/oilseed WRS integrated. Insurance on stored inventory. Quality-based loan sizing."},
+     {n:3,l:"Y3\u2013Y5",d:"\u20b9150 crore loan book. 50,000 farmers across 3 chains. Credit bureau data for pulse/oilseed farmers \u2014 first in India."},
+     {n:4,l:"Y5\u2013Y8",d:"\u20b9500 crore loan book. 150,000+ farmers. Proprietary quality degradation model = underwriting moat. Partnership with major NBFCs/banks."}
+   ],
+   dfi:"The missing financial infrastructure for climate resilience: climate variability increases glut frequency, making this product MORE valuable as climate risk rises. Direct SDG 1 (income protection from distress selling). IFC agriculture finance team has explicitly identified perishable inventory finance as a priority gap for blended capital in India. First-loss guarantee from DFI de-risks the NBFC's entry into this new asset class.",
+   risk:"Perishable quality degrades during loan tenure \u2014 underwriting risk is real. All perishable loans must be backed by cold hub storage with AI-driven quality assessment at origination + spoilage insurance. Grain and pulse WRS loans are materially lower risk \u2014 start with these to validate the model before scaling perishable lending."},
+
+  {id:"F4",color:"#BA7517",itype:"Services \u2014 Advisory & Marketplace",
    title:"Input intelligence & quality marketplace (4-chain)",
-   tag:"Single verified marketplace for feed, certified seeds, fertilizers, and crop protection products across all four chains — addressing the most high-frequency, highest-cost, and most fraud-ridden supply chain in Indian agriculture",
-   prob:"Input costs are the largest controllable cost item in all four chains: dairy feed is 60–70% of milk production cost with no organised market; counterfeit seeds are 20–25% of the cereal market; HYV/certified seed adoption in pulses is below 40%; NMEO-Oilseeds specifically targets certified seed replacement as its primary productivity lever. Every rupee saved on verified inputs is additional farmer income — and the platform captures a transaction margin on a purchase that is already happening regardless. This is the highest-frequency touchpoint in the platform stack.",
-   ev:["Dairy: 10% feed cost reduction = 25–35% net income improvement for a 2-animal HH (DAHD/IIMA). Zero organised feed marketplace exists at scale anywhere in India",
-       "Cereals: counterfeit/substandard seeds estimated 20–25% of total market — certified seed switch delivers 8–12% yield improvement (ICAR studies)",
-       "Pulses/oilseeds: HYV adoption <40%; switching to certified seed: 15–25% yield gain for tur, 20–30% for mustard (ICRISAT/ICAR) — NMEO ₹10,103 Cr committed to this transition",
-       "DeHaat (₹3,000 Cr FY25 GMV, input commerce) + AgroStar ($111M, 5–9M farmers) prove demand; neither covers feed or is cross-chain"],
-   biz:"Transaction margin on verified inputs: 10–15% on feed, 8–12% on certified seeds, 5–8% on fertilizers + SaaS advisory subscription (₹50–100/month) + NMEO-Oilseeds scheme facilitation fee + data monetisation to input manufacturers for demand forecasting. At 2M farmers × ₹30,000/yr inputs: ₹1,800–3,600 crore GMV; platform revenue ₹150–300 crore annually. High-frequency touchpoint builds daily farmer engagement.",
+   tag:"Single verified marketplace for feed, certified seeds, fertilizers, and crop protection products across all four Tier-1 chains \u2014 addressing the most high-frequency, highest-cost, and most fraud-ridden supply chain in Indian agriculture",
+   prob:"Input costs are the largest controllable cost item in all four chains: dairy feed is 60\u201370% of milk production cost with no organised market; counterfeit seeds are 20\u201325% of the cereal market; HYV/certified seed adoption in pulses is below 40%; NMEO-Oilseeds specifically targets certified seed replacement as its primary productivity lever. Every rupee saved on verified inputs is additional farmer income \u2014 and the platform captures a transaction margin on a purchase that is already happening. This is the highest-frequency touchpoint in the platform stack.",
+   ev:["Dairy: 10% feed cost reduction = 25\u201335% net income improvement for a 2-animal HH (DAHD/IIMA). Zero organised feed marketplace at scale anywhere in India",
+       "Cereals: counterfeit/substandard seeds 20\u201325% of total market; certified seed switch delivers 8\u201312% yield improvement (ICAR studies)",
+       "Pulses/oilseeds: HYV adoption <40%; certified seed: 15\u201325% yield gain for tur, 20\u201330% for mustard (ICRISAT/ICAR); NMEO \u20b910,103 Cr committed to this transition",
+       "DeHaat (\u20b93,000 Cr FY25 GMV, input commerce) + AgroStar ($111M, 5\u20139M farmers) prove demand; neither covers feed or is cross-chain"],
+   biz:"Transaction margin on verified inputs: 10\u201315% on feed, 8\u201312% on certified seeds, 5\u20138% on fertilizers + SaaS advisory subscription (\u20b950\u2013100/month) + NMEO-Oilseeds facilitation fee + data monetisation to input manufacturers. At 2M farmers x \u20b930,000/yr inputs: \u20b91,800\u20133,600 crore GMV; platform revenue \u20b9150\u2013300 crore annually. Highest-frequency daily touchpoint.",
    scores:{impact:5,ws:4,feas:4,rev:5,climate:4},
-   stages:[{n:1,l:"Y0–Y1",d:"Launch feed marketplace (dairy, 3 states). Certified seed catalogue for tur/chana + wheat/rice. NMEO facilitation for mustard/soybean. 50,000 farmers."},{n:2,l:"Y1–Y3",d:"Cross-chain input platform. 500,000 farmers. Quality scoring for all products. AI-driven variety recommendation (soil + weather + price)."},{n:3,l:"Y3–Y5",d:"1M farmers. Private label certified seed brand. Demonstration plot network for variety validation."},{n:4,l:"Y5–Y8",d:"5M+ farmers. Market leader in organised SMH input supply across all four chains. Input quality dataset licensed to insurers for yield-based underwriting."}],
-   dfi:"Input quality improvement is the most direct climate adaptation intervention: certified drought-tolerant and heat-tolerant varieties are the first line of defence for climate-vulnerable SMH farmers. Reducing feed costs in dairy = direct income uplift for women (70% of dairy labour). SDG 2 (productivity) + SDG 8 (income) + SDG 13 (climate adaptation). NMEO-Oilseeds government funding creates direct co-investment opportunity for this idea.",
-   risk:"Competing against entrenched local dealer networks that offer input credit, trust, and relationships built over decades. Platform must match credit terms (embedded input credit from NBFC partner) and build trust through demonstration plots and community field agents. Last-mile distribution challenge — use DME network and PACS infrastructure (Micro-infra layer) as input distribution channels rather than building own logistics."},
-  {id:"F5",color:"#993356",itype:"FS — Insurance",
-   title:"Climate resilience bundle — parametric insurance, advisory & diversification (4-chain)",
-   tag:"Integrated parametric insurance + climate-smart advisory + crop diversification support across all four value chains — the platform's climate action anchor and the single product that commands DFI/philanthropic capital at scale",
-   prob:"Climate change is simultaneously the largest threat to SMH farmer incomes and the strongest rationale for DFI investment in the platform. NICRA projects 6–25% wheat yield decline by 2100. Horticulture crops are 3–5x more climate-sensitive than cereals — Maharashtra 2023: ₹2,000+ crore destroyed in one week with zero SMH insurance cover. Dairy is losing 0.36–0.38 MT/year from heat stress already. Kharif pulses and oilseeds are 100% rain-fed with <8% insurance enrolment. Parametric insurance for agriculture is virtually absent across all four chains. Climate advisory without insurance is incomplete; insurance without advisory is blind. This idea bundles both, across all four chains, as a single integrated climate resilience product.",
-   ev:["NICRA/ICAR: wheat yields down 6–25% by 2100; rain-fed rice down 20% by 2050; irrigated rice down 7–10% by 2050/2080 (Business Standard Jan 2025)",
-       "Horticulture 3–5x more climate-sensitive than cereals (ICAR-CRIDA 2022); PMFBY horti enrolment <5% of eligible farmers; claim settlement <60%",
-       "Dairy: Cambridge peer-reviewed study — North India loses 0.36–0.38 MT/yr milk from heat stress already (RCP4.5 baseline scenario)",
-       "Kharif pulses/oilseeds: <8% PMFBY enrolment; Vidarbha soybean yield range 0.7–1.8 T/ha across recent seasons (monsoon variability); zero parametric products available"],
-   biz:"Insurance premium commission (15–20% of premium across all four chains) + SaaS climate advisory subscription (₹100–300/season/farmer) + government scheme (PMFBY) facilitation fee + parametric product development fee from insurance partners + reinsurance data licensing. At 2M insured farmers: ₹80–200 crore annual insurance commission revenue. Proprietary climate risk dataset = long-term data asset licensed to reinsurers.",
+   stages:[
+     {n:1,l:"Y0\u2013Y1",d:"Launch feed marketplace (dairy, 3 states). Certified seed catalogue for tur/chana + wheat/rice. NMEO facilitation for mustard/soybean. 50,000 farmers."},
+     {n:2,l:"Y1\u2013Y3",d:"Cross-chain input platform. 500,000 farmers. Quality scoring for all products. AI-driven variety recommendation (soil + weather + price)."},
+     {n:3,l:"Y3\u2013Y5",d:"1M farmers. Private label certified seed brand. Demonstration plot network for variety validation."},
+     {n:4,l:"Y5\u2013Y8",d:"5M+ farmers. Market leader in organised SMH input supply across all 4 chains. Input quality dataset licensed to insurers for yield-based underwriting."}
+   ],
+   dfi:"Input quality improvement is the most direct climate adaptation intervention: certified drought-tolerant and heat-tolerant varieties are the first line of defence for climate-vulnerable SMH farmers. Reducing feed costs in dairy = direct income uplift for women (70% of dairy labour). SDG 2 (productivity) + SDG 8 (income) + SDG 13 (climate adaptation). NMEO-Oilseeds government funding creates direct co-investment opportunity.",
+   risk:"Competing against entrenched local dealer networks offering input credit, trust, and decades-old relationships. Platform must match credit terms (embedded input credit from NBFC partner) and build trust through demonstration plots and community field agents. Last-mile distribution challenge \u2014 use DME network and PACS infrastructure as input distribution channels rather than building own logistics."},
+
+  {id:"F5",color:"#993356",itype:"FS \u2014 Insurance",
+   title:"Climate resilience bundle \u2014 parametric insurance, advisory & diversification (4-chain)",
+   tag:"Integrated parametric insurance + climate-smart advisory + crop diversification support across all four Tier-1 value chains \u2014 the platform's climate action anchor and the single product that commands DFI/philanthropic capital at scale",
+   prob:"Climate change is simultaneously the largest threat to SMH farmer incomes and the strongest rationale for DFI investment in the platform. NICRA projects 6\u201325% wheat yield decline by 2100. Horticulture crops are 3\u20135x more climate-sensitive than cereals. Dairy is losing 0.36\u20130.38 MT/year from heat stress. Kharif pulses and oilseeds are 100% rain-fed with <8% insurance enrolment. Parametric insurance for agriculture is virtually absent across all four chains. Climate advisory without insurance is incomplete; insurance without advisory is blind. This idea bundles both, across all four chains, as a single integrated climate resilience product.",
+   ev:["NICRA/ICAR: wheat yields down 6\u201325% by 2100; rain-fed rice down 20% by 2050; irrigated rice down 7\u201310% by 2050/2080 (Business Standard Jan 2025)",
+       "Horticulture 3\u20135x more climate-sensitive than cereals (ICAR-CRIDA 2022); PMFBY horti enrolment <5% of eligible farmers; Maharashtra 2023: \u20b92,000+ crore lost in one week with zero SMH insurance",
+       "Dairy: Cambridge peer-reviewed study \u2014 North India loses 0.36\u20130.38 MT/yr milk from heat stress already (RCP4.5 baseline scenario)",
+       "Kharif pulses/oilseeds: <8% PMFBY enrolment; Vidarbha soybean yield range 0.7\u20131.8 T/ha across recent seasons from monsoon variability; zero parametric products available"],
+   biz:"Insurance premium commission (15\u201320% of premium across all 4 chains) + SaaS climate advisory subscription (\u20b9100\u2013300/season/farmer) + PMFBY facilitation fee + parametric product development fee from insurance partners + reinsurance data licensing. At 2M insured farmers: \u20b980\u2013200 crore annual insurance commission. Proprietary climate risk dataset = long-term data asset licensed to reinsurers.",
    scores:{impact:4,ws:5,feas:4,rev:3,climate:5},
-   stages:[{n:1,l:"Y0–Y1",d:"Climate advisory for 4 crops across 4 chains (dairy fodder, horti tomato/onion, wheat heat stress, tur drought). PMFBY facilitation live. 50,000 farmers."},{n:2,l:"Y1–Y3",d:"First parametric insurance products live: rainfall-indexed (horti/pulses) + temperature-indexed (dairy heat stress). IRDAI engagement."},{n:3,l:"Y3–Y5",d:"500,000 insured farmers. Millet and drought-tolerant variety diversification market linkage live. All 4 chains covered."},{n:4,l:"Y5–Y8",d:"2M+ insured farmers. National climate risk database. Proprietary actuarial models. Reinsurance data licensing. SDG 13 flagship product."}],
-   dfi:"The DFI anchor product for the entire platform — three SDGs in one: SDG 13 (climate action), SDG 1 (income protection from climate shocks), SDG 2 (food security via diversification). Parametric insurance innovation is a stated priority for IFC, CGAP, Gates Foundation, Omidyar Network, and all major climate finance providers. The proprietary climate risk dataset that accumulates across four chains and millions of farmers has significant standalone commercial value to the global reinsurance industry — a rare example of a development finance product with embedded IP value.",
-   risk:"Parametric insurance product development requires IRDAI regulatory approval and actuarial validation — 12–18 month process. Start with PMFBY facilitation (immediate, no new approval) while developing proprietary parametric products. Partner with AIC or SBI General for regulatory shelf rather than seeking own licence. Basis risk (parametric index not matching actual farmer loss) must be communicated transparently — farmer education is as important as product design."}
+   stages:[
+     {n:1,l:"Y0\u2013Y1",d:"Climate advisory for 4 crops across 4 chains (dairy fodder, horti tomato/onion, wheat heat stress, tur drought). PMFBY facilitation live. 50,000 farmers."},
+     {n:2,l:"Y1\u2013Y3",d:"First parametric insurance products live: rainfall-indexed (horti/pulses) + temperature-indexed (dairy heat stress). IRDAI engagement."},
+     {n:3,l:"Y3\u2013Y5",d:"500,000 insured farmers. Millet and drought-tolerant variety diversification market linkage live. All 4 chains covered."},
+     {n:4,l:"Y5\u2013Y8",d:"2M+ insured farmers. National climate risk database. Proprietary actuarial models. Reinsurance data licensing. SDG 13 flagship product."}
+   ],
+   dfi:"The DFI anchor product for the entire platform \u2014 three SDGs in one: SDG 13 (climate action), SDG 1 (income protection from climate shocks), SDG 2 (food security via diversification). Parametric insurance innovation is a stated priority for IFC, CGAP, Gates Foundation, Omidyar Network, and all major climate finance providers. The proprietary climate risk dataset accumulating across four chains has significant standalone commercial value to the global reinsurance industry.",
+   risk:"Parametric insurance product development requires IRDAI regulatory approval and actuarial validation \u2014 12\u201318 month process. Start with PMFBY facilitation (immediate, no new approval) while developing proprietary parametric products. Partner with AIC or SBI General for regulatory shelf rather than seeking own licence. Basis risk (parametric index not matching actual farmer loss) must be communicated transparently \u2014 farmer education is as important as product design."}
 ]);
 
-
-// ===================== PULSES & OILSEEDS VALUE CHAIN FLOW =====================
-bVCF('povc',[
-  {h:"1. Inputs",bg:"#EDE8F7",tc:"#3C1A60",a:["Seed companies","IFFCO/Fertilizers","Irrigation (limited)","Govt schemes (NMEO)"],b:"Certified/HYV seed adoption <40% in pulses; counterfeit seed common. Oilseeds: NMEO subsidises certified seed but last-mile distribution patchy. Most SMH farmers use saved seed — lower yield, no quality assurance.",m:"HYV adoption gap",mc:"#FAEEDA",mt:"#633806"},
-  {h:"2. Production",bg:"#CBB8E8",tc:"#3C1A60",a:["~70M+ SMH farmers","Kharif: tur/moong/urad/soybean/groundnut","Rabi: chana/masoor/mustard"],b:"Seasonal duality: kharif pulses/oilseeds (June–Oct) and rabi pulses/oilseeds (Oct–Mar). Both are predominantly rain-fed — highest climate exposure of any major crop group. Average holding 0.74 ha means very small quantities per farmer.",m:"Rain-fed: climate exposed",mc:"#FCEBEB",mt:"#A32D2D"},
-  {h:"3. Harvest & storage",bg:"#FAEEDA",tc:"#633806",a:["Household storage","Local traders","PACS / godowns (limited)"],b:"Post-harvest losses 8–12% (CIPHET). 65–70% stored at household level using traditional methods. Quality deterioration from moisture and pests common. WRS available legally but SMH excluded due to small lot size and logistics barriers.",m:"PHT: 8–12% losses",mc:"#FAECE7",mt:"#993C1D"},
-  {h:"4. Aggregation & trade",bg:"#EF9F27",tc:"#412402",a:["Local arhatiyas","District traders","Commission agents","NAFED/NCCF"],b:"NAFED/NCCF operate government procurement but cover ~20% of eligible farmers. 80% of transactions through private trader chain: farmer → local trader → district aggregator → dal mill or crusher. Each step adds margin with no value addition. Price discovery absent at farm gate.",m:"Trader chain: 80% volume",mc:"#FCEBEB",mt:"#A32D2D"},
-  {h:"5. Processing",bg:"#F09595",tc:"#501313",a:["Dal mills (60,000+ small mills)","Solvent extraction plants","Expeller crushers","Export houses"],b:"Dal mills: dehull and split pulses — 67–72% milling recovery for tur. Oil extractors: cold-press expellers (small, village level) or large solvent extraction plants. Processing is highly fragmented; no quality grading standard enforced at mill level. Miller buys from trader — farmer invisible in the price discovery.",m:"No direct farmer access",mc:"#FCEBEB",mt:"#A32D2D"},
-  {h:"6. Consumer",bg:"#FCEBEB",tc:"#501313",a:["Kirana stores","Organised retail","Institutional (mid-day meal, PDS)","Export channel"],b:"Tur dal retail: ₹120–180/kg (FY25 avg after volatility). Mustard oil: ₹130–160/L. Edible oil retail grows 8–10% annually. Farmer gets ~30–38% of consumer price in good years; as low as 15–20% in glut/shortage events. Processor captures transformation premium.",m:"Farmer: 30–38% typical yr",mc:"#FAEEDA",mt:"#633806"}
-]);
-
-// PULSES & OILSEEDS SUPPLY CHAIN GAPS
-bGG('pog',[
-  {i:"📈",bg:"#FCEBEB",st:"Market intelligence",t:"Sowing-blind farmers — the root cause of the price cycle",rows:[
-    {l:"Farmers commit land and inputs for kharif pulses/oilseeds in May–June with zero demand intelligence — no visibility into expected market prices at October–November harvest",s:"ic"},
-    {l:"The tur price cycle (shortage 2023 → glut 2024) is a textbook case of coordinated over/under-planting driven by lagged price signals — recurring every 4–5 years since 1990s",s:"ic"},
-    {l:"No platform provides pre-sowing district-level crop-specific demand signals for pulses or oilseeds at SMH farmer scale — identical white space to horticulture",s:"ic"}],
-   q:"Agmarknet has 10+ years of historical pulse/oilseed mandi price data. Satellite-based crop area estimation now available via ISRO/ICAR. A pre-sowing intelligence platform could reduce the glut/shortage amplitude by 20–30% — stabilising both farmer income and consumer prices. This is perhaps the highest-leverage single intervention in Indian agriculture."},
-  {i:"🏛️",bg:"#FAECE7",st:"Procurement access",t:"NAFED/NCCF procurement reach — only ~20% of eligible SMH farmers",rows:[
-    {l:"Self-Reliance in Pulses Mission guarantees 100% procurement for tur/urad/masoor — but NAFED procurement infrastructure reaches only ~20% of eligible SMH farmers due to logistics and registration barriers",s:"ic"},
-    {l:"Registration barriers identical to cereals MSP: awareness (national pulse MSP awareness <30%), distance to procurement centres, quality documentation requirements",s:"ih"},
-    {l:"NAFED storage and procurement budget is finite — in glut years, procurement is often suspended or capped, leaving farmers with no safety net despite policy guarantee",s:"ih"}],
-   q:"The structural gap between policy promise and farmer reality: Self-Reliance in Pulses Mission is the most ambitious procurement guarantee in Indian history — but execution is limited by the same last-mile access problem that has historically constrained MSP reach. Platform can facilitate farmer registration, quality testing, and logistics coordination to NAFED centres."},
-  {i:"🏭",bg:"#FAEEDA",st:"Processing linkage",t:"Dal mill & crusher market opacity — no direct farmer-processor channel",rows:[
-    {l:"India's 60,000+ small dal mills buy from district aggregators, not from farmers directly — creating a mandatory trader intermediation layer extracting 10–15% with zero value addition",s:"ih"},
-    {l:"Oilseed crushing: most SMH farmers in MP/MH sell soybeans to local traders at harvest rather than directly to solvent extraction plants — surrendering processing premium entirely",s:"ih"},
-    {l:"No marketplace exists connecting pulse/oilseed farmers with processing units for direct sale — full white space across the entire value chain",s:"ic"}],
-   q:"A farmer who sells tur directly to a dal mill at ₹7,800–8,000/qtl vs through a trader at ₹6,500–7,000/qtl gains ₹800–1,500/qtl additional income — 12–20% improvement with zero input change. The processing margins that currently go to traders belong structurally to either farmers or millers; a marketplace platform enables this redistribution."},
-  {i:"🌧️",bg:"#FAECE7",st:"Climate / production",t:"Kharif exposure — rain-fed crops with no climate buffer",rows:[
-    {l:"Kharif pulses (tur, moong, urad) and kharif oilseeds (soybean, groundnut) are almost entirely rain-fed — making them the most climate-exposed major crop group in India",s:"ic"},
-    {l:"ICAR-CRIDA: groundnut and soybean show 15–25% yield decline in drought years; yields in Vidarbha soybean ranged from 0.7–1.8 T/ha across recent years due to monsoon variability",s:"ih"},
-    {l:"PMFBY coverage for pulses/oilseeds: <8% of eligible farmers enrolled; claim settlement rates poor (IRDAI data); parametric insurance essentially absent for both sub-chains",s:"ih"}],
-   q:"Unlike cereals (irrigated wheat/rice) and horticulture (some irrigation), kharif pulse and oilseed farmers have essentially no climate buffer — they are fully exposed to monsoon risk with minimal insurance. As climate variability increases, this exposure compounds. A climate advisory + parametric insurance product has no existing competition in this space."},
-  {i:"🌱",bg:"#E8E0F5",st:"Input quality",t:"Certified seed penetration <40% — largest yield gap driver",rows:[
-    {l:"HYV/certified seed adoption in pulses: <40% nationally; most SMH farmers use farm-saved seed with progressive yield decline (2–3% per season from inbreeding depression)",s:"ih"},
-    {l:"NMEO-Oilseeds specifically targets certified seed replacement as a priority intervention — but delivery mechanism relies on government distribution, not commercial channels with quality assurance",s:"ih"},
-    {l:"Counterfeit oilseed varieties (especially soybean in MP/MH) estimated at 15–20% of commercial market (ICAR field studies)",s:"ih"}],
-   q:"Switching from farm-saved to certified HYV seed: 15–25% yield improvement in tur (ICRISAT); 20–30% in mustard (ICAR data); 12–18% in groundnut. This is a pure income improvement achievable without any other input change. The gap between NMEO policy (certified seed distribution) and SMH farmer reality (using saved seed) is the platform's entry point."},
-  {i:"💳",bg:"#E6F1FB",st:"Financial layer",t:"Working capital trap — cash-strapped farmers forced to distress-sell",rows:[
-    {l:"SMH pulse/oilseed farmers carry input debt (seeds, fertilizer) into harvest — creating acute cash pressure to sell immediately at harvest regardless of prevailing price",s:"ih"},
-    {l:"WRS is legally available for pulses and oilseeds (unlike horticulture) but WDRA-registered warehouses near SMH clusters are scarce, and minimum lot sizes exclude smallholders",s:"ih"},
-    {l:"Women growing pulses as intercrop (estimated 40–50% of pulse area involves female decision-making) have zero formal credit access — no income records, no land title, no formal collateral",s:"imm"}],
-   q:"A pulse/oilseed farmer who can hold grain for 45–60 days post-harvest (past the immediate crop glut) can typically sell at 10–20% higher price as seasonal stocks normalise. Working capital finance against stored grain (WRS model, adapted for small lots) creates measurable income improvement — but no platform serves SMH farmers at this scale."}
-]);
-
-bWF('powf',[
-  {l:"Consumer retail price (tur dal)",v:"₹150/kg",p:100,c:"#185FA5",n:"Baseline"},
-  {l:"Retailer margin",v:"–₹18/kg",p:12,c:"#E24B4A",n:"~12%"},
-  {l:"Wholesale / distribution",v:"–₹15/kg",p:10,c:"#E24B4A",n:"~10%"},
-  {l:"Dal miller margin (milling + transformation)",v:"–₹42/kg",p:28,c:"#EF9F27",n:"~28% (incl. milling recovery loss)"},
-  {l:"Trader / aggregator margin",v:"–₹15/kg",p:10,c:"#E24B4A",n:"~10%"},
-  {l:"Commission + transport",v:"–₹9/kg",p:6,c:"#EF9F27",n:"~6%"},
-  {l:"Farmer gross receipt",v:"~₹51/kg (raw tur equiv.)",p:34,c:"#1D9E75",n:"~34%"},
-  {l:"Input costs (seed, fertilizer, irrigation)",v:"–₹9/kg",p:6,c:"#E24B4A",n:"est."},
-  {l:"Labour + harvest + transport",v:"–₹7/kg",p:5,c:"#EF9F27",n:"est."},
-  {l:"Farmer net income",v:"~₹35/kg",p:23,c:"#639922",n:"~23% (open market)"}
-]);
-
-bWST('pows',[
-  {g:"Government MSP procurement facilitation (tur/urad/masoor/chana)",p:"NAFED/NCCF e-procurement portals (partial; reach limited)",c:"partial",s:"Portal exists; SMH access gap identical to cereals. 80% of eligible farmers cannot navigate registration + logistics. Full facilitation opportunity."},
-  {g:"Pre-sowing crop demand signal / price forecasting",p:"None for pulses or oilseeds at SMH scale",c:"uncovered",s:"FULL WHITE SPACE — the most structurally important gap. Breaks 30-year glut/shortage import cycle. No existing player."},
-  {g:"Direct farmer-to-dal-mill marketplace",p:"None at meaningful scale",c:"uncovered",s:"FULL WHITE SPACE — 60,000+ dal mills buy exclusively from traders. No platform connects farmers to mills. Direct purchase would add ₹800–1,500/qtl for farmer."},
-  {g:"Direct farmer-to-crusher / oilseed processor marketplace",p:"ITC e-Choupal (early model, not scaled digitally)",c:"partial",s:"ITC e-Choupal historically served soybean MP/AP but is not a current digital marketplace. Full white space in organised farmer-to-processor digital channel."},
-  {g:"Certified seed & HYV input marketplace (pulses/oilseeds)",p:"AgroStar ($111M), BigHaat ($10M+) — generic input commerce",c:"partial",s:"Generalised input platforms exist. Crop-specific certified pulse/oilseed seed with quality assurance for SMH is not addressed by any player at scale."},
-  {g:"Warehouse receipt finance — small lot SMH pulse/oilseed storage",p:"Arya.ag, StarAgri (large lots, aggregators only)",c:"partial",s:"WRS available for pulses/oilseeds (unlike horticulture) but SMH minimum lot threshold is prohibitive. Small-lot WRS adaptation for 1–3 tonne holdings is unserved."},
-  {g:"Parametric climate insurance for kharif pulse/oilseed farmers",p:"PMFBY (<8% enrolment), AIC (limited parametric)",c:"partial",s:"PMFBY exists but <8% enrolment and poor claim settlement. Parametric rainfall/drought index insurance for kharif pulses and oilseeds is essentially absent."},
-  {g:"Climate-smart variety advisory + drought-tolerant seed linkage",p:"None integrated with market linkage",c:"uncovered",s:"FULL WHITE SPACE — ICRISAT/ICAR have validated drought-tolerant pulse and oilseed varieties; no platform delivers this advisory with certified seed and market linkage simultaneously."},
-  {g:"Integrated pulses + oilseeds SMH farmer platform",p:"None",c:"uncovered",s:"FULL WHITE SPACE — least-served major value chain in Indian agritech. All $2B+ invested in agritech since 2020 has produced zero dedicated pulse/oilseed platform at scale."}
-]);
-
-// PULSES & OILSEEDS 5 PLATFORM IDEAS
-bIdeas('poi',[
-  {id:1,color:"#7B3FA0",title:"Pre-sowing market intelligence & demand signal platform",
-   tag:"AI-powered district-level crop demand signals delivered before sowing — breaking India's 30-year pulse/oilseed glut-shortage-import cycle permanently",
-   prob:"The tur price cycle (shortage 2023, glut 2024) is not a weather event — it is a market failure caused by 70M farmers sowing simultaneously with no information about expected demand. The same cycle has recurred every 4–5 years across tur, chana, soybean, and groundnut. A platform that aggregates historical mandi prices, satellite crop area data, import/export signals, and NAFED procurement trends can deliver actionable district-level sowing advisories 60–90 days before kharif planting. This single intervention could reduce price volatility amplitude by 20–30%, stabilise farmer income, AND reduce India's annual ₹20,000–50,000 crore pulse import bill.",
-   ev:["India imports 3–4 MT pulses/year despite being world #1 producer — entirely demand-supply mismatch driven by sowing blind (NAFED/Commerce Ministry data)",
-       "Tur dal: retail price swung from ₹100–120/kg (2021) to ₹200–300/kg (2023) and back within 3 years — driven by correlated farmer sowing decisions with no market intelligence",
-       "Agmarknet: 10+ years of pulse/oilseed mandi price time series available; ISRO Bhuvan/Fasal satellite crop area estimation validated for major kharif crops",
-       "RBI Bulletin (2024): price volatility in pulses/oilseeds is structurally linked to information asymmetry at sowing — same mechanism documented for horticulture"],
-   biz:"Subscription advisory (₹200–400/season/farmer) + premium market linkage for farmers acting on signals (1–2% GMV commission) + data licensing to commodity traders, food processors, NAFED/government for procurement planning. At 2M subscribers: ₹40–80 crore annual subscription revenue. Government data licensing could be ₹20–50 crore additionally.",
-   scores:{impact:5,ws:5,feas:4,rev:4,climate:4},
-   stages:[{n:1,l:"Y0–6 months",d:"Build price forecasting model: Agmarknet historical data + satellite area estimation + NAFED import data. Pilot in 3 tur-growing districts (Karnataka/MH)."},{n:2,l:"Y1",d:"IVR/WhatsApp pre-sowing advisory to 50,000 farmers before kharif 2026. Measure area response vs control districts."},{n:3,l:"Y2",d:"Multi-crop intelligence: chana (rabi), soybean, groundnut, mustard. 500,000 subscriber farmers. Forward contracting pilot."},{n:4,l:"Y3–5",d:"National crop intelligence platform. Government procurement planning data product. 3M+ subscribers. License to NAFED for MSP quantity planning."}],
-   dfi:"Market transparency is the most cost-effective market stabilisation intervention possible — no physical infrastructure required. Stabilising pulse prices simultaneously protects farmer income (SDG 1) and food security for consumers who depend on dal as primary protein (SDG 2). Reducing import dependence aligns with national strategic goals. Climate angle: as monsoon variability increases price unpredictability, platform value grows.",
-   risk:"Model accuracy is critical — a wrong signal causes farmers to abandon a profitable crop. Start with directional signals only (relative demand vs last year). Partner with ICAR/agricultural universities for model validation and credibility. Build slowly over 2 seasons before claiming forecast precision."},
-  {id:2,color:"#9B5EC0",title:"Direct processor linkage — dal mill & oilseed crusher marketplace",
-   tag:"Eliminating mandatory trader intermediation by connecting pulse/oilseed farmers directly to dal mills and crushing units — capturing 12–20% additional income with no input change",
-   prob:"India's 60,000+ dal mills and 15,000+ solvent extraction/expeller plants collectively process essentially all of India's pulse and oilseed production — but not a single one buys directly from SMH farmers at scale. The mandatory trader layer extracts ₹800–1,500/qtl (tur) or ₹200–400/qtl (soybean) with zero value addition. This is captured value that belongs structurally to either the farmer or the processor. No platform has built this direct farmer-to-processor marketplace. The first mover creates immediate, defensible, and measurable income improvement for farmers.",
-   ev:["Dal mill direct purchase price vs trader intermediated: ₹800–1,500/qtl additional for tur farmer — confirmed by ICRISAT Telangana/AP field studies",
-       "60,000+ small dal mills in India; most buy from local aggregators who provide logistics, grading, and credit — all functions a digital platform can provide directly",
-       "ITC e-Choupal historically demonstrated direct soybean procurement from farmers at prices above trader rates in MP/AP — but not a current digital marketplace model",
-       "FSSAI traceability rules (implementation phased 2025–27) create processor incentive for direct, documented supply chains — regulatory tailwind for platform"],
-   biz:"Marketplace commission (2–3% of GMV) from processor side + logistics coordination fee + quality testing and grading service fee (₹15–25/qtl). At ₹2,000 crore annual GMV: ₹40–60 crore platform revenue. Scale potential: India's total pulse/oilseed farm-gate value >₹1.5 lakh crore annually.",
-   scores:{impact:5,ws:5,feas:4,rev:4,climate:3},
-   stages:[{n:1,l:"Y0–6 months",d:"Onboard 20 dal mills in Maharashtra/Karnataka. Build farmer supply aggregation in 50 villages. First direct transactions at harvest season."},{n:2,l:"Y1",d:"200 mills + 5,000 farmers. Quality grading at village level. Logistics network. ₹100 crore GMV."},{n:3,l:"Y2",d:"Soybean/groundnut crusher channel live. 1,000 processors + 50,000 farmers. ₹500 crore GMV."},{n:4,l:"Y3–5",d:"National marketplace. 5,000+ processors. 300,000+ farmers. Industry-standard digital procurement replacing arhatiyas in pulse/oilseed supply chain."}],
-   dfi:"Direct income improvement with no input cost: processor savings on arhatiya margins are shared with farmers. SDG 1 + SDG 8. Women who grow pulses as intercrop gain formal market access for first time. Traceability premium supports export quality compliance (increasing India's pulse/oilseed export competitiveness).",
-   risk:"Processors currently rely on trader credit and supply reliability. Platform must replicate or replace: (a) quality guarantee for the miller, (b) logistics reliability, (c) farmer supplier relationship. Start with processors who already do some direct sourcing. Supply aggregation before demand aggregation."},
-  {id:3,color:"#5C9E2A",title:"NAFED procurement access facilitation platform",
-   tag:"Digital registration, quality documentation, and logistics coordination enabling SMH pulse/oilseed farmers to access the government's 100% procurement guarantee — currently reached by only ~20%",
-   prob:"The Self-Reliance in Pulses Mission promises 100% government procurement for tur, urad, and masoor — the most generous procurement guarantee in Indian agricultural policy. Yet NAFED's infrastructure reaches only ~20% of eligible SMH farmers. The barriers are registration complexity, distance to procurement centres, quality documentation requirements, and lack of digital literacy. A platform that removes these barriers can unlock the full policy benefit for 40–50 million additional pulse farmers — generating ₹500–1,000 crore additional income in a single season.",
-   ev:["Self-Reliance in Pulses Mission (2025–31): 100% procurement commitment for tur/urad/masoor by NAFED/NCCF — most ambitious procurement guarantee in Indian agriculture",
-       "NAFED pulse procurement: 20–25 LMT average annual procurement vs estimated 50–60 LMT eligible SMH-produced volume — 60–70% of eligible farmers excluded",
-       "Structural barriers identical to cereals MSP exclusion: registration (Aadhaar, land documents), distance to centres (avg 40–60 km for non-served villages), quality testing",
-       "AgriStack Farmer Registry (19 states signed MoUs): digital farmer ID foundation being built — platform can layer procurement facilitation on this identity infrastructure"],
-   biz:"Registration and facilitation fee (₹200–400/farmer/season) + logistics coordination margin (aggregated transport to NAFED centres) + SaaS to state procurement agencies (₹5–10/farmer/season for documentation and tracking). At 5M newly-enrolled farmers: ₹100–200 crore annual facilitation revenue.",
-   scores:{impact:4,ws:4,feas:4,rev:3,climate:3},
-   stages:[{n:1,l:"Y0–6 months",d:"Partner with NAFED MP/MH regional offices. Build farmer registration workflow on AgriStack/eKYC. Pilot 5,000 tur farmers in 3 districts."},{n:2,l:"Y1",d:"100,000 farmers enrolled. Logistics network to 50 procurement centres. Quality testing coordination."},{n:3,l:"Y2",d:"1M farmers across 4 states (MH, MP, Karnataka, Telangana). ₹750+ crore additional MSP income directed to farmers."},{n:4,l:"Y3–5",d:"All pulse/oilseed eligible states. 5M+ farmers. Government SaaS revenue from procurement documentation and tracking."}],
-   dfi:"Most direct income transfer mechanism: unlocking existing government money for excluded farmers. No capital creation required — just access. SDG 1 flagship. AgriStack integration creates national digital infrastructure benefit. NABARD co-financing potential for farmer registration and logistics investment.",
-   risk:"NAFED procurement is seasonal and politically sensitive — procurement budgets can be capped in surplus years. De-risk by building processor marketplace (Idea 2) simultaneously so platform revenue is not 100% dependent on government procurement volumes."},
-  {id:4,color:"#185FA5",title:"Certified seed & climate-smart variety advisory platform",
-   tag:"Increasing HYV/certified seed adoption from <40% to 70%+ in pulses and oilseeds — unlocking 15–25% yield improvement with the single highest-leverage agronomic intervention available",
-   prob:"The yield gap between India's average pulse/oilseed farmer and the achievable potential is primarily an input quality gap. HYV/certified seed adoption in pulses is <40% nationally; most farmers use farm-saved seed with progressive yield decline. NMEO-Oilseeds specifically targets certified seed as intervention priority #1 — but relies on government distribution channels with poor last-mile reach. A platform that delivers certified, quality-assured, drought-tolerant varieties with agronomic advisory and market linkage addresses the most underpenetrated high-impact intervention in this value chain.",
-   ev:["Certified HYV vs farm-saved seed: 15–25% yield gain in tur (ICRISAT); 20–30% in mustard (ICAR); 12–18% in groundnut — translating to ₹5,000–15,000/ha additional income",
-       "NMEO-Oilseeds: ₹10,103 Cr allocated partially for certified seed replacement — but government distribution channels reach <30% of target farmers (NMEO baseline survey)",
-       "ICAR/ICRISAT: drought-tolerant tur varieties (ICPL 87119, BSMR 736) show 20–30% better yield stability under deficit rainfall vs traditional varieties — critical for Vidarbha kharif farmers",
-       "Counterfeit oilseed varieties (especially soybean in MP/MH): estimated 15–20% of commercial market (ICAR field studies) — certified marketplace directly addresses this"],
-   biz:"Transaction margin on certified seeds (8–12%) + SaaS advisory subscription (₹100–200/season/farmer) + NMEO-Oilseeds scheme facilitation fee + weather-based variety recommendation data product. At 1M farmers spending ₹5,000/yr on seeds: ₹500 crore GMV; ₹40–60 crore platform revenue.",
-   scores:{impact:4,ws:4,feas:4,rev:4,climate:5},
-   stages:[{n:1,l:"Y0–6 months",d:"Certified seed supplier network (ICRISAT, state seed corporations, private breeders). Advisory content for tur/chana/mustard/soybean. 5,000 pilot farmers."},{n:2,l:"Y1",d:"Marketplace live. 100,000 farmers. NMEO scheme facilitation integrated. Demonstration plots in 10 clusters."},{n:3,l:"Y2",d:"Drought-tolerant variety advisory with yield data. 500,000 farmers. Private label certified seed brand."},{n:4,l:"Y3–5",d:"Market leader in certified pulse/oilseed seed for SMH. AI-driven variety recommendation (soil + weather + market price). 3M+ farmers."}],
-   dfi:"Climate resilience = certified drought-tolerant seed adoption. SDG 13 (climate adaptation) + SDG 2 (yield improvement = food security) + SDG 8 (income improvement). NMEO government funding creates co-investment opportunity. ICRISAT partnership adds scientific credibility and DFI alignment (CGIAR mandate).",
-   risk:"Seed supply chain quality assurance is complex — a bad seed lot destroys trust permanently. Investment in seed testing infrastructure (or partnership with state seed testing labs) is non-negotiable. Never sell seeds that aren't independently quality-certified. Partnership with ICRISAT/NRCS for supply chain validation."},
-  {id:5,color:"#BA7517",title:"Oilseed import substitution — farmer aggregation for organised crushing",
-   tag:"Building the domestic oilseed value chain that reduces India's ₹1.5 lakh crore annual edible oil import bill — connecting SMH mustard/soybean/groundnut farmers to modern processing at national scale",
-   prob:"India's dependence on imported edible oils is one of its largest strategic vulnerabilities. NMEO-Oilseeds deploys ₹10,103 Cr to address this — but the mission is production-focused, not market-architecture-focused. The structural gap: India's domestic oilseed production could satisfy 60–70% of consumption demand (up from 40% today) if organised aggregation, quality grading, and processing access existed for SMH farmers. Instead, 70M+ soybean/mustard/groundnut SMH farmers sell to fragmented local crushers with no quality premium, no traceability, and no access to modern extraction plants with 90%+ oil recovery rates vs village expellers at 70–75%.",
-   ev:["NMEO-Oilseeds (₹10,103 Cr, 2024–31): government's first integrated oilseed mission — creates policy tailwind with institutional capital committed",
-       "Modern solvent extraction plants: 90–92% oil recovery vs village expeller 70–75% — the 15–20% recovery gap is entirely lost value in the current fragmented processing chain",
-       "India edible oil import: ₹1.5 lakh crore FY24 (Commerce Ministry); palm oil ~50% of imports (Malaysia/Indonesia); domestic production could substitute 20–30% of this with organised production",
-       "Mustard oil traceability premium: Rajasthan mustard with documented origin increasingly sought by premium edible oil brands (Patanjali, Fortune, Dhara) — 5–8% premium for certified origin"],
-   biz:"Aggregation and quality grading fee (₹50–80/qtl) + premium pass-through from modern extraction plants (₹100–200/qtl for quality-differentiated supply) + brand partnership for traceable origin oil (₹0.50–1.00/L commission on consumer brand) + NMEO scheme facilitation. At 10 LMT oilseed volume: ₹50–80 crore annual revenue.",
-   scores:{impact:4,ws:4,feas:3,rev:4,climate:4},
-   stages:[{n:1,l:"Y0–6 months",d:"Mustard aggregation pilot: 50 villages in Rajasthan. Partner with 2 modern extraction plants. First quality-graded batches."},{n:2,l:"Y1",d:"Soybean aggregation in MP. 10,000 farmers. ₹100 crore GMV. Premium brand partnership for traceable mustard oil."},{n:3,l:"Y2",d:"3 oilseed crops (mustard/soybean/groundnut) in 4 states. 100,000 farmers. NMEO co-investment unlocked."},{n:4,l:"Y3–5",d:"National oilseed aggregation platform. 500,000 farmers. Measurable contribution to India's edible oil import substitution. Government recognition + co-funding."}],
-   dfi:"Strategic national interest aligned with commercial returns — rare in agritech. NMEO ₹10,103 Cr creates direct co-investment opportunity. Climate angle: soybean/groundnut as kharif crops benefit from drought-tolerant variety adoption (links to Idea 4). SDG 2 (food security through import substitution) + SDG 8 (farmer income via quality premiums). SEAI and food processing Ministry as institutional partners.",
-   risk:"Modern extraction plants require minimum volumes (typically 100+ tonnes/day) — SMH aggregation must be able to guarantee supply reliability and quality consistency. Start with mustard (rabi, more predictable) before kharif oilseeds (higher weather risk). Volume aggregation before quality differentiation — sequence matters."}
-]);
 
 document.getElementById('n-p00').classList.add('active');
 </script>
